@@ -7536,7 +7536,7 @@ header {
 
 .collapsible-nav {
   display: flex;
-  align-items: center;
+  align-items: end;
   width: 0px;
   overflow: hidden;
   margin-right: 10px;
@@ -7551,7 +7551,7 @@ header {
       overflow: auto;
       flex-direction: column;
       top: 71px;
-      align-items: flex-start;
+      align-items: center;
       background-color: #ffffff;
       margin-right: 0;
       padding-left: 24px;
