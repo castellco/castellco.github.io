@@ -5,13 +5,13 @@
 @import 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Patua+One&family=Stylish&display=swap';
 
 /* -- define colors vars --*/
-$red: #053660;
-$black: #147C91;
-$bg: #333333;
+$red: #bf0a30;
+$black: #000000;
+$bg: #ededed;
 
 #quarto-content {
-  background-color: #eeeeee;
-  font-family: 'Inconsolata', sans-serif !important;
-  font-family: 'Oswald', sans-serif;
-  color: #000000;
+  background-color: $bg;
+  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Inconsolata', sans-serif;
+  color: $black;
 }

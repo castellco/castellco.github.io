@@ -2,12 +2,9 @@
 title: "Blog"
 ---
 
-Esto es una prueba
+Pronto...
 
-# sdgsf
-prueba de pruebas
-
-```{r}
-#hol.a
+```{r echo=FALSE}
+#pronto
 ```
 

@@ -1,30 +1,23 @@
 [
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Resume",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Proyectos",
     "section": "",
-    "text": "Education\nsdfs\nsdf sdf\n\n\n\nExperience\na c b\n\n\n\nPublications\ndfsdag\n\n\n\nActivities\nsdsfg"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Carolina Cornejo Castellano",
-    "section": "",
-    "text": "This is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites.\n{#css, echo=FALSE} .title {   font-family: 'Patua One', serif;   font-style: bold;   font-weight: normal;   color: #bf0a30   }"
+    "text": "Pronto…"
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Esto es una prueba\n\nsdgsf\nprueba de pruebas\n\n#hol.a"
+    "text": "Pronto…"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Carolina Cornejo Castellano",
     "section": "",
-    "text": "Esto es una prueba\n\nsdgsf\nprueba de pruebas\n\n#hol.a"
+    "text": "Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Soy especialmente competente en el análisis (inferencial, causal y predictivo) y visualización. Gracias a mi experiencia en Academia, priorizo la rigurosidad metodológica —tanto en la investigación de la problemática como en el modelamiento de los datos— y la traducción de soluciones analíticas complejas a narrativas claras y centradas en el público.\n\nEducación\n\nMáster Universitario en Ciencias Sociales Computacionales ∙ Universidad Carlos III de Madrid ∙ 2023\nEspecialización en Ciencia de Datos para las Ciencias Sociales y la Gestión Pública ∙ Pontificia Universidad Católica del Perú ∙ 2022\nEspecialización en Monitoreo y Evaluación de Proyectos y Programas ∙ Universidad ESAN ∙ 2021\nBachiller en Comunicación para el Desarrollo ∙ Pontificia Universidad Católica del Perú ∙ 2018\n\n\n\nExperiencia\n\nBecaria de gestión de datos ∙ Vestas (Madrid) ∙ 6 meses\nGestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ 2 años y 3 meses\nAsistente de investigación ∙ Prof. Huaita ∙ 1 año y 11 meses"
   }
 ]

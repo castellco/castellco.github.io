@@ -6,7 +6,7 @@ website:
   title: "Carolina"
   favicon: images/favicon.png
   navbar:
-    background: "#eeeeee"
+    background: "#ededed"
     foreground: "#000000"
     logo: images/favicon.png
     # logo-href: 
@@ -15,8 +15,7 @@ website:
     collapse: true
     right:
       - href: index.qmd
-        text: About me
-      - resume.qmd
+        text: Sobre mí
       - blog.qmd
       - projects.qmd
   page-footer:
@@ -34,5 +33,3 @@ format:
     css: styles.css
     toc: true
     page-layout: full
-
-    

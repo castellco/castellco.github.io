@@ -1,13 +1,11 @@
 ---
-title: "Projects"
+title: "Proyectos"
 ---
 
-Esto es una prueba
+Pronto...
 
-# sdgsf
-prueba de pruebas
+```{r echo=FALSE}
 
-```{r}
-#hol.a
 ```
+
 
