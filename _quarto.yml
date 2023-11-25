@@ -34,7 +34,5 @@ format:
     css: styles.css
     toc: true
     page-layout: full
-    header-includes: |
-       <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet"> 
-    mainfont: 'Stylish'
+
     

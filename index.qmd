@@ -13,11 +13,7 @@ about:
     - icon: envelope-at-fill
       text: Email
       href: mailto:gissela.cornejo@pucp.pe
-format:
-  html:
-    header-includes: |
-      <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Stylish&display=swap" rel="stylesheet">
-    mainfont: 'Patua One'
+
 ---
 
 This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
@@ -26,12 +22,12 @@ This is a Quarto website. To learn more about Quarto websites visit <https://qua
 
 ```
 
-```{css, echo=FALSE}
+```{#css, echo=FALSE}
 .title {
   font-family: 'Patua One', serif;
   font-style: bold;
   font-weight: normal;
-  color: #bf0a30;
+  color: #bf0a30
   }
 ```
 

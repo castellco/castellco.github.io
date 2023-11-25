@@ -1,9 +1,17 @@
 /*-- scss:defaults --*/
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Oswald:wght@300;400;500&display=swap';
 
+
+@import 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Patua+One&family=Stylish&display=swap';
+
+/* -- define colors vars --*/
+$red: #053660;
+$black: #147C91;
+$bg: #333333;
+
 #quarto-content {
   background-color: #eeeeee;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Inconsolata', sans-serif !important;
   font-family: 'Oswald', sans-serif;
   color: #000000;
 }
