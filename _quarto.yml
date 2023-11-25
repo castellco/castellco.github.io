@@ -4,6 +4,7 @@ project:
   
 website:
   title: "Carolina"
+  favicon: images/favicon.png
   navbar:
     background: "#eeeeee"
     foreground: "#000000"
@@ -18,9 +19,19 @@ website:
       - resume.qmd
       - blog.qmd
       - projects.qmd
+  page-footer:
+    background: "#000000"
+    left:
+    - "Copyright 2023, Carolina Cornejo Castellano"
+    right:
+    - icon: linkedin
+      href: https://linkedin.com/in/castellco
+    - icon: github
+      href: https://github.com/castellco
 format:
   html:
     theme: [lux, styles.scss]
     css: styles.css
     toc: true
     page-layout: full
+    
