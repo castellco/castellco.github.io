@@ -1,0 +1,43 @@
+---
+title: "Carolina Cornejo Castellano"
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/castellco/
+    - icon: github
+      text: Github
+      href: https://github.com/castellco
+    - icon: envelope-at-fill
+      text: Email
+      href: mailto:gissela.cornejo@pucp.pe
+# header-includes: |
+#       <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/tt2020-style-g" type="text/css"/>
+mainfont: TT2020G
+---
+
+This is a Quarto website.
+MORE ON MILAN
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+
+```
+
+```{css, echo=FALSE}
+.title {
+  font-family: 'TT2020G'
+  font-style: normal
+  font-weight: normal;
+  color: #bf0a30;
+  }
+```
+
+<!-- bg <- "#efefef" -->
+<!-- title_col <- "#bf0a30" -->
+<!-- title_font <- "American Typewriter Regular" -->
+<!-- font-weight: 400 -->
+
+
