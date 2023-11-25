@@ -19,7 +19,6 @@ mainfont: TT2020G
 ---
 
 This is a Quarto website.
-MORE ON MILAN
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}
