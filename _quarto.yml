@@ -1,6 +1,7 @@
 project:
   type: website
-
+  output-dir: docs
+  
 website:
   title: "Carolina"
   navbar:
@@ -23,7 +24,3 @@ format:
     css: styles.css
     toc: true
     page-layout: full
-    grid:
-      sidebar-width: 0px
-      body-width: 1000px
-      margin-width: 250px
