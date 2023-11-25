@@ -34,4 +34,7 @@ format:
     css: styles.css
     toc: true
     page-layout: full
+    header-includes: |
+       <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/tt2020-style-g" type="text/css"/>
+    mainfont: TT2020G
     
