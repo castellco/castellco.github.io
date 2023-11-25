@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Carolina Cornejo Castellano",
-    "section": "",
-    "text": "This is a Quarto website. To learn more about Quarto websites visitt https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "Resume",
     "section": "",
     "text": "Education\nsdfs\nsdf sdf\n\n\n\nExperience\na c b\n\n\n\nPublications\ndfsdag\n\n\n\nActivities\nsdsfg"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Carolina Cornejo Castellano",
+    "section": "",
+    "text": "This is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "blog.html",
