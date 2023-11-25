@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "Carolina"
+  navbar:
+    background: "#eeeeee"
+    foreground: "#000000"
+    # logo: 
+    # logo-href: 
+    search: true
+    pinned: true
+    collapse: true
+    right:
+      - href: index.qmd
+        text: About me
+      - resume.qmd
+      - blog.qmd
+      - projects.qmd
+format:
+  html:
+    theme: [lux, styles.scss]
+    css: styles.css
+    toc: true
+    page-layout: full
+    grid:
+      sidebar-width: 0px
+      body-width: 1000px
+      margin-width: 250px
