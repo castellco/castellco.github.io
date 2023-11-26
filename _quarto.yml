@@ -6,7 +6,7 @@ website:
   title: "Carolina"
   favicon: images/favicon.png
   navbar:
-    background: "#ededed"
+    background: "#F6F5F5"
     foreground: "#000000"
     logo: images/favicon.png
     # logo-href: 
