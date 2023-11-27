@@ -1,5 +1,6 @@
 ---
 title: "Carolina Cornejo Castellano"
+pagetitle: "Carolina Cornejo Castellano"
 subtitle: "Científica de datos"
 image: profile.jpg
 about:
@@ -14,6 +15,12 @@ about:
     - icon: envelope-at-fill
       text: Email
       href: mailto:gissela.cornejo@pucp.pe
+
+twitter-card:
+    title: Carolina Cornejo Castellano, Ms.
+    description: |
+      Científica de datos y científica social computacional.
+    image: profile.png
 ---
 Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Gracias a mi experiencia en Academia, priorizo la rigurosidad metodológica —tanto en la investigación de la problemática como en el análisis (inferencial, causal y predictivo)— y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
@@ -34,17 +41,6 @@ Mi expertise yace en la intersección de la ciencia de datos y las ciencias soci
 ```
 
 ```{css, echo=FALSE}
-.title {
-  font-style: bold;
-  font-weight: 800;
-  color: #bf0a30
-  }
+
 ```
 
-<!-- bg <- "#efefef" -->
-
-<!-- title_col <- "#bf0a30" -->
-
-<!-- title_font <- "American Typewriter Regular" -->
-
-<!-- font-weight: 400 -->

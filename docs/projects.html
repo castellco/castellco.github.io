@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -62,6 +63,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<meta name="twitter:title" content="Carolina - Proyectos">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://github.com/castellco/terrorism_peru/blob/main/figs/map_full.png?raw=true">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -107,11 +112,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exploring-terrorism-in-peru-a-spatial-approach" id="toc-exploring-terrorism-in-peru-a-spatial-approach" class="nav-link active" data-scroll-target="#exploring-terrorism-in-peru-a-spatial-approach">Exploring terrorism in Peru: A spatial approach</a></li>
+  <li><a href="#palabras-que-se-las-lleva-el-viento" id="toc-palabras-que-se-las-lleva-el-viento" class="nav-link" data-scroll-target="#palabras-que-se-las-lleva-el-viento">Palabras que se las lleva el viento</a></li>
+  <li><a href="#how-americans-spend-their-money" id="toc-how-americans-spend-their-money" class="nav-link" data-scroll-target="#how-americans-spend-their-money">How Americans spend their money</a></li>
+  <li><a href="#scraping-y-análisis-de-sentimientos-de-los-tweets-del-congresista-peruano-alejandro-cavero" id="toc-scraping-y-análisis-de-sentimientos-de-los-tweets-del-congresista-peruano-alejandro-cavero" class="nav-link" data-scroll-target="#scraping-y-análisis-de-sentimientos-de-los-tweets-del-congresista-peruano-alejandro-cavero">Scraping y análisis de sentimientos de los tweets del congresista peruano Alejandro Cavero</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -130,9 +147,74 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Pronto…</p>
+<section id="exploring-terrorism-in-peru-a-spatial-approach" class="level1">
+<h1>Exploring terrorism in Peru: A spatial approach</h1>
+<p>Código en R, datasets y shapefiles utilizados en mi master’s thesis “Exploring terrorism in Peru: A spatial approach” como parte del Máster en Ciencias Sociales Computacionales (MUCSS), 2022- 2023, en la Universidad Carlos III de Madrid.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Ataques terroristas en Perú 1980-2021</th>
+<th style="text-align: center;">Zonas de cultivo de hoja de coca</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://github.com/castellco/terrorism_peru/blob/main/figs/map_full.png?raw=true" class="img-fluid"></td>
+<td style="text-align: center;"><img src="https://github.com/castellco/terrorism_peru/blob/main/figs/map_coca.png?raw=true" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+<p><em>Abstract:</em></p>
+<blockquote class="blockquote">
+<p>The present thesis investigates the spatial diffusion of terrorist attacks in Peru during three temporalities: the peak of violence (1980-2000), its decline (2000-2021), and the entire period (1980-2021). To study the relationships between the occurrence of terrorist attacks and geographic features, three grid-cell level datasets are constructed with which Moran’s I tests and different spatial (spatial error and spatial autoregressive) and non-spatial (linear and negative binomial) models were applied. The findings reveal that spatial autocorrelation of attacks is more pronounced during the decline period. Moreover, the effects of certain spatial variables on the number of terrorist attacks vary across time periods and models, sometimes even reversing their impact.</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/castellco/terrorism_peru">GitHub repo</a>.</li>
+</ul>
+</section>
+<section id="palabras-que-se-las-lleva-el-viento" class="level1">
+<h1>Palabras que se las lleva el viento</h1>
+<p>Técnicas de minería de textos aplicadas a los 10 últimos discursos de investidura de presidentes peruanos: N-grams, análisis de sentimiento y Latent Dirichlet Allocation (LDA).</p>
+<p><img src="https://github.com/castellco/presidential-speeches/blob/main/sentiments.png?raw=true" class="img-fluid"> <img src="https://github.com/castellco/presidential-speeches/blob/main/bigrams.png?raw=true" class="img-fluid"></p>
+<ul>
+<li><a href="https://github.com/castellco/presidential-speeches/">GitHub repo</a>.</li>
+</ul>
+</section>
+<section id="how-americans-spend-their-money" class="level1">
+<h1>How Americans spend their money</h1>
+<p>Réplica en R de un bump chart interactivo originalmente elaborado en Tableau, y discusión a la luz de las teorías sobre visualización de datos de Tufte, Cleveland, Wikilson y compañía.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Gráfico original en Tableau</th>
+<th style="text-align: center;">Mi réplica en R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://csslab.uc3m.es/dataviz/projects/2022/100481925/images/original.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="https://csslab.uc3m.es/dataviz/projects/2022/100481925/100481925_files/figure-html5/unnamed-chunk-10-1.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://csslab.uc3m.es/dataviz/projects/2022/100481925/#ref-lodhaHowAmericansSpend2022">Enlace a la publicación</a>.</p>
+</section>
+<section id="scraping-y-análisis-de-sentimientos-de-los-tweets-del-congresista-peruano-alejandro-cavero" class="level1">
+<h1>Scraping y análisis de sentimientos de los tweets del congresista peruano Alejandro Cavero</h1>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -2,10 +2,42 @@
 title: "Proyectos"
 ---
 
-Pronto...
+# Exploring terrorism in Peru: A spatial approach
 
-```{r echo=FALSE}
+Código en R, datasets y shapefiles utilizados en mi master's thesis “Exploring terrorism in Peru: A spatial approach” como parte del Máster en Ciencias Sociales Computacionales (MUCSS), 2022- 2023, en la Universidad Carlos III de Madrid.
 
-```
+Ataques terroristas en Perú 1980-2021            |  Zonas de cultivo de hoja de coca
+:-------------------------:|:-------------------------:
+![](https://github.com/castellco/terrorism_peru/blob/main/figs/map_full.png?raw=true)  |  ![](https://github.com/castellco/terrorism_peru/blob/main/figs/map_coca.png?raw=true)
 
 
+*Abstract:*
+
+> The present thesis investigates the spatial diffusion of terrorist attacks in Peru during three temporalities: the peak of violence (1980-2000), its decline (2000-2021), and the entire period (1980-2021). To study the relationships between the occurrence of terrorist attacks and geographic features, three grid-cell level datasets are constructed with which Moran's I tests and different spatial (spatial error and spatial autoregressive) and non-spatial (linear and negative binomial) models were applied. The findings reveal that spatial autocorrelation of attacks is more pronounced during the decline period. Moreover, the effects of certain spatial variables on the number of terrorist attacks vary across time periods and models, sometimes even reversing their impact.
+
+
+- [GitHub repo](https://github.com/castellco/terrorism_peru).
+
+# Palabras que se las lleva el viento
+
+Técnicas de minería de textos aplicadas a los 10 últimos discursos de investidura de presidentes peruanos: N-grams, análisis de sentimiento y Latent Dirichlet Allocation (LDA).
+
+![](https://github.com/castellco/presidential-speeches/blob/main/bigrams.png?raw=true)
+![](https://github.com/castellco/presidential-speeches/blob/main/sentiments.png?raw=true)
+
+- [GitHub repo](https://github.com/castellco/presidential-speeches/).
+
+
+# How Americans spend their money
+
+Réplica en R de un bump chart interactivo originalmente elaborado en Tableau, y discusión a la luz de las teorías sobre visualización de datos de Tufte, Cleveland, Wikilson y compañía.
+
+Gráfico original en Tableau            |  Mi réplica en R
+:-------------------------:|:-------------------------:
+![](https://csslab.uc3m.es/dataviz/projects/2022/100481925/images/original.png)  |  ![](https://csslab.uc3m.es/dataviz/projects/2022/100481925/100481925_files/figure-html5/unnamed-chunk-10-1.png)
+
+[Enlace a la publicación](https://csslab.uc3m.es/dataviz/projects/2022/100481925/#ref-lodhaHowAmericansSpend2022).
+
+# Scraping y análisis de sentimientos de los tweets del congresista peruano Alejandro Cavero
+
+### 

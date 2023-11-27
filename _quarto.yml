@@ -4,13 +4,15 @@ project:
   
 website:
   title: "Carolina"
+  site-url: https://castellco.github.io
+  description: "Científica de datos y Máster en Ciencias Sociales Computacionales"
   favicon: images/favicon.png
+  twitter-card: true
   navbar:
-    background: "#1e2019"
     logo: images/favicon.png
-    # logo-href: 
+    background: $black
     search: true
-    pinned: true
+    pinned: false
     collapse: true
     right:
       - href: index.qmd
@@ -18,7 +20,7 @@ website:
       - blog.qmd
       - projects.qmd
   page-footer:
-    background: "#1e2019"
+    background: $black
     left:
     - "Copyright 2023, Carolina Cornejo Castellano"
     right:
