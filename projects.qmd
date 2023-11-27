@@ -48,7 +48,8 @@ Scrapeé los tweets del congresista peruano Alejandro Cavero (cuando la API era 
 # Shiny App del Primer Censo  Nacional Prenitenciario del Perú
 
 
-# Visualizando en QGIS los colegios  peligrosamente cercanos a un río
+# Visualizando en QGIS los colegios en zonas inundables
++ Matriz de distancia y búffers.
 
 # Se puede predecir el terrorismo?
 Ejercicio de machine learning supervisado aplicado al [Global Terrorism Database](https://www.start.umd.edu/gtd/).
