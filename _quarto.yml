@@ -6,8 +6,7 @@ website:
   title: "Carolina"
   favicon: images/favicon.png
   navbar:
-    background: "#F6F5F5"
-    foreground: "#000000"
+    background: "#1e2019"
     logo: images/favicon.png
     # logo-href: 
     search: true
@@ -19,7 +18,7 @@ website:
       - blog.qmd
       - projects.qmd
   page-footer:
-    background: "#000000"
+    background: "#1e2019"
     left:
     - "Copyright 2023, Carolina Cornejo Castellano"
     right:
