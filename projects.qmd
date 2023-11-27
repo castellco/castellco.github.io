@@ -39,5 +39,16 @@ Gráfico original en Tableau            |  Mi réplica en R
 [Enlace a la publicación](https://csslab.uc3m.es/dataviz/projects/2022/100481925/#ref-lodhaHowAmericansSpend2022).
 
 # Scraping y análisis de sentimientos de los tweets del congresista peruano Alejandro Cavero
+Scrapeé los tweets del congresista peruano Alejandro Cavero (cuando la API era aún gratuita). Análisis de sentimientos, visualizaciones, clustering, etc.
 
-### 
+![](https://github.com/castellco/cavero-sentiments/blob/main/wordcloud.png?raw=true)
+
+- [GitHub repo](https://github.com/castellco/cavero-sentiments)
+
+# Shiny App del Primer Censo  Nacional Prenitenciario del Perú
+
+
+# Visualizando en QGIS los colegios  peligrosamente cercanos a un río
+
+# Se puede predecir el terrorismo?
+Ejercicio de machine learning supervisado aplicado al [Global Terrorism Database](https://www.start.umd.edu/gtd/).
