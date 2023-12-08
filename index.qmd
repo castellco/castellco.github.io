@@ -2,9 +2,8 @@
 title: "Carolina Cornejo Castellano"
 pagetitle: "Carolina Cornejo Castellano"
 subtitle: "Científica de datos"
-image: profile.jpg
 about:
-  template: trestles
+  template: solana
   links:
     - icon: linkedin
       text: LinkedIn
@@ -22,7 +21,7 @@ twitter-card:
       Científica de datos y científica social computacional.
     image: profile.png
 ---
-Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Gracias a mi experiencia en Academia, priorizo la rigurosidad metodológica —tanto en la investigación de la problemática como en el análisis (inferencial, causal y predictivo)— y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
+Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica —tanto en la investigación de la problemática como en el análisis (inferencial, causal y predictivo)— y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
 
 #### Educación
