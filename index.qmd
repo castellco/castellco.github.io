@@ -31,9 +31,10 @@ Mi expertise yace en la intersección de la ciencia de datos y las ciencias soci
 
 
 #### Experiencia
-- Becaria de gestión de datos ∙ Vestas (Madrid) ∙ 6 meses
-- Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ 2 años y 3 meses
-- Asistente de investigación ∙ Prof. Huaita ∙ 1 año y 11 meses
+- Analista de datos ∙ Baldecash ∙ Lima ∙ Diciembre 2023 - ahora
+- Becaria de gestión de datos ∙ Vestas ∙ Madrid ∙ 6 meses
+- Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ Lima ∙ 2 años y 3 meses
+- Asistente de investigación ∙ Prof. Huaita ∙ Lima ∙ 1 año y 11 meses
 
 ```{r}
 
