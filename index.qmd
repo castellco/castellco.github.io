@@ -21,7 +21,7 @@ twitter-card:
       Científica de datos y científica social computacional.
     image: profile.png
 ---
-Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica —tanto en la investigación de la problemática como en el análisis (inferencial, causal y predictivo)— y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
+Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica en la investigación de la problemática a resolver— y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
 
 #### Educación
@@ -31,10 +31,11 @@ Mi expertise yace en la intersección de la ciencia de datos y las ciencias soci
 
 
 #### Experiencia
-- Analista de datos ∙ Baldecash ∙ Lima ∙ Diciembre 2023 - ahora
-- Becaria de gestión de datos ∙ Vestas ∙ Madrid ∙ 6 meses
-- Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ Lima ∙ 2 años y 3 meses
-- Asistente de investigación ∙ Prof. Huaita ∙ Lima ∙ 1 año y 11 meses
+
+- Analista de datos ∙ Baldecash ∙ Diciembre 2023 - actualidad
+- Becaria de gestión de datos ∙ Vestas (Madrid) ∙ 6 meses
+- Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ 2 años y 3 meses
+- Asistente de investigación ∙ Prof. Huaita ∙ 1 año y 11 meses
 
 ```{r}
 
