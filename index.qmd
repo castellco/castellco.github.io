@@ -1,7 +1,7 @@
 ---
 title: "Carolina Cornejo Castellano"
 pagetitle: "Carolina Cornejo Castellano"
-subtitle: "Científica de datos"
+subtitle: "Máster en Ciencias Sociales Computacionales"
 about:
   template: solana
   links:
@@ -18,10 +18,10 @@ about:
 twitter-card:
     title: Carolina Cornejo Castellano, Ms.
     description: |
-      Científica de datos y científica social computacional.
+      Científica social computacional.
     image: profile.png
 ---
-Mi expertise yace en la intersección de la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica en la investigación de la problemática a resolver y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
+Mi perfil confluye la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica en la investigación de la problemática y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
 
 #### Educación
@@ -32,7 +32,6 @@ Mi expertise yace en la intersección de la ciencia de datos y las ciencias soci
 
 #### Experiencia
 
-- Analista de datos ∙ Baldecash ∙ Diciembre 2023 - actualidad
 - Becaria de gestión de datos ∙ Vestas (Madrid) ∙ 6 meses
 - Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ 2 años y 3 meses
 - Asistente de investigación ∙ Prof. Huaita ∙ 1 año y 11 meses
