@@ -17,12 +17,12 @@ website:
     right:
       - href: index.qmd
         text: Sobre mí
-      - blog.qmd
+      # - blog.qmd
       - projects.qmd
   page-footer:
     background: $black
     left:
-    - "Copyright 2023, Carolina Cornejo Castellano"
+    - "Copyright 2024, Carolina Cornejo Castellano"
     right:
     - icon: linkedin
       href: https://linkedin.com/in/castellco
