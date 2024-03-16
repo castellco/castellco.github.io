@@ -1,7 +1,7 @@
 ---
 title: "Carolina Cornejo Castellano"
 pagetitle: "Carolina Cornejo Castellano"
-subtitle: "Científica de datos"
+subtitle: "Máster en Ciencias Sociales Computacionales"
 about:
   template: solana
   links:
@@ -16,22 +16,23 @@ about:
       href: mailto:gissela.cornejo@pucp.pe
 
 twitter-card:
-    title: Carolina Cornejo Castellano, Ms.
+    title: Carolina Cornejo Castellano, MSc.
     description: |
-      Científica de datos y científica social computacional.
+      Máster en Ciencias Sociales Computacionales.
     image: profile.png
 ---
 Mi perfil converge la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica —tanto en la investigación de la problemática como en el análisis (inferencial, causal y predictivo)— y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
 
 #### Educación
--  Máster Universitario en Ciencias Sociales Computacionales ∙ Universidad Carlos III de Madrid ∙ 2023
+- Máster Universitario en Ciencias Sociales Computacionales ∙ Universidad Carlos III de Madrid ∙ 2023
 - Especialización en Ciencia de Datos para las Ciencias Sociales y la Gestión Pública ∙ Pontificia Universidad Católica del Perú ∙ 2022
 - Especialización en Monitoreo y Evaluación de Proyectos y Programas ∙ Universidad ESAN ∙ 2021
 - Bachiller en Comunicación para el Desarrollo ∙ Pontificia Universidad Católica del Perú ∙ 2018
 
 
 #### Experiencia
+- Analista de manejo de la información ∙ World Vision Perú ∙ Lima ∙ Marzo 2024 - Actualidad
 - Analista de datos ∙ Baldecash ∙ Lima ∙ 2 meses
 - Becaria de gestión de datos ∙ Vestas ∙ Madrid ∙ 6 meses
 - Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ Lima ∙ 2 años y 3 meses
