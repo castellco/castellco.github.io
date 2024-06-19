@@ -16,7 +16,7 @@ about:
       href: mailto:gissela.cornejo@pucp.edu.pe
     - icon: file-earmark-person-fill
       text: CV
-      href: attachments/Carolina_Cornejo_Castellano.pdf
+      href: ./Carolina_Cornejo_Castellano.pdf
 
 twitter-card:
     title: Carolina Cornejo Castellano, MSc.
