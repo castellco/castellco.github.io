@@ -13,7 +13,10 @@ about:
       href: https://github.com/castellco
     - icon: envelope-at-fill
       text: Email
-      href: mailto:gissela.cornejo@pucp.pe
+      href: mailto:gissela.cornejo@pucp.edu.pe
+    - icon: file-earmark-person-fill
+      text: CV
+      href: "./attachments/Carolina_Cornejo_Castellano.pdf"
 
 twitter-card:
     title: Carolina Cornejo Castellano, MSc.
@@ -36,11 +39,3 @@ Mi perfil converge la ciencia de datos y las ciencias sociales. Priorizo la rigu
 - Becaria de gestión de datos ∙ Vestas ∙ Madrid ∙ 6 meses
 - Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ Lima ∙ 2 años y 3 meses
 - Asistente de investigación ∙ Prof. Huaita ∙ Lima ∙ 1 año y 11 meses
-
-```{r}
-
-```
-
-```{css, echo=FALSE}
-
-```
