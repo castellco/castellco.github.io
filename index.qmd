@@ -1,6 +1,6 @@
 ---
-title: "Carolina Cornejo Castellano"
-pagetitle: "Carolina Cornejo Castellano"
+title: "Gissela Carolina Cornejo Castellano"
+pagetitle: "Gissela Carolina Cornejo Castellano"
 subtitle: "Máster en Ciencias Sociales Computacionales"
 about:
   template: solana
@@ -14,17 +14,15 @@ about:
     - icon: envelope-at-fill
       text: Email
       href: mailto:gissela.cornejo@pucp.edu.pe
-    - icon: file-earmark-person-fill
-      text: CV
-      href: ../Carolina_Cornejo_Castellano.pdf
+
 
 twitter-card:
-    title: Carolina Cornejo Castellano, MSc.
+    title: Gissela Carolina Cornejo Castellano, MSc.
     description: |
       Máster en Ciencias Sociales Computacionales.
     image: profile.png
 ---
-Mi perfil converge la ciencia de datos y las ciencias sociales. Priorizo la rigurosidad metodológica y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
+Datos. Tecnología. Comunicación. Priorizo la rigurosidad metodológica y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
 #### Educación
 - Máster en Ciencias Sociales Computacionales ∙ Universidad Carlos III de Madrid ∙ 2023
@@ -39,3 +37,6 @@ Mi perfil converge la ciencia de datos y las ciencias sociales. Priorizo la rigu
 - Becaria de gestión de datos ∙ Vestas ∙ Madrid ∙ 6 meses
 - Gestora de bases de datos de monitoreo y evaluación ∙ CIES ∙ Lima ∙ 2 años y 3 meses
 - Asistente de investigación ∙ Prof. Huaita ∙ Lima ∙ 1 año y 11 meses
+
+#### Otras actividades
+Soy miembro colaborador de [Omdena](https://www.omdena.com/), donde colaboro con colegas en otros países para resolver problemas colaborativamente con herramientas de IA.

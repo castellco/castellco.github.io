@@ -3,9 +3,9 @@ project:
   output-dir: docs
   
 website:
-  title: "Carolina"
+  title: "G. Carolina"
   site-url: https://castellco.github.io
-  description: "Científica de datos y Máster en Ciencias Sociales Computacionales"
+  description: "Máster en Ciencias Sociales Computacionales"
   favicon: images/favicon.png
   twitter-card: true
   navbar:
