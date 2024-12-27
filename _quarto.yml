@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 website:
-  title: "G. Carolina"
+  title: "Carolina C.C."
   site-url: https://castellco.github.io
   description: "Máster en Ciencias Sociales Computacionales"
   favicon: images/favicon.png

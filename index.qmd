@@ -1,6 +1,6 @@
 ---
-title: "Gissela Carolina Cornejo Castellano"
-pagetitle: "Gissela Carolina Cornejo Castellano"
+title: "Carolina Cornejo Castellano"
+pagetitle: "Carolina Cornejo Castellano"
 subtitle: "Máster en Ciencias Sociales Computacionales"
 about:
   template: solana
@@ -17,12 +17,12 @@ about:
 
 
 twitter-card:
-    title: Gissela Carolina Cornejo Castellano, MSc.
+    title: Carolina Cornejo Castellano, MSc.
     description: |
       Máster en Ciencias Sociales Computacionales.
     image: profile.png
 ---
-Datos. Tecnología. Comunicación. Priorizo la rigurosidad metodológica y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
+Datos. Comunicación. Priorizo la rigurosidad metodológica y la traducción de conclusiones complejas a visualizaciones claras y centradas en el público.
 
 #### Educación
 - Máster en Ciencias Sociales Computacionales ∙ Universidad Carlos III de Madrid ∙ 2023
