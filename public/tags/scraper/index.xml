@@ -6,8 +6,8 @@
     <description>Recent content in Scraper on Carolina Cornejo Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <managingEditor>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</managingEditor>
-    <webMaster>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</webMaster>
+    <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
+    <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
     <lastBuildDate>Wed, 31 Dec 2025 11:15:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/scraper/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <title>Precios: Canasta básica — Superscraper</title>
       <link>https://castellco.github.io/posts/precios-canasta-basica-superscraper/</link>
       <pubDate>Wed, 31 Dec 2025 11:15:00 +0100</pubDate>
-      <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
       <guid>https://castellco.github.io/posts/precios-canasta-basica-superscraper/</guid>
       <description>Sistema para recolectar y consolidar precios de supermercados a gran escala.</description>
       
@@ -25,7 +25,7 @@
       <title>Euro 2024 — Scraper de resultados y estadísticas</title>
       <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
       <pubDate>Wed, 31 Dec 2025 10:30:00 +0100</pubDate>
-      <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
       <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
       <description>Scraper y pipeline para recolectar resultados, alinearlos y publicar estadísticas en tiempo diferido.</description>
       

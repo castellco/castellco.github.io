@@ -1,1 +1,1 @@
-**2026-01-01**: Sitio en construcción.
+Toma de decisiones basada en la evidencia | R, Python, Power BI, SQL
