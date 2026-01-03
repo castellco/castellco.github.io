@@ -3,6 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://castellco.github.io/en/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/"
+    />
+  </url>
+  <url>
+    <loc>https://castellco.github.io/en/cv/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/cv/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/cv/"
+    />
+  </url>
+  <url>
+    <loc>https://castellco.github.io/en/acerca-de/</loc>
+    <lastmod>2025-02-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/acerca-de/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/acerca-de/"
+    />
+  </url>
+  <url>
     <loc>https://castellco.github.io/en/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -13,23 +61,8 @@
     />
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/authors/"
-    />
-  </url>
-  <url>
-    <loc>https://castellco.github.io/en/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="es"
-      href="https://castellco.github.io/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="es"
-      href="https://castellco.github.io/en/"
     />
   </url>
   <url>
@@ -43,7 +76,7 @@
     />
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/categories/"
     />
   </url>
@@ -58,7 +91,7 @@
     />
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/series/"
     />
   </url>
@@ -73,7 +106,7 @@
     />
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/tags/"
     />
   </url>

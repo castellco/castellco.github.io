@@ -9,7 +9,7 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/"
     />
     <xhtml:link
@@ -49,7 +49,7 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/tags/"
     />
     <xhtml:link
@@ -171,6 +171,16 @@
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/cv/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/cv/"
+    />
   </url>
   <url>
     <loc>https://castellco.github.io/proyectos/</loc>
@@ -189,6 +199,16 @@
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/acerca-de/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/acerca-de/"
+    />
   </url>
   <url>
     <loc>https://castellco.github.io/authors/</loc>
@@ -196,7 +216,7 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/authors/"
     />
     <xhtml:link
@@ -211,7 +231,7 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/categories/"
     />
     <xhtml:link
@@ -226,7 +246,7 @@
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
-      hreflang="es"
+      hreflang="en"
       href="https://castellco.github.io/en/series/"
     />
     <xhtml:link
