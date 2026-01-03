@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Carolina Cornejo Castellano</title>
-    <link>https://castellco.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Carolina Cornejo Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</managingEditor>
     <webMaster>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
-    <lastBuildDate>Wed, 31 Dec 2025 11:15:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Dec 2025 11:15:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Precios: Canasta básica — Superscraper</title>
-      <link>https://castellco.github.io/posts/precios-canasta-basica-superscraper/</link>
+      <link>http://localhost:1313/posts/precios-canasta-basica-superscraper/</link>
       <pubDate>Wed, 31 Dec 2025 11:15:00 +0100</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/precios-canasta-basica-superscraper/</guid>
+      <guid>http://localhost:1313/posts/precios-canasta-basica-superscraper/</guid>
       <description>Sistema para recolectar y consolidar precios de supermercados a gran escala.</description>
       
     </item>
     
     <item>
       <title>Cavero — Análisis de sentimiento en tweets</title>
-      <link>https://castellco.github.io/posts/cavero-tweets-sentiment/</link>
+      <link>http://localhost:1313/posts/cavero-tweets-sentiment/</link>
       <pubDate>Wed, 31 Dec 2025 11:00:00 +0100</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/cavero-tweets-sentiment/</guid>
+      <guid>http://localhost:1313/posts/cavero-tweets-sentiment/</guid>
       <description>Recopilación y clasificación de tweets para analizar sentimiento sobre figuras públicas.</description>
       
     </item>
     
     <item>
       <title>How Americans Spend Their Money — Data Exploration</title>
-      <link>https://castellco.github.io/posts/how-americans-spend-their-money/</link>
+      <link>http://localhost:1313/posts/how-americans-spend-their-money/</link>
       <pubDate>Wed, 31 Dec 2025 10:45:00 +0100</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/how-americans-spend-their-money/</guid>
+      <guid>http://localhost:1313/posts/how-americans-spend-their-money/</guid>
       <description>Exploración de datos de consumo y patrones de gasto en Estados Unidos.</description>
       
     </item>
     
     <item>
       <title>Euro 2024 — Scraper de resultados y estadísticas</title>
-      <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
+      <link>http://localhost:1313/posts/euro-2024-scraper/</link>
       <pubDate>Wed, 31 Dec 2025 10:30:00 +0100</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
+      <guid>http://localhost:1313/posts/euro-2024-scraper/</guid>
       <description>Scraper y pipeline para recolectar resultados, alinearlos y publicar estadísticas en tiempo diferido.</description>
       
     </item>
     
     <item>
       <title>Palabras que se las lleva el viento</title>
-      <link>https://castellco.github.io/posts/palabras-que-se-las-lleva-el-viento/</link>
+      <link>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</link>
       <pubDate>Wed, 31 Dec 2025 10:15:00 +0100</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/palabras-que-se-las-lleva-el-viento/</guid>
+      <guid>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</guid>
       <description>Análisis de discurso y frecuencia de términos en colecciones de textos.</description>
       
     </item>
     
     <item>
       <title>La geografía del terrorismo</title>
-      <link>https://castellco.github.io/posts/geografia-terrorismo-peru/</link>
+      <link>http://localhost:1313/posts/geografia-terrorismo-peru/</link>
       <pubDate>Wed, 31 Dec 2025 10:00:00 +0100</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/geografia-terrorismo-peru/</guid>
+      <guid>http://localhost:1313/posts/geografia-terrorismo-peru/</guid>
       <description>Análisis espacial de incidentes y patrones de violencia en Perú usando datos públicos.</description>
       
     </item>
     
     <item>
       <title>CV</title>
-      <link>https://castellco.github.io/cv/</link>
+      <link>http://localhost:1313/cv/</link>
       <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/cv/</guid>
+      <guid>http://localhost:1313/cv/</guid>
       <description>&lt;p&gt;También puedes ver mi currículum más detallado en LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/cornejocastellano&#34;  target=&#34;_blank&#34;&gt;https://www.linkedin.com/in/cornejocastellano&lt;/a&gt;&lt;/p&gt;&#xA;&#xD;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Experiencia&#xD;&#xA;    &lt;div id=&#34;experiencia&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;table class=&#34;content-cv-table&#34;&gt;&#xD;&#xA;    &lt;thead&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;th&gt;Organización&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Link&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Rol&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Fechas&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Lugar&lt;/th&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;    &lt;/thead&gt;&#xD;&#xA;    &lt;tbody&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;vestas.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.vestas.com/en/&#34; target=&#34;_blank&#34;&gt;Vestas&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Construction Quality Deployment Lead&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2025 – Hoy&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Madrid, España&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;worldvision.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://worldvision.pe/&#34; target=&#34;_blank&#34;&gt;World Vision&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Analista Nacional de Manejo de la Información&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2024 – 2025&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Lima, Perú&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;vestas.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.vestas.com/en/&#34; target=&#34;_blank&#34;&gt;Vestas&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Data Management Trainee&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2023&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Madrid, España&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;cies.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.cies.org.pe/&#34; target=&#34;_blank&#34;&gt;Consorcio de Investigación Económica y Social&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Gestora de Bases de Datos de Monitoreo y Evaluación&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2019 – 2021&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Lima, Perú&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;pucp.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.pucp.edu.pe/&#34; target=&#34;_blank&#34;&gt;Pontificia Universidad Católica del Perú&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Asistente de Investigación&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2018 – 2021&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Lima, Perú&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;            &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;fondazione.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.alberodellavita.org/&#34; target=&#34;_blank&#34;&gt;Fondazione l&#39;Albero della Vita&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Pasante&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2018&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Lima, Perú&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;    &lt;/tbody&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&lt;hr&gt;&#xA;&#xD;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Educación&#xD;&#xA;    &lt;div id=&#34;educación&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;table class=&#34;content-cv-table&#34;&gt;&#xD;&#xA;    &lt;thead&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;th&gt;Institución&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Link&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Grado&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Fechas&lt;/th&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;    &lt;/thead&gt;&#xD;&#xA;    &lt;tbody&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;uc3m.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.uc3m.es/&#34; target=&#34;_blank&#34;&gt;Universidad Carlos III de Madrid&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Máster Universitario en Ciencias Sociales Computacionales&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2024&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;pucp.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.pucp.edu.pe/&#34; target=&#34;_blank&#34;&gt;Pontificia Universidad Católica del Perú&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Diplomado en Ciencia de Datos para las Ciencias Sociales y la Gestión Pública&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2021-2022&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;esan.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.ue.edu.pe/&#34; target=&#34;_blank&#34;&gt;Universidad ESAN&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Diplomado en Monitoreo y Evaluación de Programas y Proyectos&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2024&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;pucp.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.pucp.edu.pe/&#34; target=&#34;_blank&#34;&gt;Pontificia Universidad Católica del Perú&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Bachiller en Comunicación para el Desarrollo&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;2021-2022&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;    &lt;/tbody&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&lt;hr&gt;&#xA;&#xD;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Publicaciones&#xD;&#xA;    &lt;div id=&#34;publicaciones&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;table class=&#34;content-cv-table&#34;&gt;&#xD;&#xA;    &lt;thead&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;th&gt;Portada&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Título&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Referencia&lt;/th&gt;&#xD;&#xA;            &lt;th&gt;Publisher&lt;/th&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;    &lt;/thead&gt;&#xD;&#xA;    &lt;tbody&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;tfm.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://renati.sunedu.gob.pe/handle/sunedu/3627523&#34; target=&#34;_blank&#34;&gt;Exploring terrorism in Peru: a spatial approach&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Cornejo Castellano, C. (2023)&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.uc3m.es/&#34; target=&#34;_blank&#34;&gt;Universidad Carlos III de Madrid&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;            &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;guia.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&#xD;&#xA;            &lt;a href=&#34;https://cies.org.pe/publicaciones/guia-para-elaborar-investigaciones-periodisticas-sobre-trata-de/&#34; target=&#34;_blank&#34;&gt;Guía para elaborar investigaciones periodísticas sobre trata de personas (supervisión editorial)&lt;/a&gt;&#xD;&#xA;            &lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&#xD;&#xA;            Fernández, L. (2021)&#xD;&#xA;            &lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.cies.org.pe/&#34; target=&#34;_blank&#34;&gt;Consorcio de Investigación Económica y Social&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;nna.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.pj.gob.pe/wps/wcm/connect/f8e04a004cef7018bd0effe93f7fa794/ACCESO+A+LA+JUSTICIA+Y+G%C3%89NERO+WEB.pdf?MOD=AJPERES&amp;CACHEID=f8e04a004cef7018bd0effe93f7fa794&#34; target=&#34;_blank&#34;&gt;Violencia de género ejercida en el ámbito familiar contra niños, niñas y adolescentes percibidos como parte de la población LGTBI&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Huaita Alegre, M., Chavez Granda, J.,Cornejo Castellano, G. &amp; Saravia Pinazo, M. (2019)&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.pj.gob.pe/&#34; target=&#34;_blank&#34;&gt;Poder Judicial del Perú&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;cedaw.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://revistas.pucp.edu.pe/index.php/iusetveritas/article/view/22474&#34; target=&#34;_blank&#34;&gt;La ratificación de la CEDAW como hito en la lucha por los derechos de las mujeres en el Perú&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Huaita Alegre, M., &amp; Cornejo Castellano, G.(2019).&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://www.pj.gob.pe/&#34; target=&#34;_blank&#34;&gt;Ius et Veritas&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;        &lt;tr&gt;&#xD;&#xA;            &lt;td&gt;&lt;img class=&#34;customEntitityLogo&#34; src=&#34;lgtbi.png&#34;/&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://promsex.org/publicaciones/igualdad-para-construir-democracia-analisis-de-candidaturas-lgtbi-en-los-procesos-electorales-de-2006-a-2016/&#34; target=&#34;_blank&#34;&gt;Igualdad para construir democracia. Análisis de candidaturas LGTBI en los procesos electorales de 2006 a 2016&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;Alza, Carlos, et.al. (2017).&lt;/td&gt;&#xD;&#xA;            &lt;td&gt;&lt;a href=&#34;https://portal.jne.gob.pe/portal&#34; target=&#34;_blank&#34;&gt;Jurado Nacional de Elecciones y Observatorio de Políticas Públicas para la Diversidad Sexual (DISEX), PUCP&lt;/a&gt;&lt;/td&gt;&#xD;&#xA;        &lt;/tr&gt;&#xD;&#xA;    &lt;/tbody&gt;&#xD;&#xA;&lt;/table&gt;</description>
       
     </item>
     
     <item>
       <title>Proyectos</title>
-      <link>https://castellco.github.io/proyectos/</link>
+      <link>http://localhost:1313/proyectos/</link>
       <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/proyectos/</guid>
+      <guid>http://localhost:1313/proyectos/</guid>
       <description>&lt;!-- Contenido importado y adaptado desde el repositorio antiguo (projects.qmd).&#xD;&#xA;&#x9;Mantengo las imágenes apuntando a los repositorios originales cuando es apropiado. --&gt;&#xD;&#xA;&#xD;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;La geografía del terrorismo&#xD;&#xA;    &lt;div id=&#34;la-geografía-del-terrorismo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;span&#xD;&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xD;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#la-geograf%c3%ada-del-terrorismo&#34; aria-label=&#34;Ancla&#34;&gt;#&lt;/a&gt;&#xD;&#xA;    &lt;/span&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Código en R, datasets y shapefiles utilizados en mi master&amp;rsquo;s thesis “Exploring terrorism in Peru: A spatial approach” como parte del Máster en Ciencias Sociales Computacionales (MUCSS), 2022–2023, en la Universidad Carlos III de Madrid.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Acerca de</title>
-      <link>https://castellco.github.io/acerca-de/</link>
+      <link>http://localhost:1313/acerca-de/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
       <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/acerca-de/</guid>
+      <guid>http://localhost:1313/acerca-de/</guid>
       <description>&lt;p&gt;Mi carrera comenzó en Perú, en investigación académica y proyectos de desarrollo, trabajando con personas y organizaciones que buscaban generar cambio real. Fue ahí donde descubrí que el problema rara vez era la falta de datos, sino saber cómo convertirlos en información y conocimiento.&lt;/p&gt;</description>
       
     </item>
