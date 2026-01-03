@@ -1,1 +1,0 @@
-Toma de decisiones basada en la evidencia | R, Python, Power BI, SQL
