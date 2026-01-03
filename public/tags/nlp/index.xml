@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Carolina Cornejo Castellano</title>
+    <link>http://localhost:1313/tags/nlp/</link>
+    <description>Recent content in NLP on Carolina Cornejo Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</managingEditor>
+    <webMaster>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</webMaster>
+    <copyright>© 2026 Carolina Cornejo Castellano</copyright>
+    <lastBuildDate>Wed, 31 Dec 2025 11:00:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cavero — Análisis de sentimiento en tweets</title>
+      <link>http://localhost:1313/posts/cavero-tweets-sentiment/</link>
+      <pubDate>Wed, 31 Dec 2025 11:00:00 +0100</pubDate>
+      <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
+      <guid>http://localhost:1313/posts/cavero-tweets-sentiment/</guid>
+      <description>Recopilación y clasificación de tweets para analizar sentimiento sobre figuras públicas.</description>
+      
+    </item>
+    
+    <item>
+      <title>Palabras que se las lleva el viento</title>
+      <link>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</link>
+      <pubDate>Wed, 31 Dec 2025 10:15:00 +0100</pubDate>
+      <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
+      <guid>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</guid>
+      <description>Análisis de discurso y frecuencia de términos en colecciones de textos.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

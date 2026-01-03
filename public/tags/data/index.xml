@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Carolina Cornejo Castellano</title>
+    <link>http://localhost:1313/tags/data/</link>
+    <description>Recent content in Data on Carolina Cornejo Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</managingEditor>
+    <webMaster>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</webMaster>
+    <copyright>© 2026 Carolina Cornejo Castellano</copyright>
+    <lastBuildDate>Wed, 31 Dec 2025 10:45:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How Americans Spend Their Money — Data Exploration</title>
+      <link>http://localhost:1313/posts/how-americans-spend-their-money/</link>
+      <pubDate>Wed, 31 Dec 2025 10:45:00 +0100</pubDate>
+      <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
+      <guid>http://localhost:1313/posts/how-americans-spend-their-money/</guid>
+      <description>Exploración de datos de consumo y patrones de gasto en Estados Unidos.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

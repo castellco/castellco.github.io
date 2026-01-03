@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terrorismo on Carolina Cornejo Castellano</title>
+    <link>http://localhost:1313/tags/terrorismo/</link>
+    <description>Recent content in Terrorismo on Carolina Cornejo Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</managingEditor>
+    <webMaster>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</webMaster>
+    <copyright>© 2026 Carolina Cornejo Castellano</copyright>
+    <lastBuildDate>Wed, 31 Dec 2025 10:00:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/terrorismo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>La geografía del terrorismo</title>
+      <link>http://localhost:1313/posts/geografia-terrorismo-peru/</link>
+      <pubDate>Wed, 31 Dec 2025 10:00:00 +0100</pubDate>
+      <author>cor [punto] castellano [arroba] gmail [punto] com (Carolina Cornejo Castellano)</author>
+      <guid>http://localhost:1313/posts/geografia-terrorismo-peru/</guid>
+      <description>Análisis espacial de incidentes y patrones de violencia en Perú usando datos públicos.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
