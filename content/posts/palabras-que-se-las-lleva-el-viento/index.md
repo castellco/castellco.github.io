@@ -1,7 +1,7 @@
 ---
 title: "Palabras que se las lleva el viento"
 date: 2025-12-31T10:15:00+01:00
-draft: false
+draft: true
 summary: "Análisis de discurso y frecuencia de términos en colecciones de textos."
 tags: ["texto","NLP","análisis"]
 ---

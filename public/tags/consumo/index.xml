@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Consumo on Carolina Cornejo Castellano</title>
-    <link>https://castellco.github.io/tags/consumo/</link>
+    <link>http://localhost:1313/tags/consumo/</link>
     <description>Recent content in Consumo on Carolina Cornejo Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
     <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
-    <lastBuildDate>Wed, 31 Dec 2025 10:45:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/consumo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Dec 2025 10:45:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/consumo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How Americans Spend Their Money — Data Exploration</title>
-      <link>https://castellco.github.io/posts/how-americans-spend-their-money/</link>
+      <link>http://localhost:1313/posts/how-americans-spend-their-money/</link>
       <pubDate>Wed, 31 Dec 2025 10:45:00 +0100</pubDate>
       <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/how-americans-spend-their-money/</guid>
+      <guid>http://localhost:1313/posts/how-americans-spend-their-money/</guid>
       <description>Exploración de datos de consumo y patrones de gasto en Estados Unidos.</description>
       
     </item>

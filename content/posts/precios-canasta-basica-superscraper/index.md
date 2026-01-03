@@ -1,7 +1,7 @@
 ---
 title: "Precios: Canasta básica — Superscraper"
 date: 2025-12-31T11:15:00+01:00
-draft: false
+draft: true
 summary: "Sistema para recolectar y consolidar precios de supermercados a gran escala."
 tags: ["scraper","precios","economía"]
 ---

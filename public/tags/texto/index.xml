@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Texto on Carolina Cornejo Castellano</title>
-    <link>https://castellco.github.io/tags/texto/</link>
+    <link>http://localhost:1313/tags/texto/</link>
     <description>Recent content in Texto on Carolina Cornejo Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
     <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
-    <lastBuildDate>Wed, 31 Dec 2025 10:15:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/texto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Dec 2025 10:15:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/texto/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Palabras que se las lleva el viento</title>
-      <link>https://castellco.github.io/posts/palabras-que-se-las-lleva-el-viento/</link>
+      <link>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</link>
       <pubDate>Wed, 31 Dec 2025 10:15:00 +0100</pubDate>
       <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/palabras-que-se-las-lleva-el-viento/</guid>
+      <guid>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</guid>
       <description>Análisis de discurso y frecuencia de términos en colecciones de textos.</description>
       
     </item>

@@ -1,7 +1,7 @@
 ---
 title: "Cavero — Análisis de sentimiento en tweets"
 date: 2025-12-31T11:00:00+01:00
-draft: false
+draft: true
 summary: "Recopilación y clasificación de tweets para analizar sentimiento sobre figuras públicas."
 tags: ["NLP","tweets","sentimiento"]
 ---

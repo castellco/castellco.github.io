@@ -3,256 +3,256 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://castellco.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-12-31T11:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/"
+      href="http://localhost:1313/en/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/"
+      href="http://localhost:1313/"
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/econom%C3%ADa/</loc>
+    <loc>http://localhost:1313/tags/econom%C3%ADa/</loc>
     <lastmod>2025-12-31T11:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/precios/</loc>
+    <loc>http://localhost:1313/tags/precios/</loc>
     <lastmod>2025-12-31T11:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/precios-canasta-basica-superscraper/</loc>
+    <loc>http://localhost:1313/posts/precios-canasta-basica-superscraper/</loc>
     <lastmod>2025-12-31T11:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/scraper/</loc>
+    <loc>http://localhost:1313/tags/scraper/</loc>
     <lastmod>2025-12-31T11:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-12-31T11:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/tags/"
+      href="http://localhost:1313/en/tags/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/tags/"
+      href="http://localhost:1313/tags/"
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/cavero-tweets-sentiment/</loc>
+    <loc>http://localhost:1313/posts/cavero-tweets-sentiment/</loc>
     <lastmod>2025-12-31T11:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/nlp/</loc>
+    <loc>http://localhost:1313/tags/nlp/</loc>
     <lastmod>2025-12-31T11:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/sentimiento/</loc>
+    <loc>http://localhost:1313/tags/sentimiento/</loc>
     <lastmod>2025-12-31T11:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/tweets/</loc>
+    <loc>http://localhost:1313/tags/tweets/</loc>
     <lastmod>2025-12-31T11:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/consumo/</loc>
+    <loc>http://localhost:1313/tags/consumo/</loc>
     <lastmod>2025-12-31T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/data/</loc>
+    <loc>http://localhost:1313/tags/data/</loc>
     <lastmod>2025-12-31T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/estad%C3%ADsticas/</loc>
+    <loc>http://localhost:1313/tags/estad%C3%ADsticas/</loc>
     <lastmod>2025-12-31T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/how-americans-spend-their-money/</loc>
+    <loc>http://localhost:1313/posts/how-americans-spend-their-money/</loc>
     <lastmod>2025-12-31T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/deportes/</loc>
+    <loc>http://localhost:1313/tags/deportes/</loc>
     <lastmod>2025-12-31T10:30:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/euro-2024-scraper/</loc>
+    <loc>http://localhost:1313/posts/euro-2024-scraper/</loc>
     <lastmod>2025-12-31T10:30:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/an%C3%A1lisis/</loc>
+    <loc>http://localhost:1313/tags/an%C3%A1lisis/</loc>
     <lastmod>2025-12-31T10:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/palabras-que-se-las-lleva-el-viento/</loc>
+    <loc>http://localhost:1313/posts/palabras-que-se-las-lleva-el-viento/</loc>
     <lastmod>2025-12-31T10:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/texto/</loc>
+    <loc>http://localhost:1313/tags/texto/</loc>
     <lastmod>2025-12-31T10:15:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/geograf%C3%ADa/</loc>
+    <loc>http://localhost:1313/tags/geograf%C3%ADa/</loc>
     <lastmod>2025-12-31T10:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/gis/</loc>
+    <loc>http://localhost:1313/tags/gis/</loc>
     <lastmod>2025-12-31T10:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/geografia-terrorismo-peru/</loc>
+    <loc>http://localhost:1313/posts/geografia-terrorismo-peru/</loc>
     <lastmod>2025-12-31T10:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/per%C3%BA/</loc>
+    <loc>http://localhost:1313/tags/per%C3%BA/</loc>
     <lastmod>2025-12-31T10:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/terrorismo/</loc>
+    <loc>http://localhost:1313/tags/terrorismo/</loc>
     <lastmod>2025-12-31T10:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/cv/</loc>
+    <loc>http://localhost:1313/cv/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/cv/"
+      href="http://localhost:1313/en/cv/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/cv/"
+      href="http://localhost:1313/cv/"
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/proyectos/</loc>
+    <loc>http://localhost:1313/proyectos/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-03-13T20:55:37+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/acerca-de/</loc>
+    <loc>http://localhost:1313/acerca-de/</loc>
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/acerca-de/"
+      href="http://localhost:1313/en/acerca-de/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/acerca-de/"
+      href="http://localhost:1313/acerca-de/"
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/authors/</loc>
+    <loc>http://localhost:1313/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/authors/"
+      href="http://localhost:1313/en/authors/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/authors/"
+      href="http://localhost:1313/authors/"
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/categories/"
+      href="http://localhost:1313/en/categories/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/categories/"
+      href="http://localhost:1313/categories/"
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://castellco.github.io/en/series/"
+      href="http://localhost:1313/en/series/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://castellco.github.io/series/"
+      href="http://localhost:1313/series/"
     />
   </url>
 </urlset>

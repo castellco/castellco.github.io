@@ -1,7 +1,7 @@
 ---
 title: "La geografía del terrorismo"
 date: 2025-12-31T10:00:00+01:00
-draft: false
+draft: true
 summary: "Análisis espacial de incidentes y patrones de violencia en Perú usando datos públicos."
 tags: ["geografía","terrorismo","Perú","GIS"]
 ---

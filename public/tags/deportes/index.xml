@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deportes on Carolina Cornejo Castellano</title>
-    <link>https://castellco.github.io/tags/deportes/</link>
+    <link>http://localhost:1313/tags/deportes/</link>
     <description>Recent content in Deportes on Carolina Cornejo Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
     <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
-    <lastBuildDate>Wed, 31 Dec 2025 10:30:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/deportes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Dec 2025 10:30:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/deportes/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Euro 2024 — Scraper de resultados y estadísticas</title>
-      <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
+      <link>http://localhost:1313/posts/euro-2024-scraper/</link>
       <pubDate>Wed, 31 Dec 2025 10:30:00 +0100</pubDate>
       <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
+      <guid>http://localhost:1313/posts/euro-2024-scraper/</guid>
       <description>Scraper y pipeline para recolectar resultados, alinearlos y publicar estadísticas en tiempo diferido.</description>
       
     </item>

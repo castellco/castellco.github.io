@@ -1,7 +1,7 @@
 ---
 title: "Proyectos"
 date: 2025-12-26
-draft: false
+draft: true
 
 showDate : false
 showDateOnlyInArticle : false

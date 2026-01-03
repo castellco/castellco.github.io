@@ -1,7 +1,7 @@
 ---
 title: "How Americans Spend Their Money — Data Exploration"
 date: 2025-12-31T10:45:00+01:00
-draft: false
+draft: true
 summary: "Exploración de datos de consumo y patrones de gasto en Estados Unidos."
 tags: ["data","consumo","estadísticas"]
 ---
