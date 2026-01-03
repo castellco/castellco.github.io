@@ -21,21 +21,25 @@
   weight = 20
 
 [[main]]
-  name = "LinkedIn"
-  url = "https://www.linkedin.com/in/cornejocastellano"
-  weight = 30
-
-[[main]]
   name = "CV"
   pageRef = "cv"
-  weight = 40
+  weight = 30
 
 [[main]]
   name = "Tags"
   pageRef = "tags"
+  weight = 40
+
+[[main]]
+  pre = "linkedin"
+  url = "https://www.linkedin.com/in/cornejocastellano/"
   weight = 50
 
-
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/castellco/"
+  weight = 60
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

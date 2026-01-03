@@ -18,7 +18,7 @@ enableStructuredBreadcrumbs = true
 
 replyByEmail = false
 
-# mainSections = ["posts"]
+mainSections = ["posts"]
 # robots = ""
 
 
@@ -28,7 +28,7 @@ disableTextInHeader = false # que aparezca el nombre al lado del icon
 # backgroundImageWidth = 1200
 
 defaultFeaturedImage = "/img/defaultFeatured.jpg"
-defaultBackgroundImage = "/img/defaultBackground.png"
+# defaultBackgroundImage = "/img/defaultBackground.png"
 # defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 hotlinkFeatureImage = false
 # imagePosition = "50% 50%"
