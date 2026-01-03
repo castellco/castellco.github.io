@@ -28,7 +28,7 @@ disableTextInHeader = false # que aparezca el nombre al lado del icon
 # backgroundImageWidth = 1200
 
 defaultFeaturedImage = "/img/defaultFeatured.jpg"
-# defaultBackgroundImage = "/img/defaultBackground.png"
+defaultBackgroundImage = "/img/defaultBackground.png"
 # defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 hotlinkFeatureImage = false
 # imagePosition = "50% 50%"
@@ -53,15 +53,15 @@ smartTOCHideUnfocusedChildren = true
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
+  layout = "profile" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "/img/defaultBackground.png" # used in: hero, and card
   showRecent = true
   showRecentItems = 18
   showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # only used when layout equals background
+  # layoutBackgroundBlur = true # only used when layout equals background
   disableHeroImageFilter = false # only used when layout equals hero
 
 [article]

@@ -3,111 +3,111 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://castellco.github.io/en/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/"
+      href="https://castellco.github.io/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/"
+      href="https://castellco.github.io/en/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/cv/</loc>
+    <loc>https://castellco.github.io/en/cv/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/cv/"
+      href="https://castellco.github.io/cv/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/cv/"
+      href="https://castellco.github.io/en/cv/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/acerca-de/</loc>
+    <loc>https://castellco.github.io/en/acerca-de/</loc>
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/acerca-de/"
+      href="https://castellco.github.io/acerca-de/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/acerca-de/"
+      href="https://castellco.github.io/en/acerca-de/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/authors/</loc>
+    <loc>https://castellco.github.io/en/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/authors/"
+      href="https://castellco.github.io/authors/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/authors/"
+      href="https://castellco.github.io/en/authors/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>https://castellco.github.io/en/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/categories/"
+      href="https://castellco.github.io/categories/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/categories/"
+      href="https://castellco.github.io/en/categories/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/series/</loc>
+    <loc>https://castellco.github.io/en/series/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/series/"
+      href="https://castellco.github.io/series/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/series/"
+      href="https://castellco.github.io/en/series/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://castellco.github.io/en/tags/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:1313/tags/"
+      href="https://castellco.github.io/tags/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/"
+      href="https://castellco.github.io/en/tags/"
     />
   </url>
 </urlset>
