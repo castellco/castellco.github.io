@@ -1,7 +1,7 @@
 ---
 title: "Web Scraping de la EURO 2024 con Python"
 date: 2025-12-31T10:30:00+01:00
-draft: false
+draft: true
 summary: "Tutorial de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024."
 tags: ["web scraping","fútbol","python"]
 ---
@@ -68,7 +68,4 @@ df.head()
 **Código**
 
 Repositorio: https://github.com/castellco/euro_2024_scraper
-
-Puedo, si quieres, exportar un CSV de ejemplo desde ese repo, incrustar la imagen local en la entrada, o añadir fragmentos del notebook.
-
 
