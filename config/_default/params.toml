@@ -28,7 +28,7 @@ disableTextInHeader = false # que aparezca el nombre al lado del icon
 # backgroundImageWidth = 1200
 
 defaultFeaturedImage = "/img/defaultFeatured.jpg"
-defaultBackgroundImage = "/img/defaultBackground.png"
+defaultBackgroundImage = "/img/basicHero.png"
 # defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 hotlinkFeatureImage = false
 # imagePosition = "50% 50%"
@@ -54,7 +54,7 @@ smartTOCHideUnfocusedChildren = true
 
 [homepage]
   layout = "profile" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "/img/defaultBackground.png" # used in: hero, and card
+  homepageImage = "/img/basicHero.png" # used in: hero, and card
   showRecent = true
   showRecentItems = 18
   showMoreLink = true
@@ -72,8 +72,8 @@ smartTOCHideUnfocusedChildren = true
   showDateUpdated = false
   showAuthor = true
   # showAuthorBottom = false
-  showHero = true
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showHero = false
+  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
   showBreadcrumbs = true
@@ -97,8 +97,8 @@ smartTOCHideUnfocusedChildren = true
   showZenMode = false
 
 [list]
-  showHero = true
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showHero = false
+  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
   showBreadcrumbs = false
@@ -118,8 +118,8 @@ smartTOCHideUnfocusedChildren = true
 
 [taxonomy]
   showTermCount = true
-  showHero = true
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showHero = false
+  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false
@@ -127,7 +127,7 @@ smartTOCHideUnfocusedChildren = true
   cardView = false
 
 [term]
-  showHero = true
+  showHero = false
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
