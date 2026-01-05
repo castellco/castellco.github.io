@@ -19,46 +19,6 @@
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/deportes/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/estad%C3%ADsticas/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/posts/euro-2024-scraper/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/scraper/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://castellco.github.io/en/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="es"
-      href="https://castellco.github.io/tags/"
-    />
-  </url>
-  <url>
     <loc>https://castellco.github.io/cv/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -139,6 +99,21 @@
       rel="alternate"
       hreflang="es"
       href="https://castellco.github.io/series/"
+    />
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/tags/"
     />
   </url>
 </urlset>
