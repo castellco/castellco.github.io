@@ -1,5 +1,5 @@
 ---
-title: "Web Scraping con Python: Estadísticas de la Euro 2024"
+title: "Web Scraping con Python: La Euro 2024"
 date: 2025-12-31T10:30:00+01:00
 draft: false
 summary: "Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024."
@@ -110,6 +110,10 @@ La primera función, `extract_name_and_teams()`, extrae el nombre completo del j
 
 La función `extract_list_with_xpath(labels_xpath)` toma un XPath como argumento y devuelve una lista de textos de los elementos que coinciden con ese XPath. Esto se usa para extraer tanto las etiquetas como las cifras de las secciones de "overview" y "statistics".
 
+`open_accordions` es una función que abre las secciones colapsables (acordeones) en la pestaña de estadísticas del jugador para asegurarse de que todos los datos estén visibles y accesibles para la extracción.
+
+Finalmente, `update_dataset(dataset)` toma el dataset actual y agrega una nueva fila con los datos del jugador actual. Esta función maneja la normalización de columnas entre distintos jugadores, evitando duplicados y asegurando que todas las filas tengan las mismas columnas, incluso si algunos jugadores no tienen ciertos datos. Esta función es mejorable por los tantos `if/elif` anidados, pero en el momento sirvió para el propósito. Un punto de mejora es simplificar los casos en los que ciertos jugadores tienen más o menos columnas que otros.
+
 ```python
 # 3: define main functions ------------------------------------------------
 def extract_name_and_teams():
@@ -212,26 +216,77 @@ def update_dataset(dataset):
 
     return dataset
 ```
+### Ejecución del scraper
 
-`extract_name_and_teams()`: obtiene nombre del jugador, selección y club usando selectores CSS/XPath robustos (con `try/except`).
-	- `extract_list_with_xpath(xpath)`: devuelve listas de etiquetas o valores a partir de un XPath (se usa para overview y estadísticas).
-	- `open_accordions()`: abre las secciones colapsables de la ficha de estadísticas para exponer todos los valores.
-	- `update_dataset(dataset)`: normaliza columnas entre distintos jugadores, evita duplicados y concatena filas al `DataFrame` central manejando tres casos: columnas iguales, más columnas, o menos columnas.
+Ahora, se ejecuta el scraper. Este es el paso que demora más, ya que hay muchos países y jugadores, y por los tiempos de espera que añadí por las razones que comenté párrafos arriba.
 
-### Recorrido por selecciones y obtención de jugadores
-	- Navegar la lista de países (recorrer índices de los radio buttons que representan selecciones).
-	- Para cada país: seleccionar la fase del torneo (TOURNAMENT), seleccionar el país, hacer `scroll_to_sponsors()` varias veces y buscar los enlaces de jugadores; extraer sus `player_id` desde las URLs con una expresión regular.
+La lógica es iterar sobre cada país participante (del 2 al 54 en el acordeón de selección de países) y luego sobre cada jugador listado para ese país. Para próximaas ediciones, el range podría cambiar. 
 
-### Extracción por jugador
-	- Para cada `player_id`: abrir la página de perfil del jugador y extraer `name`, `national_team`, `club` y los `overview` (etiquetas y cifras iniciales).
-	- Navegar a la pestaña `/statistics/`, ejecutar `open_accordions()` y usar `extract_list_with_xpath()` para leer `stats_labels` y `stats_figures`.
-	- Llamar a `update_dataset()` para combinar `overview` + `stats` en una sola fila y anexarla al `DataFrame` maestro.
+Por cada jugador, se extraen los datos usando las funciones definidas previamente y se actualiza el dataset.
 
-### Robustez y logging
-	- El notebook usa `time.sleep()` entre acciones para dar tiempo a la carga dinámica y captura excepciones para saltar jugadores o selecciones vacías.
-	- Imprime mensajes de estado (p. ej. "Condition met: dataset.empty", IDs procesadas) que ayudan a depurar el proceso.
+```python
+# 4: scraping work: iterate over each country and each player -------------
+for i in range(2, 55): 
+    # open main site
+    driver.get("https://www.uefa.com/european-qualifiers/statistics/players/")
+    # select main tournament (excluding qualiying)
+    time.sleep(2)
+    try:
+        main_tournament = driver.find_element(By.XPATH, '//pk-accordion-item[1]/pk-accordion-item-content/pk-radio/pk-radio-option[1]')
+        time.sleep(2)
+        main_tournament.click()
+        time.sleep(2)
+    except:
+        main_tournament = driver.find_element(By.XPATH, '//input[@class="pk-radio" and @name="phase" and @title="phase" and @type="radio" and @id="tournament" and @value="TOURNAMENT" and @part="input"]')
+        time.sleep(2)
+        main_tournament.click()
+        time.sleep(2)
+    # select country
+    xpath_country = '//pk-accordion-item[2]/pk-accordion-item-content/div/pk-radio/pk-radio-option[' + str(i) + ']/span'
+    select_country = driver.find_element(By.XPATH, xpath_country)
+    country_name = select_country.text
+    print('---------- Accessing info of ' + country_name + ' ----------')
+    time.sleep(2)
+    select_country.click() # select country
+    time.sleep(3)
+    # scroll down twice, as needed to discover the whole page
+    scroll_to_sponsors()
+    scroll_to_sponsors()
+    # gather all players' stats website links
+    try: 
+        player_xpath = '//a[contains(@class, "pk-w--100") and contains(@href, "/api/v1/linkrules/player/") and contains(@href, "/statistics?competitionId=3&phase=TOURNAMENT")]'
+        select_player = driver.find_elements(By.XPATH, player_xpath)
+    except:
+        print('Seems like the site of ' + country_name + ' is empty.')
+        continue
+    players_ids = []
+    for link in select_player:
+        href = link.get_attribute('href')
+        player_id = re.search(r'player/(\d+)/', href).group(1)
+        players_ids.append(player_id)
+    for player_id in players_ids:
+        time.sleep(2)
+        driver.get('https://www.uefa.com/euro2024/teams/players/' + player_id + '/')
+        print('---------- Working on player whose ID is ' + player_id + ' -------------')
+        time.sleep(2)
+        name, national_team, club = extract_name_and_teams()
+        overview_labels = extract_list_with_xpath('//span[@class="player-profile-category"]')
+        overview_figures = extract_list_with_xpath('//span[@class="player-profile-value"]')
+        print(overview_labels)
+        print(overview_figures)
+        time.sleep(2)
+        driver.get('https://www.uefa.com/euro2024/teams/players/' + player_id + '/statistics/')
+        time.sleep(2)
+        scroll_to_sponsors()
+        open_accordions()
+        stats_labels = extract_list_with_xpath('//div[@slot="stat-label"]')
+        stats_figures = extract_list_with_xpath('//div[@slot="stat-value"]')
+        print(stats_labels)
+        print(stats_figures)
+        dataset = update_dataset(dataset)
+        print('---------- End of process for player whose ID is ' + player_id + ' ----------')
+        time.sleep(2)
+```
+Al final esta sección, se obtiene un dataset (en mi caso, una tabla de 621x66).
 
-## Dataset final
-	- El output es un `pandas.DataFrame` con columnas dinámicas según las métricas encontradas por jugador. El notebook no exporta automáticamente todos los dumps, pero muestra cómo usar `df.to_csv()` o `pd.read_json()` para persistir/recuperar los datos.
-
-
+El dataset publicado está en el repo en [Dagshub](https://dagshub.com/Omdena/TunisiaLocalChapter_UEFAEURO2024/src/906eefeacb49f4e8318dc8e6f890c26b726880bb/Datasets/players_stats_uefa_scraper.csv).

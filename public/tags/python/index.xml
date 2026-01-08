@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Carolina Cornejo Castellano</title>
+    <link>https://castellco.github.io/tags/python/</link>
+    <description>Recent content in Python on Carolina Cornejo Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
+    <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
+    <copyright>© 2026 Carolina Cornejo Castellano</copyright>
+    <lastBuildDate>Wed, 31 Dec 2025 10:30:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Web Scraping con Python: La Euro 2024</title>
+      <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
+      <pubDate>Wed, 31 Dec 2025 10:30:00 +0100</pubDate>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
+      <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
+      <description>Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://castellco.github.io/posts/euro-2024-scraper/featured.gif" />
+    </item>
+    
+  </channel>
+</rss>

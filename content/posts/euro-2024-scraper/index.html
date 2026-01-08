@@ -1,0 +1,261 @@
+---
+title: "Web Scraping con Python: Estadísticas de la Euro 2024"
+date: 2025-12-31T10:30:00+01:00
+draft: false
+summary: "Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024."
+categories:
+tags: ["web scraping","fútbol","python"]
+featuredImage: "/posts/euro-2024-scraper/featured.gif"
+---
+
+
+
+<div class="float">
+<img src="https://raw.githubusercontent.com/castellco/euro_2024_scraper/main/showcase.gif" alt="showcase" />
+<div class="figcaption">showcase</div>
+</div>
+<p>En este post explicaré cómo construí un scraper en Python para recolectar las estadísticas de los jugadores de la Euro 2024 desde la web oficial de la UEFA.</p>
+<div id="por-qué" class="section level2">
+<h2>¿Por qué?</h2>
+<p>Entre junio y julio del 2024 tuvo lugar la EURO 2024. En ese contexto, participé de un reto del chapter local de <a href="https://www.omdena.com/">Omdena</a> en Tunisia: <em><a href="https://www.omdena.com/chapter-challenges/leveraging-machine-learning-and-open-datasets-for-advanced-sports-analytics">UEFA EURO 2024 - Leveraging Machine Learning and Open Data Sets for Advanced Sports Analytics</a></em>. El propósito era analizar este evento en lo deportivo y lo económico. Si bien nos quedamos cortos en este último aspecto, fue un espacio interesante para aplicar técnicas de ciencia de datos al mundo del fútbol.</p>
+<p>Así, varios colegas se dispusieron a buscar datasets ya existentes: estadísticas de cada partido, datasets históricos o lo que haya. Cuando visité <a href="https://www.uefa.com/european-qualifiers/statistics/players/">la página de la EURO</a>, vi que era posible scrapearla para generar un dataset.</p>
+<p>A modo de documentación de ese ejercicio, en este post resumo la lógica detrás del scraper en Python + Selenium que hice y que extrae las estadísticas de jugadores desde la web de la UEFA y las prepara en un <code>pandas.DataFrame</code> para análisis exploratorio y modelado.</p>
+</div>
+<div id="resumen-técnico" class="section level2">
+<h2>Resumen técnico</h2>
+<p>El objetivo principal es automatizar la recolección de datos de los jugadores de la <a href="https://www.uefa.com/european-qualifiers/statistics/players/">EURO</a> a falta de acceso a una API oficial. El output debía ser un dataset en formato tabular.</p>
+<p>Usé Python por ser el lenguaje de preferencia en los proyectos de Omdena en los que he participado, aunque también R hubiera servido. La librería principal fue <code>Selenium</code>, que permite controlar el navegador web (en mi caso, Chrome) para interactuar con páginas dinámicas que cargan contenido vía JavaScript.</p>
+<p>Hacia los meses que hice este scraper, los términos y condiciones de la web de la UEFA permitían el web scraping para fines no comerciales. Recomiendo revisar los términos actuales antes de ejecutar cualquier scraper.</p>
+</div>
+<div id="pasos" class="section level2">
+<h2>Pasos</h2>
+<p>El scraper, que es open source, está disponible en GitHub:</p>
+<p>{{&lt; github repo=“castellco/euro_2024_scraper” &gt;}}</p>
+<p>Las condiciones previas son tener conexión a internet, Python 3.8+ instalado y las librerías necesarias (ver <code>requirements.txt</code> en el repo).</p>
+<p>Básicamente, los pasos para ejecutarlo son:</p>
+<div id="preparar-del-entorno" class="section level3">
+<h3>Preparar del entorno</h3>
+<p>Primero se importan las librerías necesarias e instala el driver de Chrome automáticamente con <code>webdriver_manager</code>. Luego, se configuran las opciones del navegador Chrome (p. ej. <code>--start-maximized</code>). Esto es para que se ejecute Chrome en modo gráfico y no headless —ya que algunas tablas no cargan bien en modo headless— y también por una preferencia personal: prefiero ver lo que hace el scraper en tiempo real.</p>
+<pre class="python"><code># 1: import libraries -----------------------------------------------------
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service 
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
+import pandas as pd
+import re
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument(&quot;--start-maximized&quot;)</code></pre>
+</div>
+<div id="abrir-la-web-y-preparar-la-página" class="section level3">
+<h3>Abrir la web y preparar la página</h3>
+<p>Posteriormente, se instala e inicia el <code>webdriver.Chrome(...)</code> y se carga la página <code>https://www.uefa.com/european-qualifiers/statistics/players/</code>.</p>
+<pre class="python"><code># 2: enter website, reject cookies and define function to scroll ----------
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+driver.get(&quot;https://www.uefa.com/european-qualifiers/statistics/players/&quot;)</code></pre>
+<p>Esperamos 2 segundos. Como se podrá apreciar, a lo largo del script usé varias pausas con <code>time.sleep()</code> para dar tiempo a que la página cargue dinámicamente y para, en teoría, evitar bloqueos por parte del servidor web. Luego, para indicarle a Selenium qué lugar de la página clickear para rechazar las cookies, uso un CSS selector que apunta al botón de cookies ya que no me fue posible identificar el XPath.</p>
+<p>En este punto, es importante comentar que para identificar CSS selectors, la extensión de Chrome <a href="https://chromewebstore.google.com/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=en-US">SelectorGadget</a> siempre me ha parecido excelente.</p>
+<p>Rechazadas ya las cookies, definí la función <code>scroll_to_sponsors()</code> para desplazar la página hacia abajo y con ello forzar la carga completa de la tabla dinámica de jugadores. En específico, esta función busca el banner de sponsors (que en ese entonces estaba al final de la página) usando su XPath y desplaza la vista hasta ese elemento. Esto es necesario porque la tabla de jugadores carga más filas a medida que se hace scroll hacia abajo. Necesitaba tener toda la tabla cargada.</p>
+<pre class="python"><code># define function to scroll down, in order to make rest of the table discoverable
+def scroll_to_sponsors():
+    try:
+        sponsors_xpath = &quot;//div[contains(text(), &#39;Official global sponsors&#39;)]&quot;
+        select_sponsors_banner = driver.find_element(By.XPATH, sponsors_xpath)
+        ActionChains(driver)\
+            .scroll_to_element(select_sponsors_banner)\
+            .perform()
+        time.sleep(2)
+    except:
+        try:
+            sponsors_xpath = &#39;//div[@class=&quot;pk-container pk-bg--background lazyloaded&quot; and @role=&quot;region&quot; and @pk-theme=&quot;light&quot; and @aria-label=&quot;&quot;]&#39;
+            select_sponsors_banner = driver.find_element(By.XPATH, sponsors_xpath)
+            ActionChains(driver)\
+                .scroll_to_element(select_sponsors_banner)\
+                .perform()
+            time.sleep(2)
+        except: 
+            print(&quot;The scroll_to_sponsors function didn&#39;t work.&quot;)
+            time.sleep(2)</code></pre>
+<p>También creé un dataset vacío con <code>pandas.DataFrame()</code> y varias listas vacías para almacenar los datos de cada jugador mientras se itera sobre ellos.</p>
+<pre class="python"><code># will need these later:
+dataset = pd.DataFrame()
+name, national_team, club, overview_figures, overview_labels, stats_figures, stats_labels = [], [], [], [], [], [], []</code></pre>
+</div>
+<div id="definir-funciones-auxiliares-de-extracción" class="section level3">
+<h3>Definir funciones auxiliares de extracción</h3>
+<p>Luego, definí varias funciones auxiliares para extraer datos específicos de la página. Esta parte fue la que, de lejos, me demandó más tiempo y esfuerzo. Fue prueba y error. Recozco que hay muchas cosas mejorables, pero el objetivo era tener un scraper funcional en un tiempo razonable.</p>
+<p>La primera función, <code>extract_name_and_teams()</code>, extrae el nombre completo del jugador, su selección nacional y su club actual. Usé varios <code>try/except</code> para manejar casos donde algún dato no esté disponible o el selector falle.Nuevamente usé CSS selectors y XPath para localizar los elementos gracias a la extensión <em>SelectorGadget</em>.</p>
+<p>La función <code>extract_list_with_xpath(labels_xpath)</code> toma un XPath como argumento y devuelve una lista de textos de los elementos que coinciden con ese XPath. Esto se usa para extraer tanto las etiquetas como las cifras de las secciones de “overview” y “statistics”.</p>
+<p><code>open_accordions</code> es una función que abre las secciones colapsables (acordeones) en la pestaña de estadísticas del jugador para asegurarse de que todos los datos estén visibles y accesibles para la extracción.</p>
+<p>Finalmente, <code>update_dataset(dataset)</code> toma el dataset actual y agrega una nueva fila con los datos del jugador actual. Esta función maneja la normalización de columnas entre distintos jugadores, evitando duplicados y asegurando que todas las filas tengan las mismas columnas, incluso si algunos jugadores no tienen ciertos datos. Esta función es mejorable por los tantos <code>if/elif</code> anidados, pero en el momento sirvió para el propósito. Un punto de mejora es simplificar los casos en los que ciertos jugadores tienen más o menos columnas que otros.</p>
+<pre class="python"><code># 3: define main functions ------------------------------------------------
+def extract_name_and_teams():
+    try:
+        name = driver.find_element(By.CSS_SELECTOR, &#39;.player-header__name--first&#39;).text + &#39; &#39; + driver.find_element(By.CSS_SELECTOR, &#39;.player-header__name--last&#39;).text
+        print(name)
+    except:
+        print(&#39;Player name and/or last name not found.&#39;)
+
+    try:
+        # national_team = driver.find_element(By.CSS_SELECTOR, &#39;.player-header__teams &gt; div:nth-child(1) &gt; a:nth-child(3) &gt; pk-identifier:nth-child(1) &gt; div:nth-child(2) &gt; span:nth-child(1)&#39;).text
+        # print(national_team)
+        national_team = driver.find_element(By.XPATH, &#39;//span[@class=&quot;player-header__team-name pk-text--text-01&quot;][1]&#39;).text
+        print(national_team)
+    except:
+        print(&#39;National team not found.&#39;)
+
+    try:
+        club = driver.find_element(By.CSS_SELECTOR, &#39;.player-header__teams &gt; div:nth-child(2) &gt; a:nth-child(3) &gt; pk-identifier:nth-child(1) &gt; div:nth-child(2) &gt; span:nth-child(1)&#39;).text
+        print(club)
+    except:
+        try:
+            print(&#39;Club not found. Trying another xpath...&#39;)
+            club = driver.find_element(By.XPATH, &#39;/html/body/div[3]/div/div/div[2]/div[3]/div[2]/div[2]/pk-identifier/div/div[1]/div[2]/pk-identifier/div/span&#39;).text
+            print(club)
+        except:
+            print(&#39;Club not found.&#39;)
+            club = &quot;&quot; 
+
+    return name, national_team, club
+
+def extract_list_with_xpath(labels_xpath):
+    if driver.find_elements(By.XPATH, &quot;//h2[contains(text(), &#39;Qualifying stats&#39;)]&quot;):
+        labels_text = []
+        print(&#39;Player only participated in qualifyings.&#39;)
+    else:
+        all_labels = driver.find_elements(By.XPATH, labels_xpath)
+        labels_text = [label.text for label in all_labels]
+    return labels_text
+
+def open_accordions():
+    for i in range(0, 6):
+        try: 
+            driver.find_element(By.CSS_SELECTOR, &#39;#accordion-item-&#39; + str(i) + &#39; &gt; pk-accordion-item-title:nth-child(1) &gt; h2:nth-child(1)&#39;).click()
+            time.sleep(2)
+        except: 
+            print(&#39;There are no more accordions to open.&#39;)
+            
+def update_dataset(dataset):
+    player_info = [name, national_team, club] + overview_figures
+    if stats_figures:
+        player_info += stats_figures
+    else:
+        player_info += [&quot;&quot;] * len(stats_figures)
+
+    if stats_labels:
+        columns = [&quot;name&quot;, &quot;national_team&quot;, &quot;club&quot;] + overview_labels + stats_labels
+    else:
+        columns = [&quot;name&quot;, &quot;national_team&quot;, &quot;club&quot;] + overview_labels
+
+    new_row = pd.DataFrame([player_info], columns=columns)
+    new_row = new_row.loc[:,~new_row.columns.duplicated()].copy()
+
+    dataset = dataset.loc[:,~dataset.columns.duplicated()].copy() 
+
+    if dataset.empty:
+        print(&quot;Condition met: dataset.empty&quot;)
+    elif len(dataset.columns) == len(columns):
+        print(&quot;Condition met: len(dataset.columns) == len(columns)&quot;)
+        try:
+            dataset = dataset[columns]
+        except:
+            print(&#39;Something went wrong when executing the if statement of the len(dataset.columns) == len(columns) condition in case of &#39; + name + &#39; from &#39; + national_team)
+    elif len(dataset.columns) &lt; len(columns):
+        print(&quot;Condition met: len(dataset.columns) &lt; len(columns)&quot;)
+        try: 
+            for column in columns:
+                if column not in dataset.columns:
+                    dataset[column] = &quot;&quot;
+                else:
+                    continue
+            dataset = dataset[new_row.columns]
+        except:
+            print(&#39;Something went wrong when executing the if statement of the len(dataset.columns) &lt; len(columns) condition in case of &#39; + name + &#39; from &#39; + national_team)
+    elif len(dataset.columns) &gt; len(columns):
+        print(&quot;Condition met: len(dataset.columns) &gt; len(columns)&quot;)
+        try: 
+            for column in dataset.columns:
+                if column not in columns:
+                    new_row[column] = &quot;&quot;
+                else:
+                    continue
+            new_row = new_row[dataset.columns]
+        except:
+            print(&#39;Something went wrong when executing the if statement of the len(dataset.columns) &gt; len(columns) condition in case of &#39; + name + &#39; from &#39; + national_team)
+    else:
+        print(&#39;Something went wrong when executing update_dataset function.&#39;)
+    
+    dataset = pd.concat([dataset, new_row], ignore_index=True)
+
+    return dataset</code></pre>
+</div>
+<div id="ejecución-del-scraper" class="section level3">
+<h3>Ejecución del scraper</h3>
+<p>Ahora, se ejecuta el scraper. Este es el paso que demora más, ya que hay muchos países y jugadores, y por los tiempos de espera que añadí por las razones que comenté párrafos arriba.</p>
+<p>La lógica es iterar sobre cada país participante (del 2 al 54 en el acordeón de selección de países) y luego sobre cada jugador listado para ese país. Para próximaas ediciones, el range podría cambiar.</p>
+<p>Por cada jugador, se extraen los datos usando las funciones definidas previamente y se actualiza el dataset.</p>
+<pre class="python"><code># 4: scraping work: iterate over each country and each player -------------
+for i in range(2, 55): 
+    # open main site
+    driver.get(&quot;https://www.uefa.com/european-qualifiers/statistics/players/&quot;)
+    # select main tournament (excluding qualiying)
+    time.sleep(2)
+    try:
+        main_tournament = driver.find_element(By.XPATH, &#39;//pk-accordion-item[1]/pk-accordion-item-content/pk-radio/pk-radio-option[1]&#39;)
+        time.sleep(2)
+        main_tournament.click()
+        time.sleep(2)
+    except:
+        main_tournament = driver.find_element(By.XPATH, &#39;//input[@class=&quot;pk-radio&quot; and @name=&quot;phase&quot; and @title=&quot;phase&quot; and @type=&quot;radio&quot; and @id=&quot;tournament&quot; and @value=&quot;TOURNAMENT&quot; and @part=&quot;input&quot;]&#39;)
+        time.sleep(2)
+        main_tournament.click()
+        time.sleep(2)
+    # select country
+    xpath_country = &#39;//pk-accordion-item[2]/pk-accordion-item-content/div/pk-radio/pk-radio-option[&#39; + str(i) + &#39;]/span&#39;
+    select_country = driver.find_element(By.XPATH, xpath_country)
+    country_name = select_country.text
+    print(&#39;---------- Accessing info of &#39; + country_name + &#39; ----------&#39;)
+    time.sleep(2)
+    select_country.click() # select country
+    time.sleep(3)
+    # scroll down twice, as needed to discover the whole page
+    scroll_to_sponsors()
+    scroll_to_sponsors()
+    # gather all players&#39; stats website links
+    try: 
+        player_xpath = &#39;//a[contains(@class, &quot;pk-w--100&quot;) and contains(@href, &quot;/api/v1/linkrules/player/&quot;) and contains(@href, &quot;/statistics?competitionId=3&amp;phase=TOURNAMENT&quot;)]&#39;
+        select_player = driver.find_elements(By.XPATH, player_xpath)
+    except:
+        print(&#39;Seems like the site of &#39; + country_name + &#39; is empty.&#39;)
+        continue
+    players_ids = []
+    for link in select_player:
+        href = link.get_attribute(&#39;href&#39;)
+        player_id = re.search(r&#39;player/(\d+)/&#39;, href).group(1)
+        players_ids.append(player_id)
+    for player_id in players_ids:
+        time.sleep(2)
+        driver.get(&#39;https://www.uefa.com/euro2024/teams/players/&#39; + player_id + &#39;/&#39;)
+        print(&#39;---------- Working on player whose ID is &#39; + player_id + &#39; -------------&#39;)
+        time.sleep(2)
+        name, national_team, club = extract_name_and_teams()
+        overview_labels = extract_list_with_xpath(&#39;//span[@class=&quot;player-profile-category&quot;]&#39;)
+        overview_figures = extract_list_with_xpath(&#39;//span[@class=&quot;player-profile-value&quot;]&#39;)
+        print(overview_labels)
+        print(overview_figures)
+        time.sleep(2)
+        driver.get(&#39;https://www.uefa.com/euro2024/teams/players/&#39; + player_id + &#39;/statistics/&#39;)
+        time.sleep(2)
+        scroll_to_sponsors()
+        open_accordions()
+        stats_labels = extract_list_with_xpath(&#39;//div[@slot=&quot;stat-label&quot;]&#39;)
+        stats_figures = extract_list_with_xpath(&#39;//div[@slot=&quot;stat-value&quot;]&#39;)
+        print(stats_labels)
+        print(stats_figures)
+        dataset = update_dataset(dataset)
+        print(&#39;---------- End of process for player whose ID is &#39; + player_id + &#39; ----------&#39;)
+        time.sleep(2)</code></pre>
+<p>Al final esta sección, se obtiene un dataset (en mi caso, una tabla de 621x66). Yo solo lo guardé con la extensión de Data Wrangler de VS Code, pero</p>
+</div>
+</div>

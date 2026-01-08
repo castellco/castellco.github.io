@@ -1,0 +1,15 @@
+---
+title: "Euro 2024 — Scraper"
+date: 2026-01-04
+execute:
+  echo: true
+  evaluate: true
+format: html
+---
+  
+Texto introductorio.
+
+```{python}
+# código Python del scraper (ejecutable al renderizar)
+import pandas as pd
+print("hola")
