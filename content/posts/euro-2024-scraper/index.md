@@ -1,7 +1,7 @@
 ---
 title: "Web Scraping con Python: La Euro 2024"
 date: 2025-12-31T10:30:00+01:00
-draft: false
+draft: true
 summary: "Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024."
 categories:
 tags: ["web scraping","fútbol","python"]
