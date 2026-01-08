@@ -1,7 +1,7 @@
 ---
 title: "Web Scraping con Python: La Euro 2024"
 date: 2025-12-31T10:30:00+01:00
-draft: true
+draft: false
 summary: "Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024."
 categories:
 tags: ["web scraping","fútbol","python"]
@@ -287,6 +287,6 @@ for i in range(2, 55):
         print('---------- End of process for player whose ID is ' + player_id + ' ----------')
         time.sleep(2)
 ```
-Al final esta sección, se obtiene un dataset (en mi caso, una tabla de 621x66).
+Al final esta sección, se obtiene un dataset: una tabla de 621x66.
 
 El dataset publicado está en el repo en [Dagshub](https://dagshub.com/Omdena/TunisiaLocalChapter_UEFAEURO2024/src/906eefeacb49f4e8318dc8e6f890c26b726880bb/Datasets/players_stats_uefa_scraper.csv).
