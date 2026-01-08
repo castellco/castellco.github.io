@@ -1317,7 +1317,7 @@
     "keywords": ["web scraping","fútbol","python"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1751"
+    "wordCount": "1816"
   },
   {
     "@context": "https://schema.org",
@@ -1914,7 +1914,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-31T10:30:00&#43;01:00">31 diciembre 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1751 palabras</span><span class="px-2 text-primary-500">&middot;</span><span title="Tiempo de lectura">9 mins</span>
+      <time datetime="2025-12-31T10:30:00&#43;01:00">31 diciembre 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1816 palabras</span><span class="px-2 text-primary-500">&middot;</span><span title="Tiempo de lectura">9 mins</span>
     
 
     
@@ -2113,6 +2113,7 @@
         <li><a href="#ejecución-del-scraper">Ejecución del scraper</a></li>
       </ul>
     </li>
+    <li><a href="#conclusión">Conclusión</a></li>
   </ul>
 </nav>
   </div>
@@ -2136,6 +2137,7 @@
         <li><a href="#ejecución-del-scraper">Ejecución del scraper</a></li>
       </ul>
     </li>
+    <li><a href="#conclusión">Conclusión</a></li>
   </ul>
 </nav>
   </div>
@@ -2611,8 +2613,18 @@
 </span></span><span class="line"><span class="cl">        <span class="n">dataset</span> <span class="o">=</span> <span class="n">update_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------- End of process for player whose ID is &#39;</span> <span class="o">+</span> <span class="n">player_id</span> <span class="o">+</span> <span class="s1">&#39; ----------&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></span></span></code></pre></div></div>
-<p>Al final esta sección, se obtiene un dataset (en mi caso, una tabla de 621x66).</p>
-<p>El dataset publicado está en el repo en <a href="https://dagshub.com/Omdena/TunisiaLocalChapter_UEFAEURO2024/src/906eefeacb49f4e8318dc8e6f890c26b726880bb/Datasets/players_stats_uefa_scraper.csv"  target="_blank">Dagshub</a>.</p>
+
+<h2 class="relative group">Conclusión
+    <div id="conclusión" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusi%c3%b3n" aria-label="Ancla">#</a>
+    </span>
+    
+</h2>
+<p>Al final de esta sección, se obtiene un dataset: una tabla de 621x66 que puede ser usada para diversos análisis de performance en el campo. Si bien es cierto que hay espacio de mejora en el código, el scraper cumplió su propósito y permitió recolectar datos valiosos para el reto de Omdena. Además, más allá de todo, fue una buena excusa para practicar web scraping y Python, ya que mi herramienta por defecto suele ser R.</p>
+<p>El dataset publicado está en el repo en <a href="https://github.com/castellco/euro_2024_scraper/blob/main/players_stats_uefa_2024-06-27.csv"  target="_blank">GitHub</a> y <a href="https://dagshub.com/Omdena/TunisiaLocalChapter_UEFAEURO2024/src/906eefeacb49f4e8318dc8e6f890c26b726880bb/Datasets/players_stats_uefa_scraper.csv"  target="_blank">Dagshub</a>.</p>
 
           
           

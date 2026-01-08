@@ -287,6 +287,10 @@ for i in range(2, 55):
         print('---------- End of process for player whose ID is ' + player_id + ' ----------')
         time.sleep(2)
 ```
-Al final esta sección, se obtiene un dataset: una tabla de 621x66.
 
-El dataset publicado está en el repo en [Dagshub](https://dagshub.com/Omdena/TunisiaLocalChapter_UEFAEURO2024/src/906eefeacb49f4e8318dc8e6f890c26b726880bb/Datasets/players_stats_uefa_scraper.csv).
+## Conclusión
+Al final de esta sección, se obtiene un dataset: una tabla de 621x66 que puede ser usada para diversos análisis de performance en el campo. Si bien es cierto que hay espacio de mejora en el código, el scraper cumplió su propósito y permitió recolectar datos valiosos para el reto de Omdena. Además, más allá de todo, fue una buena excusa para practicar web scraping y Python, ya que mi herramienta por defecto suele ser R.
+
+El dataset publicado está en el repo en [GitHub](
+https://github.com/castellco/euro_2024_scraper/blob/main/players_stats_uefa_2024-06-27.csv) y [Dagshub](https://dagshub.com/Omdena/TunisiaLocalChapter_UEFAEURO2024/src/906eefeacb49f4e8318dc8e6f890c26b726880bb/Datasets/players_stats_uefa_scraper.csv).
+
