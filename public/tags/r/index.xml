@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Carolina Cornejo Castellano</title>
+    <link>https://castellco.github.io/tags/r/</link>
+    <description>Recent content in R on Carolina Cornejo Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
+    <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
+    <copyright>© 2026 Carolina Cornejo Castellano</copyright>
+    <lastBuildDate>Tue, 20 May 2025 10:45:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo crear un bump chart profesional en R con ggplot2: guía completa paso a paso</title>
+      <link>https://castellco.github.io/posts/how-americans-spend-their-money/</link>
+      <pubDate>Tue, 20 May 2025 10:45:00 +0100</pubDate>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
+      <guid>https://castellco.github.io/posts/how-americans-spend-their-money/</guid>
+      <description>Aprende a crear bump charts profesionales en R usando ggplot2. Tutorial completo con código reproducible para visualizar rankings y cambios de posición entre categorías.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

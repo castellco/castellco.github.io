@@ -9,17 +9,7 @@
     <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
     <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
-    <lastBuildDate>Wed, 31 Dec 2025 10:30:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Web Scraping con Python: La Euro 2024</title>
-      <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
-      <pubDate>Wed, 31 Dec 2025 10:30:00 +0100</pubDate>
-      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
-      <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
-      <description>Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://castellco.github.io/posts/euro-2024-scraper/featured.gif" />
-    </item>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://castellco.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CV</title>
@@ -32,6 +22,26 @@
     </item>
     
     <item>
+      <title>La geografía del terrorismo</title>
+      <link>https://castellco.github.io/posts/geografia-terrorismo-peru/</link>
+      <pubDate>Mon, 07 Jul 2025 10:00:00 +0100</pubDate>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
+      <guid>https://castellco.github.io/posts/geografia-terrorismo-peru/</guid>
+      <description>Análisis espacial de incidentes y patrones de violencia en Perú usando datos públicos.</description>
+      
+    </item>
+    
+    <item>
+      <title>Cómo crear un bump chart profesional en R con ggplot2: guía completa paso a paso</title>
+      <link>https://castellco.github.io/posts/how-americans-spend-their-money/</link>
+      <pubDate>Tue, 20 May 2025 10:45:00 +0100</pubDate>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
+      <guid>https://castellco.github.io/posts/how-americans-spend-their-money/</guid>
+      <description>Aprende a crear bump charts profesionales en R usando ggplot2. Tutorial completo con código reproducible para visualizar rankings y cambios de posición entre categorías.</description>
+      
+    </item>
+    
+    <item>
       <title>Acerca de</title>
       <link>https://castellco.github.io/acerca-de/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
@@ -39,6 +49,16 @@
       <guid>https://castellco.github.io/acerca-de/</guid>
       <description>&lt;p&gt;Mi carrera comenzó en Perú, en investigación académica y proyectos de desarrollo, trabajando con personas y organizaciones que buscaban generar cambio real. Fue ahí donde descubrí que el problema rara vez era la falta de datos, sino saber cómo convertirlos en información y conocimiento.&lt;/p&gt;</description>
       
+    </item>
+    
+    <item>
+      <title>Web Scraping con Python: La Euro 2024</title>
+      <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
+      <pubDate>Thu, 02 Jan 2025 10:30:00 +0100</pubDate>
+      <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
+      <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
+      <description>Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://castellco.github.io/posts/euro-2024-scraper/featured.gif" />
     </item>
     
   </channel>

@@ -19,46 +19,6 @@
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/f%C3%BAtbol/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/python/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://castellco.github.io/en/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="es"
-      href="https://castellco.github.io/tags/"
-    />
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/web-scraping/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/posts/euro-2024-scraper/</loc>
-    <lastmod>2025-12-31T10:30:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://castellco.github.io/cv/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -73,6 +33,76 @@
       hreflang="es"
       href="https://castellco.github.io/cv/"
     />
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/geograf%C3%ADa/</loc>
+    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/gis/</loc>
+    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/posts/geografia-terrorismo-peru/</loc>
+    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/per%C3%BA/</loc>
+    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/</loc>
+    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://castellco.github.io/en/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://castellco.github.io/tags/"
+    />
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/terrorismo/</loc>
+    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/posts/how-americans-spend-their-money/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/dataviz/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/ggplot/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/r/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://castellco.github.io/posts/</loc>
@@ -95,6 +125,30 @@
       hreflang="es"
       href="https://castellco.github.io/acerca-de/"
     />
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/f%C3%BAtbol/</loc>
+    <lastmod>2025-01-02T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/python/</loc>
+    <lastmod>2025-01-02T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/tags/web-scraping/</loc>
+    <lastmod>2025-01-02T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://castellco.github.io/posts/euro-2024-scraper/</loc>
+    <lastmod>2025-01-02T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://castellco.github.io/authors/</loc>

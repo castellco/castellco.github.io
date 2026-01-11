@@ -9,12 +9,12 @@
     <managingEditor>cor.castellano@gmail.com (Carolina Cornejo Castellano)</managingEditor>
     <webMaster>cor.castellano@gmail.com (Carolina Cornejo Castellano)</webMaster>
     <copyright>© 2026 Carolina Cornejo Castellano</copyright>
-    <lastBuildDate>Wed, 31 Dec 2025 10:30:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jan 2025 10:30:00 +0100</lastBuildDate><atom:link href="https://castellco.github.io/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Web Scraping con Python: La Euro 2024</title>
       <link>https://castellco.github.io/posts/euro-2024-scraper/</link>
-      <pubDate>Wed, 31 Dec 2025 10:30:00 +0100</pubDate>
+      <pubDate>Thu, 02 Jan 2025 10:30:00 +0100</pubDate>
       <author>cor.castellano@gmail.com (Carolina Cornejo Castellano)</author>
       <guid>https://castellco.github.io/posts/euro-2024-scraper/</guid>
       <description>Aquí repaso cómo hice un script de web scraping en Python para recolectar las estadísticas de los jugadores de la Euro 2024.</description>
