@@ -1,5 +1,5 @@
 ---
-title: "Cómo crear un bump chart profesional en R con ggplot2: guía completa paso a paso"
+title: "Visualizar rankings en R: cómo crear bump charts con ggplot2"
 date: 2025-05-20T10:45:00+01:00
 draft: false
 summary: "Aprende a crear bump charts profesionales en R usando ggplot2. Tutorial completo con código reproducible para visualizar rankings y cambios de posición entre categorías."
