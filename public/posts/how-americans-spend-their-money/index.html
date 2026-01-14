@@ -244,7 +244,7 @@
     "keywords": ["dataviz","ggplot","R"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2326"
+    "wordCount": "1971"
   },
   {
     "@context": "https://schema.org",
@@ -841,7 +841,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-05-20T10:45:00&#43;01:00">20 mayo 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2326 palabras</span><span class="px-2 text-primary-500">&middot;</span><span title="Tiempo de lectura">11 mins</span>
+      <time datetime="2025-05-20T10:45:00&#43;01:00">20 mayo 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1971 palabras</span><span class="px-2 text-primary-500">&middot;</span><span title="Tiempo de lectura">10 mins</span>
     
 
     
@@ -1073,22 +1073,12 @@
         <li><a href="#múltiples-capas-de-texto">Múltiples capas de texto</a></li>
       </ul>
     </li>
-    <li><a href="#mejores-prácticas-para-bump-charts">Mejores prácticas para bump charts</a>
-      <ul>
-        <li><a href="#1-limita-el-número-de-categorías">1. Limita el número de categorías</a></li>
-        <li><a href="#2-usa-colores-distintivos">2. Usa colores distintivos</a></li>
-        <li><a href="#3-gestiona-las-intersecciones">3. Gestiona las intersecciones</a></li>
-        <li><a href="#4-proporciona-contexto-adecuado">4. Proporciona contexto adecuado</a></li>
-        <li><a href="#5-mantén-la-simplicidad-visual">5. Mantén la simplicidad visual</a></li>
-      </ul>
-    </li>
     <li><a href="#código-completo-y-reproducibilidad">Código completo y reproducibilidad</a></li>
-    <li><a href="#conclusión">Conclusión</a></li>
     <li><a href="#referencias">Referencias</a>
       <ul>
         <li><a href="#fuentes-de-datos">Fuentes de datos</a></li>
         <li><a href="#gráfico-original">Gráfico original</a></li>
-        <li><a href="#documentación-técnica">Documentación técnica</a></li>
+        <li><a href="#documentación-técnica-proyecto-original">Documentación técnica (proyecto original)</a></li>
         <li><a href="#material-del-proyecto">Material del proyecto</a></li>
       </ul>
     </li>
@@ -1148,22 +1138,12 @@
         <li><a href="#múltiples-capas-de-texto">Múltiples capas de texto</a></li>
       </ul>
     </li>
-    <li><a href="#mejores-prácticas-para-bump-charts">Mejores prácticas para bump charts</a>
-      <ul>
-        <li><a href="#1-limita-el-número-de-categorías">1. Limita el número de categorías</a></li>
-        <li><a href="#2-usa-colores-distintivos">2. Usa colores distintivos</a></li>
-        <li><a href="#3-gestiona-las-intersecciones">3. Gestiona las intersecciones</a></li>
-        <li><a href="#4-proporciona-contexto-adecuado">4. Proporciona contexto adecuado</a></li>
-        <li><a href="#5-mantén-la-simplicidad-visual">5. Mantén la simplicidad visual</a></li>
-      </ul>
-    </li>
     <li><a href="#código-completo-y-reproducibilidad">Código completo y reproducibilidad</a></li>
-    <li><a href="#conclusión">Conclusión</a></li>
     <li><a href="#referencias">Referencias</a>
       <ul>
         <li><a href="#fuentes-de-datos">Fuentes de datos</a></li>
         <li><a href="#gráfico-original">Gráfico original</a></li>
-        <li><a href="#documentación-técnica">Documentación técnica</a></li>
+        <li><a href="#documentación-técnica-proyecto-original">Documentación técnica (proyecto original)</a></li>
         <li><a href="#material-del-proyecto">Material del proyecto</a></li>
       </ul>
     </li>
@@ -1294,16 +1274,18 @@
     </span>
     
 </h2>
-<p>Los <strong>bump charts</strong> son una herramienta poderosa en visualización de datos que permite mostrar cambios en rankings entre diferentes categorías o grupos. En este tutorial completo, te mostraré cómo replicar un bump chart profesional publicado originalmente en Visual Capitalist, usando R y ggplot2.</p>
+<p>Los <strong>bump charts</strong> son una herramienta poderosa en visualización de datos que permite mostrar cambios en rankings entre diferentes categorías o grupos. Aquí documentaré cómo repliqué un <em>bump chart</em> profesional creado en Tableau y publicado originalmente en <em><a href="https://www.visualcapitalist.com/cp/how-americans-spend-their-money-2022/"  target="_blank">Visual Capitalist</a></em>, usando R y ggplot2.</p>
+<p>Este es el gráfico original (interactivo) que replicaremos en R, estático:
 <figure><img
     class="my-0 rounded-md"
     loading="lazy"
     decoding="async"
     fetchpriority="low"
     alt="Bump chart final sobre patrones de gasto por generación"
-    src="https://raw.githubusercontent.com/castellco/bump-chart/main/replica.png"
+    src="https://raw.githubusercontent.com/castellco/bump-chart/main/original.png"
     ></figure>
-<p>Este gráfico visualiza cómo diferentes generaciones de estadounidenses distribuyen sus gastos en 14 categorías, desde la generación Silent (nacidos en 1945 o antes) hasta la Generación Z (nacidos en 1997 o después). El análisis se basa en datos de la <em>Consumer Expenditure Survey</em> del U.S. Bureau of Labor Statistics de 2021.</p>
+</p>
+<p>Su objetivo es visualizar cómo diferentes generaciones de estadounidenses distribuyen sus gastos en 14 categorías, desde la generación <em>Silent</em> (nacidos en 1945 o antes) hasta la <em>Generación Z</em> (nacidos en 1997 o después). El análisis se basa en datos de la <em>Consumer Expenditure Survey</em> del U.S. Bureau of Labor Statistics de 2021.</p>
 
 <h2 class="relative group">¿Qué es un bump chart?
     <div id="qué-es-un-bump-chart" class="anchor"></div>
@@ -1352,7 +1334,7 @@
     alt="Gráfico original de Preethi Lodha publicado en Visual Capitalist"
     src="https://csslab.uc3m.es/dataviz/projects/2022/100481925/images/original.png"
     ></figure>
-<p>Los datos provienen de la tabla 2602 del Bureau of Labor Statistics: &ldquo;Generation of reference person: Annual expenditure means, shares, standard errors, and coefficients of variation&rdquo; del año 2021.</p>
+<p>Los datos provienen de la tabla 2602 del <em>Bureau of Labor Statistics</em>: &ldquo;Generation of reference person: Annual expenditure means, shares, standard errors, and coefficients of variation&rdquo; del año 2021.</p>
 
 <h2 class="relative group">Preparación del entorno
     <div id="preparación-del-entorno" class="anchor"></div>
@@ -1373,7 +1355,7 @@
     </span>
     
 </h3>
-<p>Primero, asegúrate de tener instalados los paquetes necesarios:</p>
+<p>Primero, hay que instalar los paquetes necesarios:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Instalar paquetes si no los tienes</span>
 </span></span><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;tidyverse&#34;</span><span class="p">,</span> <span class="s">&#34;ggplot2&#34;</span><span class="p">,</span> <span class="s">&#34;ggtext&#34;</span><span class="p">,</span> <span class="s">&#34;grid&#34;</span><span class="p">))</span></span></span></code></pre></div></div>
 
@@ -1413,7 +1395,7 @@
 </h3>
 <p>Los datos están disponibles en formato CSV en mi repositorio de GitHub:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Importar datos desde GitHub</span>
-</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&#34;https://github.com/carolinacornejocastellano/bump-chart/raw/main/data.csv&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&#34;https://github.com/castellco/bump-chart/raw/main/data.csv&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Visualizar las primeras filas</span>
 </span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></span></span></code></pre></div></div>
@@ -1568,7 +1550,7 @@
     </span>
     
 </h2>
-<p>Un tema visual coherente es fundamental para la efectividad del bump chart. Vamos a crear <code>theme_bump()</code> que define todos los aspectos estéticos del gráfico.</p>
+<p>Un tema visual coherente es fundamental para la efectividad del bump chart. Vamos a crear <code>theme_bump()</code> que define todos los aspectos estéticos del gráfico. Si bien es posible usar temas predefinidos como <code>theme_minimal()</code> o <code>theme_classic()</code>, crear un tema personalizado permite controlar cada detalle, que es lo que necesitamos para replicar fielmente el diseño original.</p>
 
 <h3 class="relative group">Definir colores
     <div id="definir-colores" class="anchor"></div>
@@ -1757,7 +1739,7 @@
     src="https://raw.githubusercontent.com/castellco/bump-chart/main/replica.png"
     ></figure>
 </p>
-<p>Como puedes ver, la réplica captura fielmente todos los elementos visuales del original, excepto los componentes interactivos (que no son necesarios para la versión estática). Los elementos clave replicados incluyen:</p>
+<p>Como se puede ver, la réplica captura fielmente todos los elementos visuales del original, excepto los componentes interactivos (que no son necesarios para la versión estática). Los elementos clave replicados incluyen:</p>
 <ul>
 <li>Líneas de grosor variable según el ranking</li>
 <li>Puntos con borde blanco para mejor visibilidad</li>
@@ -1845,107 +1827,6 @@
 </span></span><span class="line"><span class="cl"><span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="n">dollars</span><span class="p">),</span> <span class="kc">...</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">2.257</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span></span></span></code></pre></div></div>
 <p>Esta técnica crea un <strong>efecto de negrita más pronunciado</strong> mediante la superposición ligera de texto con tamaños incrementales.</p>
 
-<h2 class="relative group">Mejores prácticas para bump charts
-    <div id="mejores-prácticas-para-bump-charts" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mejores-pr%c3%a1cticas-para-bump-charts" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-<p>Basándome en esta experiencia, aquí algunas recomendaciones clave:</p>
-
-<h3 class="relative group">1. Limita el número de categorías
-    <div id="1-limita-el-número-de-categorías" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-limita-el-n%c3%bamero-de-categor%c3%adas" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>Regla general</strong>: Entre 5-15 categorías funcionan mejor. Más de 15 generan sobrecarga visual y dificultan el seguimiento de trayectorias individuales.</p>
-<p><strong>Soluciones cuando tienes muchas categorías</strong>:</p>
-<ul>
-<li>Filtrar: Mostrar solo las top 10</li>
-<li>Agrupar: Combinar categorías similares</li>
-<li>Dividir: Crear múltiples bump charts temáticos</li>
-</ul>
-
-<h3 class="relative group">2. Usa colores distintivos
-    <div id="2-usa-colores-distintivos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-usa-colores-distintivos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>Asegura suficiente diferencia en tono y luminosidad</li>
-<li>Evita combinaciones problemáticas para daltonismo (rojo-verde)</li>
-<li>Mantén consistencia si las mismas categorías aparecen en múltiples gráficos</li>
-<li>Herramientas útiles: ColorBrewer2.org, simuladores de daltonismo</li>
-</ul>
-
-<h3 class="relative group">3. Gestiona las intersecciones
-    <div id="3-gestiona-las-intersecciones" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-gestiona-las-intersecciones" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Las intersecciones de líneas son el principal desafío visual:</p>
-<p><strong>Técnicas efectivas</strong>:</p>
-<ul>
-<li>Nodos más grandes que el grosor de línea</li>
-<li>Bordes blancos alrededor de puntos (como en nuestro ejemplo)</li>
-<li>Transparencia parcial en zonas congestionadas</li>
-<li>En versiones digitales: interactividad con hover</li>
-</ul>
-
-<h3 class="relative group">4. Proporciona contexto adecuado
-    <div id="4-proporciona-contexto-adecuado" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-proporciona-contexto-adecuado" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>Tres niveles de contexto</strong>:</p>
-<ol>
-<li><strong>Título descriptivo</strong>: Qué se rankea y bajo qué criterio</li>
-<li><strong>Subtítulo</strong>: Información temporal, geográfica o metodológica</li>
-<li><strong>Etiquetas enriquecidas</strong>: Datos adicionales que faciliten interpretación</li>
-</ol>
-
-<h3 class="relative group">5. Mantén la simplicidad visual
-    <div id="5-mantén-la-simplicidad-visual" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-mant%c3%a9n-la-simplicidad-visual" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Elimina:</p>
-<ul>
-<li>Líneas de cuadrícula innecesarias</li>
-<li>Bordes y marcos decorativos</li>
-<li>Efectos 3D o sombras</li>
-<li>Leyendas redundantes</li>
-</ul>
-<p>Mantén:</p>
-<ul>
-<li>Espacio en blanco que dirija la atención</li>
-<li>Todo componente que reduzca ambigüedad</li>
-<li>Anotaciones para hallazgos clave (cuando sea apropiado)</li>
-</ul>
-
 <h2 class="relative group">Código completo y reproducibilidad
     <div id="código-completo-y-reproducibilidad" class="anchor"></div>
     
@@ -1960,34 +1841,6 @@
 <li><strong>Repositorio</strong>: <a href="https://github.com/castellco/bump-chart"  target="_blank">https://github.com/castellco/bump-chart</a></li>
 <li><strong>Proyecto original</strong>: <a href="https://csslab.uc3m.es/dataviz/projects/2022/100481925/"  target="_blank">https://csslab.uc3m.es/dataviz/projects/2022/100481925/</a></li>
 </ul>
-<p>Para reproducir este análisis en tu máquina:</p>
-<ol>
-<li>Clona el repositorio o descarga el archivo <code>data.csv</code></li>
-<li>Instala los paquetes necesarios</li>
-<li>Ejecuta el código paso a paso en RStudio o Quarto</li>
-<li>Ajusta colores, tamaños y etiquetas según tus necesidades</li>
-</ol>
-
-<h2 class="relative group">Conclusión
-    <div id="conclusión" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusi%c3%b3n" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-<p>Los bump charts son herramientas poderosas para visualizar cambios en rankings y posiciones relativas. Con ggplot2 y las técnicas mostradas en este tutorial, puedes crear visualizaciones profesionales que comuniquen efectivamente patrones complejos en tus datos.</p>
-<p>Este tutorial te ha mostrado no solo cómo replicar un bump chart técnicamente, sino también las decisiones de diseño que hacen que una visualización sea efectiva:</p>
-<ul>
-<li>Transformación de datos de wide a long</li>
-<li>Cálculo de rankings por grupos</li>
-<li>Creación de temas personalizados</li>
-<li>Uso de etiquetas enriquecidas con HTML</li>
-<li>Técnicas para mejorar la legibilidad</li>
-<li>Gestión de colores y contraste</li>
-</ul>
-<p>¿Tienes preguntas sobre bump charts, ggplot2 o visualización de datos? Contáctame a través de mi <a href="https://castellco.github.io/"  target="_blank">portfolio</a> o visita el repositorio del proyecto para más detalles.</p>
 
 <h2 class="relative group">Referencias
     <div id="referencias" class="anchor"></div>
@@ -2021,12 +1874,12 @@
 </h3>
 <p>Lodha, P. (2022). <em>How Do Americans Spend Their Money, By Generation?</em> Visual Capitalist. <a href="https://www.visualcapitalist.com/cp/how-americans-spend-their-money-2022/"  target="_blank">https://www.visualcapitalist.com/cp/how-americans-spend-their-money-2022/</a></p>
 
-<h3 class="relative group">Documentación técnica
-    <div id="documentación-técnica" class="anchor"></div>
+<h3 class="relative group">Documentación técnica (proyecto original)
+    <div id="documentación-técnica-proyecto-original" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#documentaci%c3%b3n-t%c3%a9cnica" aria-label="Ancla">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#documentaci%c3%b3n-t%c3%a9cnica-proyecto-original" aria-label="Ancla">#</a>
     </span>
     
 </h3>
@@ -2045,8 +1898,6 @@
 </h3>
 <p>Cornejo Castellano, C. (2023). <em>Bump chart: How Americans spend their money</em>. UC3M Data Visualization Projects. <a href="https://csslab.uc3m.es/dataviz/projects/2022/100481925/"  target="_blank">https://csslab.uc3m.es/dataviz/projects/2022/100481925/</a></p>
 <p>Cornejo Castellano, C. (2025). <em>Bump Chart Tutorial - GitHub Repository</em>. <a href="https://github.com/castellco/bump-chart"  target="_blank">https://github.com/castellco/bump-chart</a></p>
-<hr>
-<p><strong>Palabras clave</strong>: bump chart R, tutorial ggplot2, visualización de datos R, gráfico de rankings, data visualization español, ggplot2 tutorial español, crear bump chart, visualizar rankings en R, dataviz con R</p>
 
           
           
@@ -2185,6 +2036,155 @@
   
     <h2 class="mt-8 text-2xl font-extrabold mb-10">Relacionados</h2>
     <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+  
+  
+    
+      
+      
+        
+      
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+    <div class="flex-none relative overflow-hidden thumbnail_card_related">
+      <img
+        src="/img/defaultFeatured_hu_5e54ddbd8b858828.jpg"
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
+  
+  <div class="p-4">
+    <header>
+      <a
+        
+          href="/acerca-de/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Acerca de
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1">Mi carrera comenzó en Perú, en investigación académica y proyectos de desarrollo, trabajando con personas y organizaciones que buscaban generar cambio real. Fue ahí donde descubrí que el problema rara vez era la falta de datos, sino saber cómo convertirlos en información y conocimiento.
+</div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
       
         
 
@@ -2380,155 +2380,6 @@
 
 
     </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      
-        
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-    
-      
-    
-      
-    
-      
-    
-  
-
-  
-  
-    
-    
-      
-    
-  
-
-  
-  
-    
-      
-      
-        
-      
-    
-  
-
-
-
-<article
-  class="relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-    <div class="flex-none relative overflow-hidden thumbnail_card_related">
-      <img
-        src="/img/defaultFeatured_hu_5e54ddbd8b858828.jpg"
-        role="presentation"
-        loading="lazy"
-        decoding="async"
-        fetchpriority="low"
-        class="not-prose absolute inset-0 w-full h-full object-cover">
-    </div>
-  
-  
-  <div class="p-4">
-    <header>
-      <a
-        
-          href="/acerca-de/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Acerca de
-          
-        </h2>
-      </a>
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-
-  
-  
-
-
-
-    </div>
-    
-      <div class="prose dark:prose-invert py-1">Mi carrera comenzó en Perú, en investigación académica y proyectos de desarrollo, trabajando con personas y organizaciones que buscaban generar cambio real. Fue ahí donde descubrí que el problema rara vez era la falta de datos, sino saber cómo convertirlos en información y conocimiento.
-</div>
     
   </div>
   <div class="px-6 pt-4 pb-2"></div>

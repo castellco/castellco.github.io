@@ -10,11 +10,12 @@ featureimage: "https://raw.githubusercontent.com/castellco/bump-chart/main/repli
 
 ## Introducción
 
-Los **bump charts** son una herramienta poderosa en visualización de datos que permite mostrar cambios en rankings entre diferentes categorías o grupos. En este tutorial completo, te mostraré cómo replicar un bump chart profesional publicado originalmente en Visual Capitalist, usando R y ggplot2.
+Los **bump charts** son una herramienta poderosa en visualización de datos que permite mostrar cambios en rankings entre diferentes categorías o grupos. Aquí documentaré cómo repliqué un *bump chart* profesional creado en Tableau y publicado originalmente en *[Visual Capitalist](https://www.visualcapitalist.com/cp/how-americans-spend-their-money-2022/)*, usando R y ggplot2. 
 
-![Bump chart final sobre patrones de gasto por generación](https://raw.githubusercontent.com/castellco/bump-chart/main/replica.png)
+Este es el gráfico original (interactivo) que replicaremos en R, estático:
+![Bump chart final sobre patrones de gasto por generación](https://raw.githubusercontent.com/castellco/bump-chart/main/original.png)
 
-Este gráfico visualiza cómo diferentes generaciones de estadounidenses distribuyen sus gastos en 14 categorías, desde la generación Silent (nacidos en 1945 o antes) hasta la Generación Z (nacidos en 1997 o después). El análisis se basa en datos de la *Consumer Expenditure Survey* del U.S. Bureau of Labor Statistics de 2021.
+Su objetivo es visualizar cómo diferentes generaciones de estadounidenses distribuyen sus gastos en 14 categorías, desde la generación *Silent* (nacidos en 1945 o antes) hasta la *Generación Z* (nacidos en 1997 o después). El análisis se basa en datos de la *Consumer Expenditure Survey* del U.S. Bureau of Labor Statistics de 2021.
 
 ## ¿Qué es un bump chart?
 
@@ -37,13 +38,13 @@ El gráfico original fue creado por Preethi Lodha y publicado en [Visual Capital
 
 ![Gráfico original de Preethi Lodha publicado en Visual Capitalist](https://csslab.uc3m.es/dataviz/projects/2022/100481925/images/original.png)
 
-Los datos provienen de la tabla 2602 del Bureau of Labor Statistics: "Generation of reference person: Annual expenditure means, shares, standard errors, and coefficients of variation" del año 2021.
+Los datos provienen de la tabla 2602 del *Bureau of Labor Statistics*: "Generation of reference person: Annual expenditure means, shares, standard errors, and coefficients of variation" del año 2021.
 
 ## Preparación del entorno
 
 ### Instalación de paquetes
 
-Primero, asegúrate de tener instalados los paquetes necesarios:
+Primero, hay que instalar los paquetes necesarios:
 
 ```r
 # Instalar paquetes si no los tienes
@@ -68,7 +69,7 @@ Los datos están disponibles en formato CSV en mi repositorio de GitHub:
 
 ```r
 # Importar datos desde GitHub
-df <- read_csv("https://github.com/carolinacornejocastellano/bump-chart/raw/main/data.csv")
+df <- read_csv("https://github.com/castellco/bump-chart/raw/main/data.csv")
 
 # Visualizar las primeras filas
 head(df)
@@ -194,7 +195,7 @@ Estas etiquetas proporcionan tres niveles de información:
 
 ## Construcción del tema personalizado
 
-Un tema visual coherente es fundamental para la efectividad del bump chart. Vamos a crear `theme_bump()` que define todos los aspectos estéticos del gráfico.
+Un tema visual coherente es fundamental para la efectividad del bump chart. Vamos a crear `theme_bump()` que define todos los aspectos estéticos del gráfico. Si bien es posible usar temas predefinidos como `theme_minimal()` o `theme_classic()`, crear un tema personalizado permite controlar cada detalle, que es lo que necesitamos para replicar fielmente el diseño original.
 
 ### Definir colores
 
@@ -337,7 +338,7 @@ Este es el gráfico original publicado en the *Visual Capitalist*, en Tableau:
 Esta es mi réplica en R, con ggplot2:
 ![Mi réplica en ggplot2](https://raw.githubusercontent.com/castellco/bump-chart/main/replica.png)
 
-Como puedes ver, la réplica captura fielmente todos los elementos visuales del original, excepto los componentes interactivos (que no son necesarios para la versión estática). Los elementos clave replicados incluyen:
+Como se puede ver, la réplica captura fielmente todos los elementos visuales del original, excepto los componentes interactivos (que no son necesarios para la versión estática). Los elementos clave replicados incluyen:
 
 - Líneas de grosor variable según el ranking
 - Puntos con borde blanco para mejor visibilidad
@@ -389,56 +390,6 @@ geom_text(aes(label = dollars), ..., size = 2.257, ...)
 
 Esta técnica crea un **efecto de negrita más pronunciado** mediante la superposición ligera de texto con tamaños incrementales.
 
-## Mejores prácticas para bump charts
-
-Basándome en esta experiencia, aquí algunas recomendaciones clave:
-
-### 1. Limita el número de categorías
-
-**Regla general**: Entre 5-15 categorías funcionan mejor. Más de 15 generan sobrecarga visual y dificultan el seguimiento de trayectorias individuales.
-
-**Soluciones cuando tienes muchas categorías**:
-- Filtrar: Mostrar solo las top 10
-- Agrupar: Combinar categorías similares
-- Dividir: Crear múltiples bump charts temáticos
-
-### 2. Usa colores distintivos
-
-- Asegura suficiente diferencia en tono y luminosidad
-- Evita combinaciones problemáticas para daltonismo (rojo-verde)
-- Mantén consistencia si las mismas categorías aparecen en múltiples gráficos
-- Herramientas útiles: ColorBrewer2.org, simuladores de daltonismo
-
-### 3. Gestiona las intersecciones
-
-Las intersecciones de líneas son el principal desafío visual:
-
-**Técnicas efectivas**:
-- Nodos más grandes que el grosor de línea
-- Bordes blancos alrededor de puntos (como en nuestro ejemplo)
-- Transparencia parcial en zonas congestionadas
-- En versiones digitales: interactividad con hover
-
-### 4. Proporciona contexto adecuado
-
-**Tres niveles de contexto**:
-1. **Título descriptivo**: Qué se rankea y bajo qué criterio
-2. **Subtítulo**: Información temporal, geográfica o metodológica
-3. **Etiquetas enriquecidas**: Datos adicionales que faciliten interpretación
-
-### 5. Mantén la simplicidad visual
-
-Elimina:
-- Líneas de cuadrícula innecesarias
-- Bordes y marcos decorativos
-- Efectos 3D o sombras
-- Leyendas redundantes
-
-Mantén:
-- Espacio en blanco que dirija la atención
-- Todo componente que reduzca ambigüedad
-- Anotaciones para hallazgos clave (cuando sea apropiado)
-
 ## Código completo y reproducibilidad
 
 El código completo y los datos están disponibles en mi repositorio de GitHub:
@@ -446,27 +397,6 @@ El código completo y los datos están disponibles en mi repositorio de GitHub:
 - **Repositorio**: [https://github.com/castellco/bump-chart](https://github.com/castellco/bump-chart)
 - **Proyecto original**: [https://csslab.uc3m.es/dataviz/projects/2022/100481925/](https://csslab.uc3m.es/dataviz/projects/2022/100481925/)
 
-Para reproducir este análisis en tu máquina:
-
-1. Clona el repositorio o descarga el archivo `data.csv`
-2. Instala los paquetes necesarios
-3. Ejecuta el código paso a paso en RStudio o Quarto
-4. Ajusta colores, tamaños y etiquetas según tus necesidades
-
-## Conclusión
-
-Los bump charts son herramientas poderosas para visualizar cambios en rankings y posiciones relativas. Con ggplot2 y las técnicas mostradas en este tutorial, puedes crear visualizaciones profesionales que comuniquen efectivamente patrones complejos en tus datos.
-
-Este tutorial te ha mostrado no solo cómo replicar un bump chart técnicamente, sino también las decisiones de diseño que hacen que una visualización sea efectiva:
-
-- Transformación de datos de wide a long
-- Cálculo de rankings por grupos
-- Creación de temas personalizados
-- Uso de etiquetas enriquecidas con HTML
-- Técnicas para mejorar la legibilidad
-- Gestión de colores y contraste
-
-¿Tienes preguntas sobre bump charts, ggplot2 o visualización de datos? Contáctame a través de mi [portfolio](https://castellco.github.io/) o visita el repositorio del proyecto para más detalles.
 
 ## Referencias
 
@@ -478,7 +408,7 @@ U.S. Bureau of Labor Statistics. (2022). *Consumer Expenditure Survey, 2021*. Re
 
 Lodha, P. (2022). *How Do Americans Spend Their Money, By Generation?* Visual Capitalist. https://www.visualcapitalist.com/cp/how-americans-spend-their-money-2022/
 
-### Documentación técnica
+### Documentación técnica (proyecto original)
 
 Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis* (2nd ed.). Springer-Verlag New York. https://ggplot2.tidyverse.org
 
@@ -491,7 +421,3 @@ Wilke, C. O. (2023). *ggtext: Improved Text Rendering Support for 'ggplot2'*. R 
 Cornejo Castellano, C. (2023). *Bump chart: How Americans spend their money*. UC3M Data Visualization Projects. https://csslab.uc3m.es/dataviz/projects/2022/100481925/
 
 Cornejo Castellano, C. (2025). *Bump Chart Tutorial - GitHub Repository*. https://github.com/castellco/bump-chart
-
----
-
-**Palabras clave**: bump chart R, tutorial ggplot2, visualización de datos R, gráfico de rankings, data visualization español, ggplot2 tutorial español, crear bump chart, visualizar rankings en R, dataviz con R
