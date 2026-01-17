@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-02-07">
+
+<title>La geografía del terrorismo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">La geografía del terrorismo</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 7, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+{{&lt; github repo="castellco/terrorism_peru" &gt;}}
+<p>En el contexto de mi Trabajo de Fin de Máster (TFM) del Máster Universitario en Ciencias Sociales Computacionales en la Universidad Carlos III de Madrid, me propuse abordar el Conflicto Armado Interno desde una perspectiva espacial. Me interesaba 1) Conocer si y/o en qué grado hubo un efecto de difusión espacial de los ataques terroristas; y 2) practicar el tratamiento de datos espaciales y herramientas GIS en R.</p>
+<p>El análisis espacial de conflictos armados presenta desafíos metodológicos únicos: las observaciones no son independientes entre sí, el espacio importa, y los eventos tienden a agruparse. Así, en mi TFM apliqué modelos espaciales para estudiar la difusión de ataques terroristas en Perú durante el conflicto armado interno (1980-2021), comparando diferentes períodos temporales y técnicas de modelado.</p>
+<section id="desafío-metodológico-por-qué-modelos-espaciales" class="level2">
+<h2 class="anchored" data-anchor-id="desafío-metodológico-por-qué-modelos-espaciales">Desafío metodológico: ¿Por qué modelos espaciales?</h2>
+<section id="el-problema-de-la-dependencia-espacial" class="level3">
+<h3 class="anchored" data-anchor-id="el-problema-de-la-dependencia-espacial">El problema de la dependencia espacial</h3>
+<p>Los métodos tradicionales de regresión (OLS) asumen que las observaciones son <strong>independientes entre sí</strong>. Sin embargo, en fenómenos espaciales como conflictos armados, esta suposición se viola sistemáticamente.</p>
+<blockquote class="blockquote">
+<p>“Todo está relacionado con todo lo demás, pero las cosas cercanas están más relacionadas que las distantes.”<br>
+— <cite> Waldo Tobler (1970)</cite></p>
+</blockquote>
+<p>Esta, la llamada “Primera ley de Tobler”, es la madre de varios conceptos clave en análisis espacial. En específico, en mi TFM refiero mucho a la <strong>autocorrelación espacial</strong>, que describe cómo las observaciones en ubicaciones geográficas cercanas tienden a ser más similares entre sí que las distantes.</p>
+<p>Ignorar esta dependencia lleva a estimaciones sesgadas de los efectos, errores estándar incorrectos (generalmente subestimados), e inferencias estadísticas inválidas. Por eso se debían usar modelos espaciales.</p>
+</section>
+</section>
+<section id="metodología" class="level2">
+<h2 class="anchored" data-anchor-id="metodología">Metodología</h2>
+<p>Siguiendo las recomendaciones de Buhaug y Rød (2006), utilicé <strong>celdas de grilla (grid cells)</strong> de 0.5 × 0.5 grados decimales como unidades de análisis en lugar de divisiones administrativas tradicionales, como distritos o provincias.</p>
+<p>Este enfoque tiene ventajas, como que las celdas no cambian en tamaño, forma o número a lo largo del tiempo, permiten controlar mejor por decisiones políticas que podrían afectar la frecuencia de eventos, constituyen entidades inherentemente apolíticas (Tollefsen et al., 2012), entre otros.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/castellco/terrorism_peru/refs/heads/main/figs/map_grids.png" class="img-fluid figure-img"></p>
+<figcaption>Grid cells sobre territorio peruano</figcaption>
+</figure>
+</div>
+<section id="los-datos" class="level3">
+<h3 class="anchored" data-anchor-id="los-datos">Los datos</h3>
+<p>Integré datos de múltiples fuentes georreferenciadas:</p>
+<ol type="1">
+<li><strong>Global Terrorism Database (GTD)</strong>: Mi principal dataset, que contiene información de ~200,000 incidentes terroristas a nivel global (1970-2021)</li>
+<li><strong>PRIO-GRID</strong>: Una base de Variables geodemográficas a nivel de celda 0.5×0.5</li>
+<li><strong>xSUB</strong>: Datos subnacionales de conflicto compatibles con PRIO-GRID</li>
+<li><strong>Shapefiles</strong>: Geometrías de celdas mundiales y fronteras de Perú</li>
+</ol>
+<p><strong>Procesamiento espacial</strong>:</p>
+</section>
+</section>
+<section id="spatial-join-point-in-polygon-para-asignar-ataques-a-grid-cells" class="level1">
+<h1>Spatial join: point-in-polygon para asignar ataques a grid cells</h1>
+</section>
+<section id="agregación-de-eventos-por-celda" class="level1">
+<h1>Agregación de eventos por celda</h1>
+</section>
+<section id="construcción-de-tres-datasets-temporales-pico-declive-completo" class="level1">
+<h1>Construcción de tres datasets temporales: pico, declive, completo</h1>
+<section id="variables-del-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="variables-del-modelo">Variables del modelo</h3>
+<p><strong>Variable dependiente</strong>: - Número de ataques terroristas por celda de grilla (count data, zero-inflated)</p>
+<p><strong>Variables independientes</strong>: - <code>Dist to borders</code>: Distancia al borde territorial (km) - <code>Dist to capital</code>: Distancia a Lima (km) - <code>Coca cultiv.</code>: Presencia de cultivo de coca a gran escala (dummy) - <code>Ethnic groups</code>: Presencia de grupos étnicos excluidos - <code>Avg elevation</code>: Elevación promedio (metros) - <code>Open land prop.</code>: Proporción de terreno abierto - <code>No of local langs</code>: Número de lenguas locales</p>
+</section>
+<section id="análisis-de-autocorrelación-espacial-morans-i" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-de-autocorrelación-espacial-morans-i">Análisis de autocorrelación espacial: Moran’s I</h2>
+<p>Antes de modelar, es crucial <strong>detectar y cuantificar</strong> la autocorrelación espacial.</p>
+<section id="test-de-morans-i" class="level3">
+<h3 class="anchored" data-anchor-id="test-de-morans-i">Test de Moran’s I</h3>
+<p>El <strong>I de Moran</strong> es el estadístico más utilizado para medir autocorrelación espacial global. Varía de -1 (dispersión perfecta) a +1 (agrupamiento perfecto).</p>
+<p><strong>Hipótesis</strong>: - H0: No existe autocorrelación espacial (aleatoriedad espacial) - H1: Existe autocorrelación espacial significativa</p>
+</section>
+<section id="resultados" class="level3">
+<h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 24%">
+<col style="width: 20%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th>Moran’s I</th>
+<th>p-value</th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pico (1980-2000)</td>
+<td>0.032***</td>
+<td>0.0002</td>
+<td>Autocorrelación positiva débil</td>
+</tr>
+<tr class="even">
+<td>Declive (2001-2021)</td>
+<td>0.268***</td>
+<td>&lt; 2.2e-16</td>
+<td><strong>Autocorrelación positiva pronunciada</strong></td>
+</tr>
+<tr class="odd">
+<td>Completo (1980-2021)</td>
+<td>0.032***</td>
+<td>0.0001</td>
+<td>Autocorrelación positiva débil</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hallazgo clave</strong>: La autocorrelación espacial es <strong>significativamente más pronunciada</strong> durante el período de declive (I = 0.268) que durante el pico de violencia (I = 0.032).</p>
+<p><strong>Interpretación</strong>: Durante el período de repliegue de las fuerzas subversivas (2001-2021), los ataques se concentraron cada vez más en áreas específicas (principalmente VRAEM - Valle de los ríos Apurímac, Ene y Mantaro), creando un <strong>patrón de clustering espacial más fuerte</strong>.</p>
+</section>
+</section>
+<section id="modelos-espaciales-aplicados" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-espaciales-aplicados">Modelos espaciales aplicados</h2>
+<section id="spatial-error-model-sem" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-error-model-sem">1. Spatial Error Model (SEM)</h3>
+<p>El modelo SEM captura la <strong>dependencia espacial en los términos de error</strong>.</p>
+<p><strong>Especificación</strong>:</p>
+<pre><code>y = Xβ + ε
+ε = λWε + u</code></pre>
+<p>Donde: - <code>λ</code> (lambda): parámetro de autocorrelación espacial de los errores - <code>W</code>: matriz de pesos espaciales - <code>u</code>: error no correlacionado espacialmente</p>
+<p><strong>Cuándo usarlo</strong>: Cuando la autocorrelación espacial proviene de variables omitidas espacialmente correlacionadas.</p>
+<p><strong>Implementación en R</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spatialreg)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Definir vecindad tipo "Queen" (bordes y vértices compartidos)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(grid_sf, <span class="at">queen =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear matriz de pesos row-standardized</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>lw <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(nb, <span class="at">style =</span> <span class="st">"W"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajustar modelo SEM</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>sem_model <span class="ot">&lt;-</span> <span class="fu">errorsarlm</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  attacks <span class="sc">~</span> dist_borders <span class="sc">+</span> dist_capital <span class="sc">+</span> coca <span class="sc">+</span> ethnic <span class="sc">+</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            elevation <span class="sc">+</span> open_land <span class="sc">+</span> languages,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">listw =</span> lw</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Resultados SEM</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>λ (lambda)</strong></td>
+<td>0.032</td>
+<td><strong>0.467</strong>*</td>
+<td>0.031</td>
+</tr>
+<tr class="even">
+<td>Dist to borders</td>
+<td>-0.015</td>
+<td><strong>0.002</strong>*</td>
+<td>-0.015</td>
+</tr>
+<tr class="odd">
+<td>Dist to capital</td>
+<td>-0.018</td>
+<td>0.000</td>
+<td>-0.018</td>
+</tr>
+<tr class="even">
+<td>Coca cultiv.</td>
+<td>-5.334</td>
+<td>1.185</td>
+<td>-7.735</td>
+</tr>
+<tr class="odd">
+<td>Avg elevation</td>
+<td><strong>0.009†</strong></td>
+<td>0.000</td>
+<td><strong>0.009†</strong></td>
+</tr>
+<tr class="even">
+<td>No of local langs</td>
+<td>-8.878</td>
+<td><strong>-0.076†</strong></td>
+<td><strong>-9.072†</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretación</strong>: - El parámetro λ es <strong>significativo solo en el período de declive</strong> (0.467*<strong>, p &lt; 0.001) - Evidencia de </strong>autocorrelación espacial residual pronunciada<strong> en 2001-2021 - Durante el declive, la distancia a fronteras tiene un efecto </strong>positivo** y significativo (inversión de tendencia)</p>
+</section>
+<section id="spatial-autoregressive-model-sar" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-autoregressive-model-sar">2. Spatial Autoregressive Model (SAR)</h3>
+<p>El modelo SAR incorpora la <strong>dependencia espacial en la variable dependiente</strong>.</p>
+<p><strong>Especificación</strong>:</p>
+<pre><code>y = ρWy + Xβ + ε</code></pre>
+<p>Donde: - <code>ρ</code> (rho): parámetro de autocorrelación espacial de la variable dependiente - <code>Wy</code>: variable dependiente espacialmente rezagada (spatial lag)</p>
+<p><strong>Cuándo usarlo</strong>: Cuando existe un proceso de <strong>difusión o contagio</strong> directo entre unidades vecinas.</p>
+<p><strong>Implementación en R</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajustar modelo SAR</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sar_model <span class="ot">&lt;-</span> <span class="fu">lagsarlm</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  attacks <span class="sc">~</span> dist_borders <span class="sc">+</span> dist_capital <span class="sc">+</span> coca <span class="sc">+</span> ethnic <span class="sc">+</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            elevation <span class="sc">+</span> open_land <span class="sc">+</span> languages,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">listw =</span> lw</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Resultados SAR</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ρ (rho)</strong></td>
+<td>0.032</td>
+<td><strong>0.455</strong>*</td>
+<td>0.032</td>
+</tr>
+<tr class="even">
+<td>Dist to borders</td>
+<td>-0.016</td>
+<td>0.001</td>
+<td>-0.015</td>
+</tr>
+<tr class="odd">
+<td>Dist to capital</td>
+<td>-0.018</td>
+<td>0.000</td>
+<td>-0.018</td>
+</tr>
+<tr class="even">
+<td>Coca cultiv.</td>
+<td>-5.300</td>
+<td>1.162</td>
+<td>-7.678</td>
+</tr>
+<tr class="odd">
+<td>Avg elevation</td>
+<td><strong>0.008†</strong></td>
+<td>0.000</td>
+<td><strong>0.008†</strong></td>
+</tr>
+<tr class="even">
+<td>No of local langs</td>
+<td>-8.717</td>
+<td>-0.058</td>
+<td>-8.907</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretación</strong>: - El parámetro ρ también es <strong>significativo solo en el período de declive</strong> (0.455*<strong>) - Confirma proceso de </strong>difusión espacial** durante 2001-2021 - Resultados consistentes con SEM, validando la estructura espacial</p>
+</section>
+<section id="linear-model-ols" class="level3">
+<h3 class="anchored" data-anchor-id="linear-model-ols">3. Linear Model (OLS)</h3>
+<p>Modelo de regresión lineal tradicional <strong>sin componente espacial</strong>, usado como baseline para comparación.</p>
+<p><strong>Resultados clave</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dist to borders</td>
+<td>-0.017</td>
+<td><strong>0.001</strong>*</td>
+<td>-0.017</td>
+</tr>
+<tr class="even">
+<td>Coca cultiv.</td>
+<td>-5.484</td>
+<td><strong>1.695</strong>*</td>
+<td>-7.939</td>
+</tr>
+<tr class="odd">
+<td>Ethnic groups</td>
+<td>5.563</td>
+<td><strong>0.211</strong>*</td>
+<td>6.522</td>
+</tr>
+<tr class="even">
+<td>No of local langs</td>
+<td>-8.911</td>
+<td><strong>-0.074†</strong></td>
+<td><strong>-9.103†</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>R² Adj</strong></td>
+<td>0.010</td>
+<td>0.067</td>
+<td>0.010</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Problema</strong>: R² muy bajo indica <strong>pobre ajuste del modelo</strong>. La omisión de la estructura espacial perjudica el rendimiento predictivo.</p>
+</section>
+<section id="negative-binomial-model" class="level3">
+<h3 class="anchored" data-anchor-id="negative-binomial-model">4. Negative Binomial Model</h3>
+<p>Modelo de conteo que maneja <strong>sobredispersión</strong> en la variable dependiente.</p>
+<p><strong>Por qué Negative Binomial</strong>: - Variable dependiente = conteos (0, 1, 2, … ataques) - <strong>Zero-inflated</strong>: 301 de 488 celdas (62%) tienen 0 ataques - Media (11.39) ≠ Varianza (12,210) → <strong>sobredispersión extrema</strong> - Negative Binomial maneja mejor que Poisson cuando varianza &gt;&gt; media</p>
+<p><strong>Implementación en R</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>nb_model <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  attacks <span class="sc">~</span> dist_borders <span class="sc">+</span> dist_capital <span class="sc">+</span> coca <span class="sc">+</span> ethnic <span class="sc">+</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            elevation <span class="sc">+</span> open_land <span class="sc">+</span> languages,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Resultados Negative Binomial</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dist to borders</td>
+<td>0.002</td>
+<td><strong>0.008</strong>*</td>
+<td>0.002</td>
+</tr>
+<tr class="even">
+<td>Dist to capital</td>
+<td><strong>-0.005</strong>*</td>
+<td><strong>-0.003</strong>*</td>
+<td><strong>-0.005</strong>*</td>
+</tr>
+<tr class="odd">
+<td>Avg elevation</td>
+<td><strong>0.001</strong>*</td>
+<td>0.000</td>
+<td><strong>0.001</strong>*</td>
+</tr>
+<tr class="even">
+<td>No of local langs</td>
+<td><strong>-0.703</strong>*</td>
+<td><strong>-0.533</strong>*</td>
+<td><strong>-0.704</strong>*</td>
+</tr>
+<tr class="odd">
+<td><strong>AIC</strong></td>
+<td>1859.3</td>
+<td><strong>352.1</strong></td>
+<td>1907.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hallazgo clave</strong>: El modelo NB muestra el <strong>mejor ajuste general</strong> (AIC más bajo) y revela efectos significativos de distancia a capital y número de lenguas locales <strong>consistentes en los tres períodos</strong>.</p>
+</section>
+</section>
+<section id="comparación-de-modelos" class="level2">
+<h2 class="anchored" data-anchor-id="comparación-de-modelos">Comparación de modelos</h2>
+<section id="criterios-de-información" class="level3">
+<h3 class="anchored" data-anchor-id="criterios-de-información">Criterios de información</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Pico AIC</th>
+<th>Declive AIC</th>
+<th>Completo AIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SEM</td>
+<td>6000.7</td>
+<td><strong>1145.3</strong></td>
+<td>6005.0</td>
+</tr>
+<tr class="even">
+<td>SAR</td>
+<td>6000.7</td>
+<td><strong>1144.2</strong></td>
+<td>6005.0</td>
+</tr>
+<tr class="odd">
+<td>Linear</td>
+<td>5998.9</td>
+<td>1193.5</td>
+<td>6003.2</td>
+</tr>
+<tr class="even">
+<td>Negative Binomial</td>
+<td><strong>1859.3</strong></td>
+<td><strong>352.1</strong></td>
+<td><strong>1907.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observaciones</strong>: 1. Los modelos espaciales (SEM/SAR) muestran <strong>mejor ajuste en el período de declive</strong> 2. El modelo Negative Binomial tiene <strong>AIC consistentemente más bajo</strong> en todos los períodos 3. El período de declive tiene mejor ajuste en <strong>todos los modelos</strong> (AIC menores)</p>
+</section>
+<section id="efectos-de-variables-clave-por-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="efectos-de-variables-clave-por-modelo">Efectos de variables clave por modelo</h3>
+<section id="coca-cultivation" class="level4">
+<h4 class="anchored" data-anchor-id="coca-cultivation">Coca cultivation</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SEM</td>
+<td>-5.334</td>
+<td>+1.185</td>
+<td>-7.735</td>
+</tr>
+<tr class="even">
+<td>SAR</td>
+<td>-5.300</td>
+<td>+1.162</td>
+<td>-7.678</td>
+</tr>
+<tr class="odd">
+<td>Linear</td>
+<td>-5.484</td>
+<td><strong>+1.695</strong>*</td>
+<td>-7.939</td>
+</tr>
+<tr class="even">
+<td>NB</td>
+<td>-0.290</td>
+<td>+4.796</td>
+<td>-0.361</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Patrón</strong>: Efecto <strong>negativo</strong> durante pico, <strong>positivo</strong> durante declive (aunque solo significativo en Linear model).</p>
+<p><strong>Interpretación</strong>: Durante el declive, los grupos terroristas se replegaron hacia zonas de cultivo de coca (especialmente VRAEM), creando una asociación positiva entre coca y ataques.</p>
+</section>
+<section id="average-elevation" class="level4">
+<h4 class="anchored" data-anchor-id="average-elevation">Average elevation</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SEM</td>
+<td><strong>0.009†</strong></td>
+<td>0.000</td>
+<td><strong>0.009†</strong></td>
+</tr>
+<tr class="even">
+<td>SAR</td>
+<td><strong>0.008†</strong></td>
+<td>0.000</td>
+<td><strong>0.008†</strong></td>
+</tr>
+<tr class="odd">
+<td>Linear</td>
+<td><strong>0.008†</strong></td>
+<td>0.000</td>
+<td><strong>0.008†</strong></td>
+</tr>
+<tr class="even">
+<td>NB</td>
+<td><strong>0.001</strong>*</td>
+<td>0.000</td>
+<td><strong>0.001</strong>*</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Patrón</strong>: Efecto <strong>positivo y significativo</strong> en pico y período completo, <strong>no significativo</strong> en declive.</p>
+<p><strong>Interpretación</strong>: Durante el pico de violencia, las zonas de mayor elevación (más inaccesibles para fuerzas del orden) fueron más propensas a ataques. Este efecto desaparece en el declive.</p>
+</section>
+<section id="number-of-local-languages" class="level4">
+<h4 class="anchored" data-anchor-id="number-of-local-languages">Number of local languages</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Pico</th>
+<th>Declive</th>
+<th>Completo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SEM</td>
+<td>-8.878</td>
+<td><strong>-0.076†</strong></td>
+<td><strong>-9.072†</strong></td>
+</tr>
+<tr class="even">
+<td>SAR</td>
+<td>-8.717</td>
+<td>-0.058</td>
+<td>-8.907</td>
+</tr>
+<tr class="odd">
+<td>Linear</td>
+<td>-8.911</td>
+<td><strong>-0.074†</strong></td>
+<td><strong>-9.103†</strong></td>
+</tr>
+<tr class="even">
+<td>NB</td>
+<td><strong>-0.703</strong>*</td>
+<td><strong>-0.533</strong>*</td>
+<td><strong>-0.704</strong>*</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Patrón</strong>: Efecto <strong>negativo consistente</strong> en todos los modelos y períodos.</p>
+<p><strong>Interpretación contraintuitiva</strong>: Áreas con mayor número de lenguas locales tuvieron <strong>menos</strong> ataques. Posible explicación: mayor diversidad lingüística correlaciona con organización comunitaria más fuerte (rondas campesinas de autodefensa).</p>
+</section>
+</section>
+</section>
+<section id="hallazgos-metodológicos-clave" class="level2">
+<h2 class="anchored" data-anchor-id="hallazgos-metodológicos-clave">Hallazgos metodológicos clave</h2>
+<section id="la-autocorrelación-espacial-varía-temporalmente" class="level3">
+<h3 class="anchored" data-anchor-id="la-autocorrelación-espacial-varía-temporalmente">1. La autocorrelación espacial varía temporalmente</h3>
+<p>El <strong>I de Moran aumentó 8.4 veces</strong> del período de pico (0.032) al de declive (0.268), indicando que:</p>
+<ul>
+<li>El terrorismo se <strong>concentró geográficamente</strong> durante el declive</li>
+<li>Los modelos espaciales son <strong>especialmente importantes</strong> para analizar períodos post-conflicto</li>
+<li>La estructura espacial del conflicto <strong>cambia con el tiempo</strong></li>
+</ul>
+</section>
+<section id="los-efectos-de-variables-se-invierten-entre-períodos" class="level3">
+<h3 class="anchored" data-anchor-id="los-efectos-de-variables-se-invierten-entre-períodos">2. Los efectos de variables se invierten entre períodos</h3>
+<p>Múltiples variables muestran <strong>inversión de signo</strong> entre pico y declive:</p>
+<ul>
+<li><strong>Coca cultivation</strong>: Negativo → Positivo</li>
+<li><strong>Distance to borders</strong>: Negativo → Positivo<br>
+</li>
+<li><strong>Open land proportion</strong>: Negativo → Positivo</li>
+</ul>
+<p><strong>Implicación metodológica</strong>: Analizar todo el período como un bloque homogéneo <strong>oculta dinámicas temporales críticas</strong>.</p>
+</section>
+<section id="los-modelos-espaciales-superan-a-ols-en-períodos-de-alta-autocorrelación" class="level3">
+<h3 class="anchored" data-anchor-id="los-modelos-espaciales-superan-a-ols-en-períodos-de-alta-autocorrelación">3. Los modelos espaciales superan a OLS en períodos de alta autocorrelación</h3>
+<p>Durante el declive: - SEM/SAR AIC: ~1145 - Linear AIC: 1193.5</p>
+<p>Pero durante el pico: - Diferencias de AIC son <strong>mínimas</strong></p>
+<p><strong>Conclusión</strong>: La ventaja de modelos espaciales es <strong>condicional a la intensidad de autocorrelación espacial</strong>.</p>
+</section>
+<section id="zero-inflation-requiere-atención-especial" class="level3">
+<h3 class="anchored" data-anchor-id="zero-inflation-requiere-atención-especial">4. Zero-inflation requiere atención especial</h3>
+<p>Con 62% de celdas sin ataques: - Modelos Negative Binomial superan dramáticamente a Linear (AIC: 352 vs 1194 en declive) - <strong>Zero-Inflated Poisson</strong> fue probado inicialmente pero descartado (resultados en Apéndice del TFM) - La elección del modelo de conteo es <strong>crítica</strong> para datos de conflicto</p>
+</section>
+</section>
+<section id="implementación-técnica" class="level2">
+<h2 class="anchored" data-anchor-id="implementación-técnica">Implementación técnica</h2>
+<section id="construcción-de-matriz-de-pesos-espaciales" class="level3">
+<h3 class="anchored" data-anchor-id="construcción-de-matriz-de-pesos-espaciales">Construcción de matriz de pesos espaciales</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Definir vecindad tipo Queen</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>nb_queen <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(grid_cells, <span class="at">queen =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificar celdas sin vecinos</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nb_queen)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Resultado: 1 celda sin vecinos → eliminada del análisis</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Crear matriz de pesos row-standardized</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>W <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(nb_queen, <span class="at">style =</span> <span class="st">"W"</span>, <span class="at">zero.policy =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Visualizar estructura de vecindad</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(grid_cells), <span class="at">border =</span> <span class="st">"grey"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(nb_queen, <span class="at">coords =</span> <span class="fu">st_coordinates</span>(<span class="fu">st_centroid</span>(grid_cells)), </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Alternativas consideradas</strong>: - <strong>Rook contiguity</strong>: Solo bordes compartidos (más restrictiva) - <strong>K-nearest neighbors</strong>: K vecinos más cercanos (asegura conectividad) - <strong>Distance-based</strong>: Vecinos dentro de X km (permite pesos continuos)</p>
+<p>Opté por <strong>Queen</strong> porque: - Captura mejor la contigüidad geográfica real - Es el estándar en análisis de conflictos - Permite comparación con literatura existente</p>
+</section>
+<section id="manejo-de-datos-zero-inflated" class="level3">
+<h3 class="anchored" data-anchor-id="manejo-de-datos-zero-inflated">Manejo de datos zero-inflated</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución de la variable dependiente</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>attacks <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># FALSE  TRUE </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   187   301  → 62% zeros</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Estrategia 1: Negative Binomial</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>nb_model <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(attacks <span class="sc">~</span> ., <span class="at">data =</span> df)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Estrategia 2: Zero-Inflated Poisson (probado pero descartado)</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pscl)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>zip_model <span class="ot">&lt;-</span> <span class="fu">zeroinfl</span>(attacks <span class="sc">~</span> . <span class="sc">|</span> ., <span class="at">data =</span> df, <span class="at">dist =</span> <span class="st">"poisson"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Estrategia 3: Hurdle model (no implementado)</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># hurdle_model &lt;- hurdle(attacks ~ ., data = df, dist = "poisson")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Decisión final</strong>: Negative Binomial porque: 1. Maneja sobredispersión (varianza &gt;&gt; media) 2. Más simple que ZIP 3. En ZIP, las estimaciones de ambas partes (Poisson y logística) eran casi idénticas → parsimonia favorece NB</p>
+</section>
+<section id="validación-de-modelos" class="level3">
+<h3 class="anchored" data-anchor-id="validación-de-modelos">Validación de modelos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test de Moran en residuos (detectar autocorrelación residual)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>lm_residuals <span class="ot">&lt;-</span> <span class="fu">residuals</span>(linear_model)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">moran.test</span>(lm_residuals, <span class="at">listw =</span> W)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Resultado: Moran's I significativo → justifica modelos espaciales</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Test de Breusch-Pagan (heterocedasticidad)</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">bptest</span>(linear_model)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Test de Lagrange Multiplier para dependencia espacial</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lm.LMtests</span>(linear_model, W, <span class="at">test =</span> <span class="st">"all"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># LMerr: Test para SEM</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># LMlag: Test para SAR</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="desafíos-técnicos-y-soluciones" class="level2">
+<h2 class="anchored" data-anchor-id="desafíos-técnicos-y-soluciones">Desafíos técnicos y soluciones</h2>
+<section id="integración-de-múltiples-fuentes-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="integración-de-múltiples-fuentes-de-datos">1. Integración de múltiples fuentes de datos</h3>
+<p><strong>Desafío</strong>: Combinar datos de GTD (puntos), PRIO-GRID (grillas), xSub (tablas), shapefiles.</p>
+<p><strong>Solución</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatial join point-in-polygon</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>attacks_per_cell <span class="ot">&lt;-</span> <span class="fu">st_join</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  attacks_points,      <span class="co"># GTD data como sf points</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  grid_cells,          <span class="co"># PRIO-GRID como sf polygons</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">join =</span> st_within</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cell_id) <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_attacks =</span> <span class="fu">n</span>())</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge con variables geodemográficas</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>final_data <span class="ot">&lt;-</span> grid_cells <span class="sc">%&gt;%</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(attacks_per_cell, <span class="at">by =</span> <span class="st">"cell_id"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(priogrid_vars, <span class="at">by =</span> <span class="st">"cell_id"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(xsub_vars, <span class="at">by =</span> <span class="st">"cell_id"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">n_attacks =</span> <span class="fu">replace_na</span>(n_attacks, <span class="dv">0</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="proyecciones-cartográficas" class="level3">
+<h3 class="anchored" data-anchor-id="proyecciones-cartográficas">2. Proyecciones cartográficas</h3>
+<p><strong>Desafío</strong>: Asegurar que todos los layers usen la misma proyección.</p>
+<p><strong>Solución</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificar CRS</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(grid_cells)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(attacks_points)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Reprojectar si es necesario</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>attacks_points <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(attacks_points, <span class="at">crs =</span> <span class="fu">st_crs</span>(grid_cells))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Para Perú, usar proyección apropiada</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>peru_crs <span class="ot">&lt;-</span> <span class="st">"+proj=utm +zone=18 +south +datum=WGS84"</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>grid_cells <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(grid_cells, <span class="at">crs =</span> peru_crs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="celda-sin-vecinos" class="level3">
+<h3 class="anchored" data-anchor-id="celda-sin-vecinos">3. Celda sin vecinos</h3>
+<p><strong>Desafío</strong>: Una celda aislada causaba errores en cálculos de matriz de pesos.</p>
+<p><strong>Solución</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Identificar celdas sin vecinos</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>no_neighbors <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">sapply</span>(nb_queen, length) <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Eliminar del análisis</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>grid_cells_clean <span class="ot">&lt;-</span> grid_cells[<span class="sc">-</span>no_neighbors, ]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Resultado: 488 celdas (de 489 originales)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="interpretación-de-efectos-en-modelos-espaciales" class="level3">
+<h3 class="anchored" data-anchor-id="interpretación-de-efectos-en-modelos-espaciales">4. Interpretación de efectos en modelos espaciales</h3>
+<p><strong>Desafío</strong>: En SAR, los efectos no son directamente interpretables como en OLS porque incluyen <strong>efectos indirectos</strong> (spillovers).</p>
+<p><strong>Solución</strong>: Calcular impactos directos e indirectos.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular impactos en modelo SAR</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>impacts_sar <span class="ot">&lt;-</span> <span class="fu">impacts</span>(sar_model, <span class="at">listw =</span> W, <span class="at">R =</span> <span class="dv">1000</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(impacts_sar, <span class="at">zstats =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Resultado:</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Direct impact: efecto en la misma celda</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Indirect impact: efecto en celdas vecinas (spillover)</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Total impact: suma de ambos</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="limitaciones-y-trabajo-futuro" class="level2">
+<h2 class="anchored" data-anchor-id="limitaciones-y-trabajo-futuro">Limitaciones y trabajo futuro</h2>
+<section id="limitaciones-del-estudio" class="level3">
+<h3 class="anchored" data-anchor-id="limitaciones-del-estudio">Limitaciones del estudio</h3>
+<ol type="1">
+<li><p><strong>Calidad de datos</strong>: GTD es una base global, no especializada en Perú. Puede subreportar eventos no letales (violaciones, robos, quema de viviendas).</p></li>
+<li><p><strong>Definición de vecindad</strong>: Usé solo Queen contiguity. Otros criterios (distancia, K-nearest neighbors) podrían revelar patrones diferentes.</p></li>
+<li><p><strong>Variables omitidas</strong>: No incluí variables de presencia estatal, infraestructura vial, o historial de violencia previa por limitaciones de datos.</p></li>
+<li><p><strong>Causalidad</strong>: Los modelos muestran <strong>asociaciones</strong>, no relaciones causales. La endogeneidad espacial complica la inferencia causal.</p></li>
+</ol>
+</section>
+<section id="extensiones-futuras" class="level3">
+<h3 class="anchored" data-anchor-id="extensiones-futuras">Extensiones futuras</h3>
+<p><strong>1. Modelos espacio-temporales</strong></p>
+<p>Incorporar dimensión temporal explícitamente:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatio-temporal model</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(splm)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>st_model <span class="ot">&lt;-</span> <span class="fu">spml</span>(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  attacks <span class="sc">~</span> vars,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> panel_data,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">listw =</span> W,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="st">"within"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">spatial.error =</span> <span class="st">"b"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">lag =</span> <span class="cn">TRUE</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>2. Geographically Weighted Regression (GWR)</strong></p>
+<p>Permitir que los coeficientes <strong>varíen espacialmente</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GWmodel)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>gwr_model <span class="ot">&lt;-</span> <span class="fu">gwr.basic</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  attacks <span class="sc">~</span> vars,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> sp_data,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">bw =</span> <span class="fu">bw.gwr</span>(attacks <span class="sc">~</span> vars, <span class="at">data =</span> sp_data, <span class="at">kernel =</span> <span class="st">"gaussian"</span>),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">kernel =</span> <span class="st">"gaussian"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>3. Análisis de hotspots</strong></p>
+<p>Identificar clusters estadísticamente significativos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Local Moran's I</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>local_moran <span class="ot">&lt;-</span> <span class="fu">localmoran</span>(df<span class="sc">$</span>attacks, W)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Getis-Ord Gi*</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>gi_star <span class="ot">&lt;-</span> <span class="fu">localG</span>(df<span class="sc">$</span>attacks, W)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>4. Machine learning espacial</strong></p>
+<p>Integrar random forests con estructura espacial:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ranger)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Incluir spatial lags como features</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>lag_attacks <span class="ot">&lt;-</span> <span class="fu">lag.listw</span>(W, df<span class="sc">$</span>attacks)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>rf_spatial <span class="ot">&lt;-</span> <span class="fu">ranger</span>(</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  attacks <span class="sc">~</span> . <span class="sc">+</span> lag_attacks,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">importance =</span> <span class="st">"permutation"</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="recursos-y-reproducibilidad" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-y-reproducibilidad">Recursos y reproducibilidad</h2>
+<section id="código-y-datos" class="level3">
+<h3 class="anchored" data-anchor-id="código-y-datos">Código y datos</h3>
+<p>Todo el análisis es <strong>completamente reproducible</strong>:</p>
+<ul>
+<li><strong>Repositorio GitHub</strong>: <a href="https://github.com/castellco/terrorism_peru">github.com/castellco/terrorism_peru</a></li>
+<li><strong>Archivo R Markdown</strong>: <code>carolina_cornejo_tfm.Rmd</code> (incluye código completo)</li>
+<li><strong>Datasets</strong>: Carpeta <code>/data/data.zip</code></li>
+<li><strong>Shapefiles</strong>: Carpeta <code>/shapefiles/</code></li>
+<li><strong>Figuras</strong>: Carpeta <code>/figs/</code></li>
+</ul>
+</section>
+<section id="paquetes-de-r-utilizados" class="level3">
+<h3 class="anchored" data-anchor-id="paquetes-de-r-utilizados">Paquetes de R utilizados</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Manipulación de datos</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Análisis espacial</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)           <span class="co"># Geometrías espaciales</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)        <span class="co"># Dependencia espacial</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spatialreg)   <span class="co"># Modelos espaciales (SEM, SAR)</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelos de conteo</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)         <span class="co"># Negative Binomial</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pscl)         <span class="co"># Zero-inflated models</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap)         <span class="co"># Mapas temáticos</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)      <span class="co"># Paletas de colores</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Utilidades</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)        <span class="co"># Tidying model outputs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="instalación-del-entorno" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-del-entorno">Instalación del entorno</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar paquetes necesarios</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"sf"</span>, <span class="st">"spdep"</span>, <span class="st">"spatialreg"</span>, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">"MASS"</span>, <span class="st">"pscl"</span>, <span class="st">"ggplot2"</span>, <span class="st">"tmap"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(packages)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Clonar repositorio</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># git clone https://github.com/castellco/terrorism_peru.git</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar análisis</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">render</span>(<span class="st">"carolina_cornejo_tfm.Rmd"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="conclusiones" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones">Conclusiones</h2>
+<p>Este proyecto demuestra la <strong>importancia crítica de incorporar la estructura espacial</strong> en el análisis de conflictos armados. Los principales hallazgos metodológicos son:</p>
+<section id="la-autocorrelación-espacial-no-es-constante" class="level3">
+<h3 class="anchored" data-anchor-id="la-autocorrelación-espacial-no-es-constante">1. La autocorrelación espacial no es constante</h3>
+<p>El I de Moran aumentó de 0.032 (pico) a 0.268 (declive), revelando que la <strong>concentración geográfica de la violencia cambia dramáticamente</strong> a lo largo del conflicto.</p>
+</section>
+<section id="los-modelos-espaciales-son-esenciales-cuando-hay-autocorrelación-fuerte" class="level3">
+<h3 class="anchored" data-anchor-id="los-modelos-espaciales-son-esenciales-cuando-hay-autocorrelación-fuerte">2. Los modelos espaciales son esenciales cuando hay autocorrelación fuerte</h3>
+<p>Durante el declive, los modelos SEM/SAR mostraron mejor ajuste (AIC ~1145) que OLS (AIC 1194), y el parámetro espacial (λ = 0.467, ρ = 0.455) fue altamente significativo.</p>
+</section>
+<section id="los-efectos-de-variables-son-condicionales-al-período-temporal" class="level3">
+<h3 class="anchored" data-anchor-id="los-efectos-de-variables-son-condicionales-al-período-temporal">3. Los efectos de variables son condicionales al período temporal</h3>
+<p>Variables clave como coca cultivation y distance to borders <strong>invierten su signo</strong> entre períodos, demostrando que analizar todo el conflicto como un bloque homogéneo <strong>oculta dinámicas críticas</strong>.</p>
+</section>
+<section id="la-elección-del-modelo-de-conteo-importa-con-zero-inflation" class="level3">
+<h3 class="anchored" data-anchor-id="la-elección-del-modelo-de-conteo-importa-con-zero-inflation">4. La elección del modelo de conteo importa con zero-inflation</h3>
+<p>Con 62% de ceros, el modelo Negative Binomial superó dramáticamente a OLS y mostró efectos robustos de variables como distancia a capital y número de lenguas locales.</p>
+</section>
+<section id="implicaciones-para-análisis-de-conflictos" class="level3">
+<h3 class="anchored" data-anchor-id="implicaciones-para-análisis-de-conflictos">Implicaciones para análisis de conflictos</h3>
+<p>Este trabajo muestra que el análisis riguroso de conflictos armados requiere:</p>
+<p>✓ <strong>Datos desagregados</strong> (grid-cell level, no país/región)<br>
+✓ <strong>Modelos espaciales</strong> cuando existe autocorrelación<br>
+✓ <strong>Análisis temporal diferenciado</strong> (pico vs declive vs completo)<br>
+✓ <strong>Modelos de conteo apropiados</strong> para datos zero-inflated<br>
+✓ <strong>Reproducibilidad completa</strong> (código + datos públicos)</p>
+</section>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<section id="metodológicas" class="level3">
+<h3 class="anchored" data-anchor-id="metodológicas">Metodológicas</h3>
+<p>Anselin, L. (1988). <em>Spatial Econometrics: Methods and Models</em>. Springer.</p>
+<p>Buhaug, H., &amp; Rød, J. K. (2006). Local determinants of African civil wars,</p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

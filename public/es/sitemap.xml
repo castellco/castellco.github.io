@@ -35,32 +35,26 @@
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/geograf%C3%ADa/</loc>
-    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <loc>https://castellco.github.io/tags/dataviz/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/gis/</loc>
-    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <loc>https://castellco.github.io/tags/ggplot/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://castellco.github.io/posts/geografia-terrorismo-peru/</loc>
-    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/per%C3%BA/</loc>
-    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <loc>https://castellco.github.io/tags/r/</loc>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://castellco.github.io/tags/</loc>
-    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
+    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -75,31 +69,7 @@
     />
   </url>
   <url>
-    <loc>https://castellco.github.io/tags/terrorismo/</loc>
-    <lastmod>2025-07-07T10:00:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://castellco.github.io/posts/how-americans-spend-their-money/</loc>
-    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/dataviz/</loc>
-    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/ggplot/</loc>
-    <lastmod>2025-05-20T10:45:00+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://castellco.github.io/tags/r/</loc>
     <lastmod>2025-05-20T10:45:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

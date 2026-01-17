@@ -395,6 +395,9 @@ Esta técnica crea un **efecto de negrita más pronunciado** mediante la superpo
 El código completo y los datos están disponibles en mi repositorio de GitHub:
 
 - **Repositorio**: [https://github.com/castellco/bump-chart](https://github.com/castellco/bump-chart)
+
+{{< github repo="castellco/bump-chart" >}}
+
 - **Proyecto original**: [https://csslab.uc3m.es/dataviz/projects/2022/100481925/](https://csslab.uc3m.es/dataviz/projects/2022/100481925/)
 
 
