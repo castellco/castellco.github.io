@@ -1322,7 +1322,7 @@
     "keywords": ["datos espaciales","Perú","GIS","R"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2882"
+    "wordCount": "1024"
   },
   {
     "@context": "https://schema.org",
@@ -1919,7 +1919,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-07T10:00:00&#43;01:00">7 febrero 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2882 palabras</span><span class="px-2 text-primary-500">&middot;</span><span title="Tiempo de lectura">14 mins</span>
+      <time datetime="2025-02-07T10:00:00&#43;01:00">7 febrero 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1024 palabras</span><span class="px-2 text-primary-500">&middot;</span><span title="Tiempo de lectura">5 mins</span>
     
 
     
@@ -2118,93 +2118,18 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#desafío-metodológico-por-qué-modelos-espaciales">Desafío metodológico: ¿Por qué modelos espaciales?</a>
-      <ul>
-        <li><a href="#el-problema-de-la-dependencia-espacial">El problema de la dependencia espacial</a></li>
-      </ul>
-    </li>
+    <li><a href="#por-qué-modelos-espaciales-el-problema-de-la-dependencia-espacial">¿Por qué modelos espaciales? El problema de la dependencia espacial</a></li>
     <li><a href="#metodología">Metodología</a>
       <ul>
         <li><a href="#los-datos">Los datos</a></li>
         <li><a href="#el-procesamiento">El procesamiento</a></li>
-        <li><a href="#variables-del-modelo">Variables del modelo</a></li>
-      </ul>
-    </li>
-    <li><a href="#análisis-de-autocorrelación-espacial-morans-i">Análisis de autocorrelación espacial: Moran&rsquo;s I</a>
-      <ul>
+        <li><a href="#las-variables">Las variables</a></li>
         <li><a href="#test-de-morans-i">Test de Moran&rsquo;s I</a></li>
+        <li><a href="#los-modelos-espaciales-sar-y-sem">Los modelos espaciales: SAR y SEM</a></li>
       </ul>
     </li>
-    <li><a href="#modelos-espaciales-aplicados">Modelos espaciales aplicados</a>
-      <ul>
-        <li><a href="#1-spatial-error-model-sem">1. Spatial Error Model (SEM)</a></li>
-        <li><a href="#2-spatial-autoregressive-model-sar">2. Spatial Autoregressive Model (SAR)</a></li>
-        <li><a href="#3-linear-model-ols">3. Linear Model (OLS)</a></li>
-        <li><a href="#4-negative-binomial-model">4. Negative Binomial Model</a></li>
-      </ul>
-    </li>
-    <li><a href="#comparación-de-modelos">Comparación de modelos</a>
-      <ul>
-        <li><a href="#criterios-de-información">Criterios de información</a></li>
-        <li><a href="#efectos-de-variables-clave-por-modelo">Efectos de variables clave por modelo</a>
-          <ul>
-            <li><a href="#coca-cultivation">Coca cultivation</a></li>
-            <li><a href="#average-elevation">Average elevation</a></li>
-            <li><a href="#number-of-local-languages">Number of local languages</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#hallazgos-metodológicos-clave">Hallazgos metodológicos clave</a>
-      <ul>
-        <li><a href="#1-la-autocorrelación-espacial-varía-temporalmente">1. La autocorrelación espacial varía temporalmente</a></li>
-        <li><a href="#2-los-efectos-de-variables-se-invierten-entre-períodos">2. Los efectos de variables se invierten entre períodos</a></li>
-        <li><a href="#3-los-modelos-espaciales-superan-a-ols-en-períodos-de-alta-autocorrelación">3. Los modelos espaciales superan a OLS en períodos de alta autocorrelación</a></li>
-        <li><a href="#4-zero-inflation-requiere-atención-especial">4. Zero-inflation requiere atención especial</a></li>
-      </ul>
-    </li>
-    <li><a href="#implementación-técnica">Implementación técnica</a>
-      <ul>
-        <li><a href="#construcción-de-matriz-de-pesos-espaciales">Construcción de matriz de pesos espaciales</a></li>
-        <li><a href="#manejo-de-datos-zero-inflated">Manejo de datos zero-inflated</a></li>
-        <li><a href="#validación-de-modelos">Validación de modelos</a></li>
-      </ul>
-    </li>
-    <li><a href="#desafíos-técnicos-y-soluciones">Desafíos técnicos y soluciones</a>
-      <ul>
-        <li><a href="#1-integración-de-múltiples-fuentes-de-datos">1. Integración de múltiples fuentes de datos</a></li>
-        <li><a href="#2-proyecciones-cartográficas">2. Proyecciones cartográficas</a></li>
-        <li><a href="#3-celda-sin-vecinos">3. Celda sin vecinos</a></li>
-        <li><a href="#4-interpretación-de-efectos-en-modelos-espaciales">4. Interpretación de efectos en modelos espaciales</a></li>
-      </ul>
-    </li>
-    <li><a href="#limitaciones-y-trabajo-futuro">Limitaciones y trabajo futuro</a>
-      <ul>
-        <li><a href="#limitaciones-del-estudio">Limitaciones del estudio</a></li>
-        <li><a href="#extensiones-futuras">Extensiones futuras</a></li>
-      </ul>
-    </li>
-    <li><a href="#recursos-y-reproducibilidad">Recursos y reproducibilidad</a>
-      <ul>
-        <li><a href="#código-y-datos">Código y datos</a></li>
-        <li><a href="#paquetes-de-r-utilizados">Paquetes de R utilizados</a></li>
-        <li><a href="#instalación-del-entorno">Instalación del entorno</a></li>
-      </ul>
-    </li>
-    <li><a href="#conclusiones">Conclusiones</a>
-      <ul>
-        <li><a href="#1-la-autocorrelación-espacial-no-es-constante">1. La autocorrelación espacial no es constante</a></li>
-        <li><a href="#2-los-modelos-espaciales-son-esenciales-cuando-hay-autocorrelación-fuerte">2. Los modelos espaciales son esenciales cuando hay autocorrelación fuerte</a></li>
-        <li><a href="#3-los-efectos-de-variables-son-condicionales-al-período-temporal">3. Los efectos de variables son condicionales al período temporal</a></li>
-        <li><a href="#4-la-elección-del-modelo-de-conteo-importa-con-zero-inflation">4. La elección del modelo de conteo importa con zero-inflation</a></li>
-        <li><a href="#implicaciones-para-análisis-de-conflictos">Implicaciones para análisis de conflictos</a></li>
-      </ul>
-    </li>
-    <li><a href="#referencias">Referencias</a>
-      <ul>
-        <li><a href="#metodológicas">Metodológicas</a></li>
-      </ul>
-    </li>
+    <li><a href="#conclusiones">Conclusiones</a></li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav>
   </div>
@@ -2218,93 +2143,18 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#desafío-metodológico-por-qué-modelos-espaciales">Desafío metodológico: ¿Por qué modelos espaciales?</a>
-      <ul>
-        <li><a href="#el-problema-de-la-dependencia-espacial">El problema de la dependencia espacial</a></li>
-      </ul>
-    </li>
+    <li><a href="#por-qué-modelos-espaciales-el-problema-de-la-dependencia-espacial">¿Por qué modelos espaciales? El problema de la dependencia espacial</a></li>
     <li><a href="#metodología">Metodología</a>
       <ul>
         <li><a href="#los-datos">Los datos</a></li>
         <li><a href="#el-procesamiento">El procesamiento</a></li>
-        <li><a href="#variables-del-modelo">Variables del modelo</a></li>
-      </ul>
-    </li>
-    <li><a href="#análisis-de-autocorrelación-espacial-morans-i">Análisis de autocorrelación espacial: Moran&rsquo;s I</a>
-      <ul>
+        <li><a href="#las-variables">Las variables</a></li>
         <li><a href="#test-de-morans-i">Test de Moran&rsquo;s I</a></li>
+        <li><a href="#los-modelos-espaciales-sar-y-sem">Los modelos espaciales: SAR y SEM</a></li>
       </ul>
     </li>
-    <li><a href="#modelos-espaciales-aplicados">Modelos espaciales aplicados</a>
-      <ul>
-        <li><a href="#1-spatial-error-model-sem">1. Spatial Error Model (SEM)</a></li>
-        <li><a href="#2-spatial-autoregressive-model-sar">2. Spatial Autoregressive Model (SAR)</a></li>
-        <li><a href="#3-linear-model-ols">3. Linear Model (OLS)</a></li>
-        <li><a href="#4-negative-binomial-model">4. Negative Binomial Model</a></li>
-      </ul>
-    </li>
-    <li><a href="#comparación-de-modelos">Comparación de modelos</a>
-      <ul>
-        <li><a href="#criterios-de-información">Criterios de información</a></li>
-        <li><a href="#efectos-de-variables-clave-por-modelo">Efectos de variables clave por modelo</a>
-          <ul>
-            <li><a href="#coca-cultivation">Coca cultivation</a></li>
-            <li><a href="#average-elevation">Average elevation</a></li>
-            <li><a href="#number-of-local-languages">Number of local languages</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#hallazgos-metodológicos-clave">Hallazgos metodológicos clave</a>
-      <ul>
-        <li><a href="#1-la-autocorrelación-espacial-varía-temporalmente">1. La autocorrelación espacial varía temporalmente</a></li>
-        <li><a href="#2-los-efectos-de-variables-se-invierten-entre-períodos">2. Los efectos de variables se invierten entre períodos</a></li>
-        <li><a href="#3-los-modelos-espaciales-superan-a-ols-en-períodos-de-alta-autocorrelación">3. Los modelos espaciales superan a OLS en períodos de alta autocorrelación</a></li>
-        <li><a href="#4-zero-inflation-requiere-atención-especial">4. Zero-inflation requiere atención especial</a></li>
-      </ul>
-    </li>
-    <li><a href="#implementación-técnica">Implementación técnica</a>
-      <ul>
-        <li><a href="#construcción-de-matriz-de-pesos-espaciales">Construcción de matriz de pesos espaciales</a></li>
-        <li><a href="#manejo-de-datos-zero-inflated">Manejo de datos zero-inflated</a></li>
-        <li><a href="#validación-de-modelos">Validación de modelos</a></li>
-      </ul>
-    </li>
-    <li><a href="#desafíos-técnicos-y-soluciones">Desafíos técnicos y soluciones</a>
-      <ul>
-        <li><a href="#1-integración-de-múltiples-fuentes-de-datos">1. Integración de múltiples fuentes de datos</a></li>
-        <li><a href="#2-proyecciones-cartográficas">2. Proyecciones cartográficas</a></li>
-        <li><a href="#3-celda-sin-vecinos">3. Celda sin vecinos</a></li>
-        <li><a href="#4-interpretación-de-efectos-en-modelos-espaciales">4. Interpretación de efectos en modelos espaciales</a></li>
-      </ul>
-    </li>
-    <li><a href="#limitaciones-y-trabajo-futuro">Limitaciones y trabajo futuro</a>
-      <ul>
-        <li><a href="#limitaciones-del-estudio">Limitaciones del estudio</a></li>
-        <li><a href="#extensiones-futuras">Extensiones futuras</a></li>
-      </ul>
-    </li>
-    <li><a href="#recursos-y-reproducibilidad">Recursos y reproducibilidad</a>
-      <ul>
-        <li><a href="#código-y-datos">Código y datos</a></li>
-        <li><a href="#paquetes-de-r-utilizados">Paquetes de R utilizados</a></li>
-        <li><a href="#instalación-del-entorno">Instalación del entorno</a></li>
-      </ul>
-    </li>
-    <li><a href="#conclusiones">Conclusiones</a>
-      <ul>
-        <li><a href="#1-la-autocorrelación-espacial-no-es-constante">1. La autocorrelación espacial no es constante</a></li>
-        <li><a href="#2-los-modelos-espaciales-son-esenciales-cuando-hay-autocorrelación-fuerte">2. Los modelos espaciales son esenciales cuando hay autocorrelación fuerte</a></li>
-        <li><a href="#3-los-efectos-de-variables-son-condicionales-al-período-temporal">3. Los efectos de variables son condicionales al período temporal</a></li>
-        <li><a href="#4-la-elección-del-modelo-de-conteo-importa-con-zero-inflation">4. La elección del modelo de conteo importa con zero-inflation</a></li>
-        <li><a href="#implicaciones-para-análisis-de-conflictos">Implicaciones para análisis de conflictos</a></li>
-      </ul>
-    </li>
-    <li><a href="#referencias">Referencias</a>
-      <ul>
-        <li><a href="#metodológicas">Metodológicas</a></li>
-      </ul>
-    </li>
+    <li><a href="#conclusiones">Conclusiones</a></li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav>
   </div>
@@ -2422,7 +2272,9 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <div class="github-card-wrapper">
+          <p>Este post es sobre el TFM con el que me gradué del Máster Universitario en Ciencias Sociales Computacionales en la UC3M. Para este, apliqué modelos espaciales para estudiar la difusión de ataques terroristas en Perú durante la temporada álgida del Conflicto Armado Interno (1980-2000) y desde entonces a la actualidad, comparando diferentes períodos temporales y técnicas de modelado.</p>
+<p>El código es open source en Github:
+<div class="github-card-wrapper">
     <a id="github-0b361eba8855f3eb2ecdb822d0298a0f" target="_blank" href="https://github.com/castellco/terrorism_peru" class="cursor-pointer">
       <div
         class="w-full md:w-auto p-0 m-0 border border-neutral-200 dark:border-neutral-700 border rounded-md shadow-2xl"><div class="w-full nozoom">
@@ -2479,33 +2331,20 @@
         data-repo-url="https://api.github.com/repos/castellco/terrorism_peru"
         data-repo-id="github-0b361eba8855f3eb2ecdb822d0298a0f"></script>
     </a>
-  </div>
-<p>En el contexto de mi Trabajo de Fin de Máster (TFM) del Máster Universitario en Ciencias Sociales Computacionales en la Universidad Carlos III de Madrid, me propuse abordar el Conflicto Armado Interno  desde una perspectiva espacial. Me interesaba 1) Conocer si y/o en qué grado hubo un efecto de difusión espacial de los ataques terroristas; y 2) practicar el tratamiento de datos espaciales y herramientas GIS en R.</p>
-<p>El análisis espacial de conflictos armados presenta desafíos metodológicos únicos: las observaciones no son independientes entre sí, el espacio importa, y los eventos tienden a agruparse. Así, en mi TFM apliqué modelos espaciales para estudiar la difusión de ataques terroristas en Perú durante el conflicto armado interno (1980-2021), comparando diferentes períodos temporales y técnicas de modelado.</p>
+  </div></p>
 
-<h2 class="relative group">Desafío metodológico: ¿Por qué modelos espaciales?
-    <div id="desafío-metodológico-por-qué-modelos-espaciales" class="anchor"></div>
+<h2 class="relative group">¿Por qué modelos espaciales? El problema de la dependencia espacial
+    <div id="por-qué-modelos-espaciales-el-problema-de-la-dependencia-espacial" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#desaf%c3%ado-metodol%c3%b3gico-por-qu%c3%a9-modelos-espaciales" aria-label="Ancla">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#por-qu%c3%a9-modelos-espaciales-el-problema-de-la-dependencia-espacial" aria-label="Ancla">#</a>
     </span>
     
 </h2>
-
-<h3 class="relative group">El problema de la dependencia espacial
-    <div id="el-problema-de-la-dependencia-espacial" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#el-problema-de-la-dependencia-espacial" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Los métodos tradicionales de regresión (OLS) asumen que las observaciones son <strong>independientes entre sí</strong>. Sin embargo, en fenómenos espaciales como conflictos armados, esta suposición se viola sistemáticamente.</p>
+<p>Los métodos tradicionales de regresión (OLS) asumen que las observaciones son <strong>independientes entre sí</strong>. Sin embargo, en fenómenos espaciales como los ataques terroristas, esta suposición se viola sistemáticamente.</p>
 <blockquote><p>“Todo está relacionado con todo lo demás, pero las cosas cercanas están más relacionadas que las distantes.”<br>
-— <cite> Waldo Tobler (1970)</cite></p></blockquote><p>Esta, la llamada &ldquo;Primera ley de Tobler&rdquo;, es la madre de varios conceptos clave en análisis espacial. En específico, en mi TFM refiero mucho a la <strong>autocorrelación espacial</strong>, que describe cómo las observaciones en ubicaciones geográficas cercanas tienden a ser más similares entre sí que las distantes.</p>
-<p>Ignorar esta dependencia lleva a estimaciones sesgadas de los efectos, errores estándar incorrectos (generalmente subestimados), e inferencias estadísticas inválidas. Por eso se debían usar modelos espaciales.</p>
+— <cite> Waldo Tobler (1970)</cite></p></blockquote><p>Esta, la llamada &ldquo;Primera ley de Tobler&rdquo;, es la madre de varios conceptos clave en análisis espacial. En específico, en mi TFM refiero mucho a la <strong>autocorrelación espacial</strong>, que describe cómo las observaciones en ubicaciones geográficas cercanas tienden a ser más similares entre sí que las distantes. Ignorar esta dependencia lleva a estimaciones sesgadas de los efectos, errores estándar incorrectos (generalmente subestimados), e inferencias inválidas. Por eso, si quería estudiar la territorialidad del Conflicto Armado Interno, debían usar modelos espaciales.</p>
 
 <h2 class="relative group">Metodología
     <div id="metodología" class="anchor"></div>
@@ -2516,7 +2355,7 @@
     </span>
     
 </h2>
-<p>Siguiendo las recomendaciones de Buhaug y Rød (2006), utilicé <strong>celdas de grilla (grid cells)</strong> de 0.5 × 0.5 grados decimales como unidades de análisis en lugar de divisiones administrativas tradicionales, como distritos o provincias.</p>
+<p>Siguiendo las recomendaciones de Buhaug y Rød (2006), utilicé <strong>celdas de grilla (grid cells)</strong>, en este caso de 0.5 × 0.5 grados decimales como unidades de análisis en lugar de divisiones administrativas tradicionales, como distritos o provincias.</p>
 <p>Este enfoque tiene ventajas, como que las celdas no cambian en tamaño, forma o número a lo largo del tiempo, permiten controlar mejor por decisiones políticas que podrían afectar la frecuencia de eventos, constituyen entidades inherentemente apolíticas (Tollefsen et al., 2012), entre otros.</p>
 <figure><img
     class="my-0 rounded-md"
@@ -2538,9 +2377,9 @@
 </h3>
 <p>Integré datos de múltiples fuentes georreferenciadas:</p>
 <ol>
-<li><strong>Global Terrorism Database (GTD)</strong>: Mi principal dataset, que contiene información de ~200,000 incidentes terroristas a nivel global (1970-2021)</li>
-<li><strong>PRIO-GRID</strong>: Una base de Variables geodemográficas a nivel de celda 0.5×0.5</li>
-<li><strong>xSUB</strong>: Datos subnacionales de conflicto compatibles con PRIO-GRID</li>
+<li><strong><a href="https://www.start.umd.edu/data-tools/GTD"  target="_blank">Global Terrorism Database (GTD)</a></strong>: Mi principal dataset, que contiene información de ~200,000 incidentes terroristas a nivel global (1970-2021)</li>
+<li><strong><a href="https://grid.prio.org/#/download"  target="_blank">PRIO-GRID</a></strong>: Una base de variables geodemográficas a nivel de celda 0.5×0.5</li>
+<li><strong><a href="https://cross-sub.org/"  target="_blank">xSUB</a></strong>: Datos subnacionales de conflicto compatibles con PRIO-GRID</li>
 <li><strong>Shapefiles</strong>: Geometrías de celdas mundiales y fronteras de Perú</li>
 </ol>
 
@@ -2553,22 +2392,19 @@
     </span>
     
 </h3>
-<p>Básicamente, y para resumir, hice un <em>point-in-polygon spatial join</em> para asignar los ataques (los puntos) a los grid cells (los polygons). Luego, agregué los eventos (los ataques terroristas) por celda y construí tres sub datasets temporales: uno para el pico de la violencia (1980-2000), otro para el declive (2001-2021), y otro para el período completo (1980-2021).</p>
+<p>Básicamente, y para resumir, hice un <em>point-in-polygon spatial join</em> para asignar los ataques (los puntos) a los grid cells (los polígonos). Luego, construí tres sub datasets temporales: uno para el pico de la violencia (1980-2000), otro para el declive (2001-2021), y otro para el período completo (1980-2021).</p>
 
-<h3 class="relative group">Variables del modelo
-    <div id="variables-del-modelo" class="anchor"></div>
+<h3 class="relative group">Las variables
+    <div id="las-variables" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#variables-del-modelo" aria-label="Ancla">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#las-variables" aria-label="Ancla">#</a>
     </span>
     
 </h3>
-<p><strong>Variable dependiente</strong>:</p>
-<ul>
-<li>Número de ataques terroristas por celda de grilla (datos de conteo, que a la vez son zero-inflated, ya que muchas celdas no registran ataques).</li>
-</ul>
-<p><strong>Variables independientes</strong>:</p>
+<p>Mi variable dependiente fue el número de ataques terroristas por celda. Estos son datos de conteo <em>zero-inflated</em>, ya que muchas celdas no registran ataques.</p>
+<p>Como variables independientes, seleccioné un conjunto basado en la literatura previa sobre geografía del conflicto armado (Buhaug y Rød, 2006; Weidmann, 2015; Hendrix y Salehyan, 2012), y por disposición de datos. En el código estos se identifican como:</p>
 <ul>
 <li><code>Dist to borders</code>: Distancia al borde territorial (km)</li>
 <li><code>Dist to capital</code>: Distancia a Lima (km)</li>
@@ -2579,17 +2415,6 @@
 <li><code>No of local langs</code>: Número de lenguas locales</li>
 </ul>
 
-<h2 class="relative group">Análisis de autocorrelación espacial: Moran&rsquo;s I
-    <div id="análisis-de-autocorrelación-espacial-morans-i" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#an%c3%a1lisis-de-autocorrelaci%c3%b3n-espacial-morans-i" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-<p>Antes de modelar, es crucial <strong>detectar y cuantificar</strong> la autocorrelación espacial.</p>
-
 <h3 class="relative group">Test de Moran&rsquo;s I
     <div id="test-de-morans-i" class="anchor"></div>
     
@@ -2599,979 +2424,23 @@
     </span>
     
 </h3>
-<p>El <strong>I de Moran</strong> es el estadístico más utilizado para medir autocorrelación espacial global. Varía de -1 (dispersión perfecta) a +1 (agrupamiento perfecto).</p>
-<p><strong>Hipótesis</strong>:</p>
-<ul>
-<li>H0: No existe autocorrelación espacial (el fenómeno que se está analizando exhibe completa aleatoriedad espacial)</li>
-<li>H1: Existe autocorrelación espacial significativa (el fenómeno parece presentar un patrón espacial no aleatorio)</li>
-</ul>
-<p>Así, la autocorrelación espacial es <strong>significativamente más pronunciada</strong> durante el período de declive (I = 0.268) que durante el pico de violencia (I = 0.032).</p>
-<p><strong>Interpretación</strong>:
-Durante el período de repliegue de las fuerzas subversivas (2001-2021), los ataques se concentraron cada vez más en áreas específicas (principalmente VRAEM - Valle de los ríos Apurímac, Ene y Mantaro), creando un <strong>patrón de clustering espacial más fuerte</strong>.</p>
+<p>El <strong>I de Moran</strong> es el estadístico más utilizado para medir autocorrelación espacial global. Varía de -1 indicando dispersión perfecta, a +1 sugiriendo un agrupamiento perfecto.</p>
+<p>El código en R es reproducible y, para resumir, utilicé la función <code>moran.test()</code> del paquete <code>spdep</code>. El resultado fue que la autocorrelación espacial es <strong>significativamente más pronunciada</strong> durante el período de declive (I = 0.268) que durante el pico de violencia (I = 0.032). Es decir, los ataques se concentraron geográficamente durante el declive.</p>
+<p>Esto se explica con que durante el período de repliegue de las fuerzas subversivas (2001-2021), los ataques se concentraron cada vez más en áreas específicas (principalmente VRAEM), creando un patrón de clustering espacial más fuerte.</p>
 
-<h2 class="relative group">Modelos espaciales aplicados
-    <div id="modelos-espaciales-aplicados" class="anchor"></div>
+<h3 class="relative group">Los modelos espaciales: SAR y SEM
+    <div id="los-modelos-espaciales-sar-y-sem" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modelos-espaciales-aplicados" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">1. Spatial Error Model (SEM)
-    <div id="1-spatial-error-model-sem" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-spatial-error-model-sem" aria-label="Ancla">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#los-modelos-espaciales-sar-y-sem" aria-label="Ancla">#</a>
     </span>
     
 </h3>
-<p>El modelo SEM captura la <strong>dependencia espacial en los términos de error</strong>.</p>
-<p><strong>Especificación</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">y = Xβ + ε
-</span></span><span class="line"><span class="cl">ε = λWε + u</span></span></code></pre></div></div>
-<p>Donde:</p>
-<ul>
-<li><code>λ</code> (lambda): parámetro de autocorrelación espacial de los errores</li>
-<li><code>W</code>: matriz de pesos espaciales</li>
-<li><code>u</code>: error no correlacionado espacialmente</li>
-</ul>
-<p><strong>Cuándo usarlo</strong>: Cuando la autocorrelación espacial proviene de variables omitidas espacialmente correlacionadas.</p>
-<p><strong>Implementación en R</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">spatialreg</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Definir vecindad tipo &#34;Queen&#34; (bordes y vértices compartidos)</span>
-</span></span><span class="line"><span class="cl"><span class="n">nb</span> <span class="o">&lt;-</span> <span class="nf">poly2nb</span><span class="p">(</span><span class="n">grid_sf</span><span class="p">,</span> <span class="n">queen</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Crear matriz de pesos row-standardized</span>
-</span></span><span class="line"><span class="cl"><span class="n">lw</span> <span class="o">&lt;-</span> <span class="nf">nb2listw</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="s">&#34;W&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Ajustar modelo SEM</span>
-</span></span><span class="line"><span class="cl"><span class="n">sem_model</span> <span class="o">&lt;-</span> <span class="nf">errorsarlm</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks</span> <span class="o">~</span> <span class="n">dist_borders</span> <span class="o">+</span> <span class="n">dist_capital</span> <span class="o">+</span> <span class="n">coca</span> <span class="o">+</span> <span class="n">ethnic</span> <span class="o">+</span> 
-</span></span><span class="line"><span class="cl">            <span class="n">elevation</span> <span class="o">+</span> <span class="n">open_land</span> <span class="o">+</span> <span class="n">languages</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">listw</span> <span class="o">=</span> <span class="n">lw</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>Resultados SEM</strong>:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>λ (lambda)</strong></td>
-          <td>0.032</td>
-          <td><strong>0.467</strong>*</td>
-          <td>0.031</td>
-      </tr>
-      <tr>
-          <td>Dist to borders</td>
-          <td>-0.015</td>
-          <td><strong>0.002</strong>*</td>
-          <td>-0.015</td>
-      </tr>
-      <tr>
-          <td>Dist to capital</td>
-          <td>-0.018</td>
-          <td>0.000</td>
-          <td>-0.018</td>
-      </tr>
-      <tr>
-          <td>Coca cultiv.</td>
-          <td>-5.334</td>
-          <td>1.185</td>
-          <td>-7.735</td>
-      </tr>
-      <tr>
-          <td>Avg elevation</td>
-          <td><strong>0.009†</strong></td>
-          <td>0.000</td>
-          <td><strong>0.009†</strong></td>
-      </tr>
-      <tr>
-          <td>No of local langs</td>
-          <td>-8.878</td>
-          <td><strong>-0.076†</strong></td>
-          <td><strong>-9.072†</strong></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Interpretación</strong>:</p>
-<ul>
-<li>El parámetro λ es <strong>significativo solo en el período de declive</strong> (0.467***, p &lt; 0.001)</li>
-<li>Evidencia de <strong>autocorrelación espacial residual pronunciada</strong> en 2001-2021</li>
-<li>Durante el declive, la distancia a fronteras tiene un efecto <strong>positivo</strong> y significativo (inversión de tendencia)</li>
-</ul>
-
-<h3 class="relative group">2. Spatial Autoregressive Model (SAR)
-    <div id="2-spatial-autoregressive-model-sar" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-spatial-autoregressive-model-sar" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>El modelo SAR incorpora la <strong>dependencia espacial en la variable dependiente</strong>.</p>
-<p><strong>Especificación</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">y = ρWy + Xβ + ε</span></span></code></pre></div></div>
-<p>Donde:</p>
-<ul>
-<li><code>ρ</code> (rho): parámetro de autocorrelación espacial de la variable dependiente</li>
-<li><code>Wy</code>: variable dependiente espacialmente rezagada (spatial lag)</li>
-</ul>
-<p><strong>Cuándo usarlo</strong>: Cuando existe un proceso de <strong>difusión o contagio</strong> directo entre unidades vecinas.</p>
-<p><strong>Implementación en R</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Ajustar modelo SAR</span>
-</span></span><span class="line"><span class="cl"><span class="n">sar_model</span> <span class="o">&lt;-</span> <span class="nf">lagsarlm</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks</span> <span class="o">~</span> <span class="n">dist_borders</span> <span class="o">+</span> <span class="n">dist_capital</span> <span class="o">+</span> <span class="n">coca</span> <span class="o">+</span> <span class="n">ethnic</span> <span class="o">+</span> 
-</span></span><span class="line"><span class="cl">            <span class="n">elevation</span> <span class="o">+</span> <span class="n">open_land</span> <span class="o">+</span> <span class="n">languages</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">listw</span> <span class="o">=</span> <span class="n">lw</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>Resultados SAR</strong>:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>ρ (rho)</strong></td>
-          <td>0.032</td>
-          <td><strong>0.455</strong>*</td>
-          <td>0.032</td>
-      </tr>
-      <tr>
-          <td>Dist to borders</td>
-          <td>-0.016</td>
-          <td>0.001</td>
-          <td>-0.015</td>
-      </tr>
-      <tr>
-          <td>Dist to capital</td>
-          <td>-0.018</td>
-          <td>0.000</td>
-          <td>-0.018</td>
-      </tr>
-      <tr>
-          <td>Coca cultiv.</td>
-          <td>-5.300</td>
-          <td>1.162</td>
-          <td>-7.678</td>
-      </tr>
-      <tr>
-          <td>Avg elevation</td>
-          <td><strong>0.008†</strong></td>
-          <td>0.000</td>
-          <td><strong>0.008†</strong></td>
-      </tr>
-      <tr>
-          <td>No of local langs</td>
-          <td>-8.717</td>
-          <td>-0.058</td>
-          <td>-8.907</td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Interpretación</strong>:</p>
-<ul>
-<li>El parámetro ρ también es <strong>significativo solo en el período de declive</strong> (0.455***)</li>
-<li>Confirma proceso de <strong>difusión espacial</strong> durante 2001-2021</li>
-<li>Resultados consistentes con SEM, validando la estructura espacial</li>
-</ul>
-
-<h3 class="relative group">3. Linear Model (OLS)
-    <div id="3-linear-model-ols" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-linear-model-ols" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Modelo de regresión lineal tradicional <strong>sin componente espacial</strong>, usado como baseline para comparación.</p>
-<p><strong>Resultados clave</strong>:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Dist to borders</td>
-          <td>-0.017</td>
-          <td><strong>0.001</strong>*</td>
-          <td>-0.017</td>
-      </tr>
-      <tr>
-          <td>Coca cultiv.</td>
-          <td>-5.484</td>
-          <td><strong>1.695</strong>*</td>
-          <td>-7.939</td>
-      </tr>
-      <tr>
-          <td>Ethnic groups</td>
-          <td>5.563</td>
-          <td><strong>0.211</strong>*</td>
-          <td>6.522</td>
-      </tr>
-      <tr>
-          <td>No of local langs</td>
-          <td>-8.911</td>
-          <td><strong>-0.074†</strong></td>
-          <td><strong>-9.103†</strong></td>
-      </tr>
-      <tr>
-          <td><strong>R² Adj</strong></td>
-          <td>0.010</td>
-          <td>0.067</td>
-          <td>0.010</td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Problema</strong>: R² muy bajo indica <strong>pobre ajuste del modelo</strong>. La omisión de la estructura espacial perjudica el rendimiento predictivo.</p>
-
-<h3 class="relative group">4. Negative Binomial Model
-    <div id="4-negative-binomial-model" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-negative-binomial-model" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Modelo de conteo que maneja <strong>sobredispersión</strong> en la variable dependiente.</p>
-<p><strong>Por qué Negative Binomial</strong>:</p>
-<ul>
-<li>Variable dependiente = conteos (0, 1, 2, &hellip; ataques)</li>
-<li><strong>Zero-inflated</strong>: 301 de 488 celdas (62%) tienen 0 ataques</li>
-<li>Media (11.39) ≠ Varianza (12,210) → <strong>sobredispersión extrema</strong></li>
-<li>Negative Binomial maneja mejor que Poisson cuando varianza &raquo; media</li>
-</ul>
-<p><strong>Implementación en R</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">nb_model</span> <span class="o">&lt;-</span> <span class="nf">glm.nb</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks</span> <span class="o">~</span> <span class="n">dist_borders</span> <span class="o">+</span> <span class="n">dist_capital</span> <span class="o">+</span> <span class="n">coca</span> <span class="o">+</span> <span class="n">ethnic</span> <span class="o">+</span> 
-</span></span><span class="line"><span class="cl">            <span class="n">elevation</span> <span class="o">+</span> <span class="n">open_land</span> <span class="o">+</span> <span class="n">languages</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">data</span> <span class="o">=</span> <span class="n">df</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>Resultados Negative Binomial</strong>:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Dist to borders</td>
-          <td>0.002</td>
-          <td><strong>0.008</strong>*</td>
-          <td>0.002</td>
-      </tr>
-      <tr>
-          <td>Dist to capital</td>
-          <td><strong>-0.005</strong>*</td>
-          <td><strong>-0.003</strong>*</td>
-          <td><strong>-0.005</strong>*</td>
-      </tr>
-      <tr>
-          <td>Avg elevation</td>
-          <td><strong>0.001</strong>*</td>
-          <td>0.000</td>
-          <td><strong>0.001</strong>*</td>
-      </tr>
-      <tr>
-          <td>No of local langs</td>
-          <td><strong>-0.703</strong>*</td>
-          <td><strong>-0.533</strong>*</td>
-          <td><strong>-0.704</strong>*</td>
-      </tr>
-      <tr>
-          <td><strong>AIC</strong></td>
-          <td>1859.3</td>
-          <td><strong>352.1</strong></td>
-          <td>1907.0</td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Hallazgo clave</strong>: El modelo NB muestra el <strong>mejor ajuste general</strong> (AIC más bajo) y revela efectos significativos de distancia a capital y número de lenguas locales <strong>consistentes en los tres períodos</strong>.</p>
-
-<h2 class="relative group">Comparación de modelos
-    <div id="comparación-de-modelos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#comparaci%c3%b3n-de-modelos" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Criterios de información
-    <div id="criterios-de-información" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#criterios-de-informaci%c3%b3n" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Modelo</th>
-          <th>Pico AIC</th>
-          <th>Declive AIC</th>
-          <th>Completo AIC</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SEM</td>
-          <td>6000.7</td>
-          <td><strong>1145.3</strong></td>
-          <td>6005.0</td>
-      </tr>
-      <tr>
-          <td>SAR</td>
-          <td>6000.7</td>
-          <td><strong>1144.2</strong></td>
-          <td>6005.0</td>
-      </tr>
-      <tr>
-          <td>Linear</td>
-          <td>5998.9</td>
-          <td>1193.5</td>
-          <td>6003.2</td>
-      </tr>
-      <tr>
-          <td>Negative Binomial</td>
-          <td><strong>1859.3</strong></td>
-          <td><strong>352.1</strong></td>
-          <td><strong>1907.0</strong></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Observaciones</strong>:</p>
-<ol>
-<li>Los modelos espaciales (SEM/SAR) muestran <strong>mejor ajuste en el período de declive</strong></li>
-<li>El modelo Negative Binomial tiene <strong>AIC consistentemente más bajo</strong> en todos los períodos</li>
-<li>El período de declive tiene mejor ajuste en <strong>todos los modelos</strong> (AIC menores)</li>
-</ol>
-
-<h3 class="relative group">Efectos de variables clave por modelo
-    <div id="efectos-de-variables-clave-por-modelo" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#efectos-de-variables-clave-por-modelo" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-
-<h4 class="relative group">Coca cultivation
-    <div id="coca-cultivation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#coca-cultivation" aria-label="Ancla">#</a>
-    </span>
-    
-</h4>
-<table>
-  <thead>
-      <tr>
-          <th>Modelo</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SEM</td>
-          <td>-5.334</td>
-          <td>+1.185</td>
-          <td>-7.735</td>
-      </tr>
-      <tr>
-          <td>SAR</td>
-          <td>-5.300</td>
-          <td>+1.162</td>
-          <td>-7.678</td>
-      </tr>
-      <tr>
-          <td>Linear</td>
-          <td>-5.484</td>
-          <td><strong>+1.695</strong>*</td>
-          <td>-7.939</td>
-      </tr>
-      <tr>
-          <td>NB</td>
-          <td>-0.290</td>
-          <td>+4.796</td>
-          <td>-0.361</td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Patrón</strong>: Efecto <strong>negativo</strong> durante pico, <strong>positivo</strong> durante declive (aunque solo significativo en Linear model).</p>
-<p><strong>Interpretación</strong>: Durante el declive, los grupos terroristas se replegaron hacia zonas de cultivo de coca (especialmente VRAEM), creando una asociación positiva entre coca y ataques.</p>
-
-<h4 class="relative group">Average elevation
-    <div id="average-elevation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#average-elevation" aria-label="Ancla">#</a>
-    </span>
-    
-</h4>
-<table>
-  <thead>
-      <tr>
-          <th>Modelo</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SEM</td>
-          <td><strong>0.009†</strong></td>
-          <td>0.000</td>
-          <td><strong>0.009†</strong></td>
-      </tr>
-      <tr>
-          <td>SAR</td>
-          <td><strong>0.008†</strong></td>
-          <td>0.000</td>
-          <td><strong>0.008†</strong></td>
-      </tr>
-      <tr>
-          <td>Linear</td>
-          <td><strong>0.008†</strong></td>
-          <td>0.000</td>
-          <td><strong>0.008†</strong></td>
-      </tr>
-      <tr>
-          <td>NB</td>
-          <td><strong>0.001</strong>*</td>
-          <td>0.000</td>
-          <td><strong>0.001</strong>*</td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Patrón</strong>: Efecto <strong>positivo y significativo</strong> en pico y período completo, <strong>no significativo</strong> en declive.</p>
-<p><strong>Interpretación</strong>: Durante el pico de violencia, las zonas de mayor elevación (más inaccesibles para fuerzas del orden) fueron más propensas a ataques. Este efecto desaparece en el declive.</p>
-
-<h4 class="relative group">Number of local languages
-    <div id="number-of-local-languages" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#number-of-local-languages" aria-label="Ancla">#</a>
-    </span>
-    
-</h4>
-<table>
-  <thead>
-      <tr>
-          <th>Modelo</th>
-          <th>Pico</th>
-          <th>Declive</th>
-          <th>Completo</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SEM</td>
-          <td>-8.878</td>
-          <td><strong>-0.076†</strong></td>
-          <td><strong>-9.072†</strong></td>
-      </tr>
-      <tr>
-          <td>SAR</td>
-          <td>-8.717</td>
-          <td>-0.058</td>
-          <td>-8.907</td>
-      </tr>
-      <tr>
-          <td>Linear</td>
-          <td>-8.911</td>
-          <td><strong>-0.074†</strong></td>
-          <td><strong>-9.103†</strong></td>
-      </tr>
-      <tr>
-          <td>NB</td>
-          <td><strong>-0.703</strong>*</td>
-          <td><strong>-0.533</strong>*</td>
-          <td><strong>-0.704</strong>*</td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Patrón</strong>: Efecto <strong>negativo consistente</strong> en todos los modelos y períodos.</p>
-<p><strong>Interpretación contraintuitiva</strong>: Áreas con mayor número de lenguas locales tuvieron <strong>menos</strong> ataques. Posible explicación: mayor diversidad lingüística correlaciona con organización comunitaria más fuerte (rondas campesinas de autodefensa).</p>
-
-<h2 class="relative group">Hallazgos metodológicos clave
-    <div id="hallazgos-metodológicos-clave" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hallazgos-metodol%c3%b3gicos-clave" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">1. La autocorrelación espacial varía temporalmente
-    <div id="1-la-autocorrelación-espacial-varía-temporalmente" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-la-autocorrelaci%c3%b3n-espacial-var%c3%ada-temporalmente" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>El <strong>I de Moran aumentó 8.4 veces</strong> del período de pico (0.032) al de declive (0.268), indicando que:</p>
-<ul>
-<li>El terrorismo se <strong>concentró geográficamente</strong> durante el declive</li>
-<li>Los modelos espaciales son <strong>especialmente importantes</strong> para analizar períodos post-conflicto</li>
-<li>La estructura espacial del conflicto <strong>cambia con el tiempo</strong></li>
-</ul>
-
-<h3 class="relative group">2. Los efectos de variables se invierten entre períodos
-    <div id="2-los-efectos-de-variables-se-invierten-entre-períodos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-los-efectos-de-variables-se-invierten-entre-per%c3%adodos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Múltiples variables muestran <strong>inversión de signo</strong> entre pico y declive:</p>
-<ul>
-<li><strong>Coca cultivation</strong>: Negativo → Positivo</li>
-<li><strong>Distance to borders</strong>: Negativo → Positivo</li>
-<li><strong>Open land proportion</strong>: Negativo → Positivo</li>
-</ul>
-<p><strong>Implicación metodológica</strong>: Analizar todo el período como un bloque homogéneo <strong>oculta dinámicas temporales críticas</strong>.</p>
-
-<h3 class="relative group">3. Los modelos espaciales superan a OLS en períodos de alta autocorrelación
-    <div id="3-los-modelos-espaciales-superan-a-ols-en-períodos-de-alta-autocorrelación" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-los-modelos-espaciales-superan-a-ols-en-per%c3%adodos-de-alta-autocorrelaci%c3%b3n" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Durante el declive:</p>
-<ul>
-<li>SEM/SAR AIC: ~1145</li>
-<li>Linear AIC: 1193.5</li>
-</ul>
-<p>Pero durante el pico:</p>
-<ul>
-<li>Diferencias de AIC son <strong>mínimas</strong></li>
-</ul>
-<p><strong>Conclusión</strong>: La ventaja de modelos espaciales es <strong>condicional a la intensidad de autocorrelación espacial</strong>.</p>
-
-<h3 class="relative group">4. Zero-inflation requiere atención especial
-    <div id="4-zero-inflation-requiere-atención-especial" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-zero-inflation-requiere-atenci%c3%b3n-especial" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Con 62% de celdas sin ataques:</p>
-<ul>
-<li>Modelos Negative Binomial superan dramáticamente a Linear (AIC: 352 vs 1194 en declive)</li>
-<li><strong>Zero-Inflated Poisson</strong> fue probado inicialmente pero descartado (resultados en Apéndice del TFM)</li>
-<li>La elección del modelo de conteo es <strong>crítica</strong> para datos de conflicto</li>
-</ul>
-
-<h2 class="relative group">Implementación técnica
-    <div id="implementación-técnica" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#implementaci%c3%b3n-t%c3%a9cnica" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Construcción de matriz de pesos espaciales
-    <div id="construcción-de-matriz-de-pesos-espaciales" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#construcci%c3%b3n-de-matriz-de-pesos-espaciales" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">spdep</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 1. Definir vecindad tipo Queen</span>
-</span></span><span class="line"><span class="cl"><span class="n">nb_queen</span> <span class="o">&lt;-</span> <span class="nf">poly2nb</span><span class="p">(</span><span class="n">grid_cells</span><span class="p">,</span> <span class="n">queen</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Verificar celdas sin vecinos</span>
-</span></span><span class="line"><span class="cl"><span class="nf">summary</span><span class="p">(</span><span class="n">nb_queen</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: 1 celda sin vecinos → eliminada del análisis</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 2. Crear matriz de pesos row-standardized</span>
-</span></span><span class="line"><span class="cl"><span class="n">W</span> <span class="o">&lt;-</span> <span class="nf">nb2listw</span><span class="p">(</span><span class="n">nb_queen</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="s">&#34;W&#34;</span><span class="p">,</span> <span class="n">zero.policy</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 3. Visualizar estructura de vecindad</span>
-</span></span><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="nf">st_geometry</span><span class="p">(</span><span class="n">grid_cells</span><span class="p">),</span> <span class="n">border</span> <span class="o">=</span> <span class="s">&#34;grey&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">nb_queen</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="nf">st_coordinates</span><span class="p">(</span><span class="nf">st_centroid</span><span class="p">(</span><span class="n">grid_cells</span><span class="p">)),</span> 
-</span></span><span class="line"><span class="cl">     <span class="n">add</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">&#34;red&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>Alternativas consideradas</strong>:</p>
-<ul>
-<li><strong>Rook contiguity</strong>: Solo bordes compartidos (más restrictiva)</li>
-<li><strong>K-nearest neighbors</strong>: K vecinos más cercanos (asegura conectividad)</li>
-<li><strong>Distance-based</strong>: Vecinos dentro de X km (permite pesos continuos)</li>
-</ul>
-<p>Opté por <strong>Queen</strong> porque:</p>
-<ul>
-<li>Captura mejor la contigüidad geográfica real</li>
-<li>Es el estándar en análisis de conflictos</li>
-<li>Permite comparación con literatura existente</li>
-</ul>
-
-<h3 class="relative group">Manejo de datos zero-inflated
-    <div id="manejo-de-datos-zero-inflated" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#manejo-de-datos-zero-inflated" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Distribución de la variable dependiente</span>
-</span></span><span class="line"><span class="cl"><span class="nf">table</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">attacks</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># FALSE  TRUE </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   187   301  → 62% zeros</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Estrategia 1: Negative Binomial</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">nb_model</span> <span class="o">&lt;-</span> <span class="nf">glm.nb</span><span class="p">(</span><span class="n">attacks</span> <span class="o">~</span> <span class="n">.,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Estrategia 2: Zero-Inflated Poisson (probado pero descartado)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">pscl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">zip_model</span> <span class="o">&lt;-</span> <span class="nf">zeroinfl</span><span class="p">(</span><span class="n">attacks</span> <span class="o">~</span> <span class="n">. </span><span class="o">|</span> <span class="n">.,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">dist</span> <span class="o">=</span> <span class="s">&#34;poisson&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Estrategia 3: Hurdle model (no implementado)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># hurdle_model &lt;- hurdle(attacks ~ ., data = df, dist = &#34;poisson&#34;)</span></span></span></code></pre></div></div>
-<p><strong>Decisión final</strong>: Negative Binomial porque:</p>
-<ol>
-<li>Maneja sobredispersión (varianza &raquo; media)</li>
-<li>Más simple que ZIP</li>
-<li>En ZIP, las estimaciones de ambas partes (Poisson y logística) eran casi idénticas → parsimonia favorece NB</li>
-</ol>
-
-<h3 class="relative group">Validación de modelos
-    <div id="validación-de-modelos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#validaci%c3%b3n-de-modelos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Test de Moran en residuos (detectar autocorrelación residual)</span>
-</span></span><span class="line"><span class="cl"><span class="n">lm_residuals</span> <span class="o">&lt;-</span> <span class="nf">residuals</span><span class="p">(</span><span class="n">linear_model</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">moran.test</span><span class="p">(</span><span class="n">lm_residuals</span><span class="p">,</span> <span class="n">listw</span> <span class="o">=</span> <span class="n">W</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: Moran&#39;s I significativo → justifica modelos espaciales</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Test de Breusch-Pagan (heterocedasticidad)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">bptest</span><span class="p">(</span><span class="n">linear_model</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Test de Lagrange Multiplier para dependencia espacial</span>
-</span></span><span class="line"><span class="cl"><span class="nf">lm.LMtests</span><span class="p">(</span><span class="n">linear_model</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="s">&#34;all&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># LMerr: Test para SEM</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># LMlag: Test para SAR</span></span></span></code></pre></div></div>
-
-<h2 class="relative group">Desafíos técnicos y soluciones
-    <div id="desafíos-técnicos-y-soluciones" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#desaf%c3%ados-t%c3%a9cnicos-y-soluciones" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">1. Integración de múltiples fuentes de datos
-    <div id="1-integración-de-múltiples-fuentes-de-datos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-integraci%c3%b3n-de-m%c3%baltiples-fuentes-de-datos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>Desafío</strong>: Combinar datos de GTD (puntos), PRIO-GRID (grillas), xSub (tablas), shapefiles.</p>
-<p><strong>Solución</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Spatial join point-in-polygon</span>
-</span></span><span class="line"><span class="cl"><span class="n">attacks_per_cell</span> <span class="o">&lt;-</span> <span class="nf">st_join</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks_points</span><span class="p">,</span>      <span class="c1"># GTD data como sf points</span>
-</span></span><span class="line"><span class="cl">  <span class="n">grid_cells</span><span class="p">,</span>          <span class="c1"># PRIO-GRID como sf polygons</span>
-</span></span><span class="line"><span class="cl">  <span class="n">join</span> <span class="o">=</span> <span class="n">st_within</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">cell_id</span><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">n_attacks</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Merge con variables geodemográficas</span>
-</span></span><span class="line"><span class="cl"><span class="n">final_data</span> <span class="o">&lt;-</span> <span class="n">grid_cells</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span><span class="n">attacks_per_cell</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;cell_id&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span><span class="n">priogrid_vars</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;cell_id&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span><span class="n">xsub_vars</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;cell_id&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">n_attacks</span> <span class="o">=</span> <span class="nf">replace_na</span><span class="p">(</span><span class="n">n_attacks</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span></span></span></code></pre></div></div>
-
-<h3 class="relative group">2. Proyecciones cartográficas
-    <div id="2-proyecciones-cartográficas" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-proyecciones-cartogr%c3%a1ficas" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>Desafío</strong>: Asegurar que todos los layers usen la misma proyección.</p>
-<p><strong>Solución</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Verificar CRS</span>
-</span></span><span class="line"><span class="cl"><span class="nf">st_crs</span><span class="p">(</span><span class="n">grid_cells</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">st_crs</span><span class="p">(</span><span class="n">attacks_points</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Reprojectar si es necesario</span>
-</span></span><span class="line"><span class="cl"><span class="n">attacks_points</span> <span class="o">&lt;-</span> <span class="nf">st_transform</span><span class="p">(</span><span class="n">attacks_points</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="nf">st_crs</span><span class="p">(</span><span class="n">grid_cells</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Para Perú, usar proyección apropiada</span>
-</span></span><span class="line"><span class="cl"><span class="n">peru_crs</span> <span class="o">&lt;-</span> <span class="s">&#34;+proj=utm +zone=18 +south +datum=WGS84&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">grid_cells</span> <span class="o">&lt;-</span> <span class="nf">st_transform</span><span class="p">(</span><span class="n">grid_cells</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">peru_crs</span><span class="p">)</span></span></span></code></pre></div></div>
-
-<h3 class="relative group">3. Celda sin vecinos
-    <div id="3-celda-sin-vecinos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-celda-sin-vecinos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>Desafío</strong>: Una celda aislada causaba errores en cálculos de matriz de pesos.</p>
-<p><strong>Solución</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Identificar celdas sin vecinos</span>
-</span></span><span class="line"><span class="cl"><span class="n">no_neighbors</span> <span class="o">&lt;-</span> <span class="nf">which</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="n">nb_queen</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Eliminar del análisis</span>
-</span></span><span class="line"><span class="cl"><span class="n">grid_cells_clean</span> <span class="o">&lt;-</span> <span class="n">grid_cells[</span><span class="o">-</span><span class="n">no_neighbors</span><span class="p">,</span> <span class="n">]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: 488 celdas (de 489 originales)</span></span></span></code></pre></div></div>
-
-<h3 class="relative group">4. Interpretación de efectos en modelos espaciales
-    <div id="4-interpretación-de-efectos-en-modelos-espaciales" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-interpretaci%c3%b3n-de-efectos-en-modelos-espaciales" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>Desafío</strong>: En SAR, los efectos no son directamente interpretables como en OLS porque incluyen <strong>efectos indirectos</strong> (spillovers).</p>
-<p><strong>Solución</strong>: Calcular impactos directos e indirectos.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Calcular impactos en modelo SAR</span>
-</span></span><span class="line"><span class="cl"><span class="n">impacts_sar</span> <span class="o">&lt;-</span> <span class="nf">impacts</span><span class="p">(</span><span class="n">sar_model</span><span class="p">,</span> <span class="n">listw</span> <span class="o">=</span> <span class="n">W</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="m">1000</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">summary</span><span class="p">(</span><span class="n">impacts_sar</span><span class="p">,</span> <span class="n">zstats</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Resultado:</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># - Direct impact: efecto en la misma celda</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># - Indirect impact: efecto en celdas vecinas (spillover)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># - Total impact: suma de ambos</span></span></span></code></pre></div></div>
-
-<h2 class="relative group">Limitaciones y trabajo futuro
-    <div id="limitaciones-y-trabajo-futuro" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#limitaciones-y-trabajo-futuro" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Limitaciones del estudio
-    <div id="limitaciones-del-estudio" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#limitaciones-del-estudio" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<ol>
-<li>
-<p><strong>Calidad de datos</strong>: GTD es una base global, no especializada en Perú. Puede subreportar eventos no letales (violaciones, robos, quema de viviendas).</p>
-</li>
-<li>
-<p><strong>Definición de vecindad</strong>: Usé solo Queen contiguity. Otros criterios (distancia, K-nearest neighbors) podrían revelar patrones diferentes.</p>
-</li>
-<li>
-<p><strong>Variables omitidas</strong>: No incluí variables de presencia estatal, infraestructura vial, o historial de violencia previa por limitaciones de datos.</p>
-</li>
-<li>
-<p><strong>Causalidad</strong>: Los modelos muestran <strong>asociaciones</strong>, no relaciones causales. La endogeneidad espacial complica la inferencia causal.</p>
-</li>
-</ol>
-
-<h3 class="relative group">Extensiones futuras
-    <div id="extensiones-futuras" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#extensiones-futuras" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p><strong>1. Modelos espacio-temporales</strong></p>
-<p>Incorporar dimensión temporal explícitamente:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Spatio-temporal model</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">splm</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">st_model</span> <span class="o">&lt;-</span> <span class="nf">spml</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks</span> <span class="o">~</span> <span class="n">vars</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">data</span> <span class="o">=</span> <span class="n">panel_data</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">listw</span> <span class="o">=</span> <span class="n">W</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">model</span> <span class="o">=</span> <span class="s">&#34;within&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">spatial.error</span> <span class="o">=</span> <span class="s">&#34;b&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">lag</span> <span class="o">=</span> <span class="kc">TRUE</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>2. Geographically Weighted Regression (GWR)</strong></p>
-<p>Permitir que los coeficientes <strong>varíen espacialmente</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">GWmodel</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">gwr_model</span> <span class="o">&lt;-</span> <span class="nf">gwr.basic</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks</span> <span class="o">~</span> <span class="n">vars</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">data</span> <span class="o">=</span> <span class="n">sp_data</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">bw</span> <span class="o">=</span> <span class="nf">bw.gwr</span><span class="p">(</span><span class="n">attacks</span> <span class="o">~</span> <span class="n">vars</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sp_data</span><span class="p">,</span> <span class="n">kernel</span> <span class="o">=</span> <span class="s">&#34;gaussian&#34;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">  <span class="n">kernel</span> <span class="o">=</span> <span class="s">&#34;gaussian&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>3. Análisis de hotspots</strong></p>
-<p>Identificar clusters estadísticamente significativos:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Local Moran&#39;s I</span>
-</span></span><span class="line"><span class="cl"><span class="n">local_moran</span> <span class="o">&lt;-</span> <span class="nf">localmoran</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">attacks</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Getis-Ord Gi*</span>
-</span></span><span class="line"><span class="cl"><span class="n">gi_star</span> <span class="o">&lt;-</span> <span class="nf">localG</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">attacks</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span></span></span></code></pre></div></div>
-<p><strong>4. Machine learning espacial</strong></p>
-<p>Integrar random forests con estructura espacial:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ranger</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># Incluir spatial lags como features</span>
-</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="o">$</span><span class="n">lag_attacks</span> <span class="o">&lt;-</span> <span class="nf">lag.listw</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">attacks</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">rf_spatial</span> <span class="o">&lt;-</span> <span class="nf">ranger</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="n">attacks</span> <span class="o">~</span> <span class="n">. </span><span class="o">+</span> <span class="n">lag_attacks</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">importance</span> <span class="o">=</span> <span class="s">&#34;permutation&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
-
-<h2 class="relative group">Recursos y reproducibilidad
-    <div id="recursos-y-reproducibilidad" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#recursos-y-reproducibilidad" aria-label="Ancla">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Código y datos
-    <div id="código-y-datos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c%c3%b3digo-y-datos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Todo el análisis es <strong>completamente reproducible</strong>:</p>
-<ul>
-<li><strong>Repositorio GitHub</strong>: <a href="https://github.com/castellco/terrorism_peru"  target="_blank">github.com/castellco/terrorism_peru</a></li>
-<li><strong>Archivo R Markdown</strong>: <code>carolina_cornejo_tfm.Rmd</code> (incluye código completo)</li>
-<li><strong>Datasets</strong>: Carpeta <code>/data/data.zip</code></li>
-<li><strong>Shapefiles</strong>: Carpeta <code>/shapefiles/</code></li>
-<li><strong>Figuras</strong>: Carpeta <code>/figs/</code></li>
-</ul>
-
-<h3 class="relative group">Paquetes de R utilizados
-    <div id="paquetes-de-r-utilizados" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#paquetes-de-r-utilizados" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Manipulación de datos</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Análisis espacial</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span>           <span class="c1"># Geometrías espaciales</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">spdep</span><span class="p">)</span>        <span class="c1"># Dependencia espacial</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">spatialreg</span><span class="p">)</span>   <span class="c1"># Modelos espaciales (SEM, SAR)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Modelos de conteo</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span>         <span class="c1"># Negative Binomial</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">pscl</span><span class="p">)</span>         <span class="c1"># Zero-inflated models</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Visualización</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tmap</span><span class="p">)</span>         <span class="c1"># Mapas temáticos</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">viridis</span><span class="p">)</span>      <span class="c1"># Paletas de colores</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Utilidades</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">broom</span><span class="p">)</span>        <span class="c1"># Tidying model outputs</span></span></span></code></pre></div></div>
-
-<h3 class="relative group">Instalación del entorno
-    <div id="instalación-del-entorno" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#instalaci%c3%b3n-del-entorno" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Instalar paquetes necesarios</span>
-</span></span><span class="line"><span class="cl"><span class="n">packages</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;tidyverse&#34;</span><span class="p">,</span> <span class="s">&#34;sf&#34;</span><span class="p">,</span> <span class="s">&#34;spdep&#34;</span><span class="p">,</span> <span class="s">&#34;spatialreg&#34;</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">              <span class="s">&#34;MASS&#34;</span><span class="p">,</span> <span class="s">&#34;pscl&#34;</span><span class="p">,</span> <span class="s">&#34;ggplot2&#34;</span><span class="p">,</span> <span class="s">&#34;tmap&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="n">packages</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Clonar repositorio</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># git clone https://github.com/castellco/terrorism_peru.git</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Ejecutar análisis</span>
-</span></span><span class="line"><span class="cl"><span class="n">rmarkdown</span><span class="o">::</span><span class="nf">render</span><span class="p">(</span><span class="s">&#34;carolina_cornejo_tfm.Rmd&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>Para modelar la dependencia espacial, corrí un Spatial Error Model (SEM) y un Spatial Autoregressive Model (SAR).</p>
+<p>Según Fischer y Wang (2011), hay dos formas principales de modelar la dependencia espacial: a través del término de error (spatial error) o a través de la variable dependiente (spatial lag). Usé SEM para probar si los errores estaban correlacionados espacialmente. <em>Grosso modo</em>, la lógica de este algoritmo es que si el modelo  se equivoca al predecir en una celda, probablemente también se equivocará de forma similar en las celdas vecinas. Por otro lado, los SAR incluyen explícitamente el valor de la variable dependiente en las celdas vecinas como un predictor adicional.</p>
+<p>Otro punto importante es la definición de &ldquo;vecino&rdquo; o *neighbor&quot; usada: Utilicé la definición tipo &ldquo;Queen&rdquo;: dos celdas son vecinas si comparten un borde o incluso solo una esquina.</p>
+<p>También apliqué modelos no espaciales (lineales y de conteo) como  regresiones lineales, <em>Negative Binominal</em> y <em>Zero-inflated Poisson</em>, pero no profundizaré en ellos. Cabe resaltar que el objetivo de emplear diversos modelos no era identificar el &ldquo;mejor&rdquo;, sino evaluar la variabilidad en los efectos estimados de las variables explicativas: explicar los fenómenos más que predecir el resultado.</p>
 
 <h2 class="relative group">Conclusiones
     <div id="conclusiones" class="anchor"></div>
@@ -3582,67 +2451,17 @@ Durante el período de repliegue de las fuerzas subversivas (2001-2021), los ata
     </span>
     
 </h2>
-<p>Este proyecto demuestra la <strong>importancia crítica de incorporar la estructura espacial</strong> en el análisis de conflictos armados. Los principales hallazgos metodológicos son:</p>
-
-<h3 class="relative group">1. La autocorrelación espacial no es constante
-    <div id="1-la-autocorrelación-espacial-no-es-constante" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-la-autocorrelaci%c3%b3n-espacial-no-es-constante" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>El I de Moran aumentó de 0.032 (pico) a 0.268 (declive), revelando que la <strong>concentración geográfica de la violencia cambia dramáticamente</strong> a lo largo del conflicto.</p>
-
-<h3 class="relative group">2. Los modelos espaciales son esenciales cuando hay autocorrelación fuerte
-    <div id="2-los-modelos-espaciales-son-esenciales-cuando-hay-autocorrelación-fuerte" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-los-modelos-espaciales-son-esenciales-cuando-hay-autocorrelaci%c3%b3n-fuerte" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Durante el declive, los modelos SEM/SAR mostraron mejor ajuste (AIC ~1145) que OLS (AIC 1194), y el parámetro espacial (λ = 0.467, ρ = 0.455) fue altamente significativo.</p>
-
-<h3 class="relative group">3. Los efectos de variables son condicionales al período temporal
-    <div id="3-los-efectos-de-variables-son-condicionales-al-período-temporal" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-los-efectos-de-variables-son-condicionales-al-per%c3%adodo-temporal" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Variables clave como coca cultivation y distance to borders <strong>invierten su signo</strong> entre períodos, demostrando que analizar todo el conflicto como un bloque homogéneo <strong>oculta dinámicas críticas</strong>.</p>
-
-<h3 class="relative group">4. La elección del modelo de conteo importa con zero-inflation
-    <div id="4-la-elección-del-modelo-de-conteo-importa-con-zero-inflation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-la-elecci%c3%b3n-del-modelo-de-conteo-importa-con-zero-inflation" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Con 62% de ceros, el modelo Negative Binomial superó dramáticamente a OLS y mostró efectos robustos de variables como distancia a capital y número de lenguas locales.</p>
-
-<h3 class="relative group">Implicaciones para análisis de conflictos
-    <div id="implicaciones-para-análisis-de-conflictos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#implicaciones-para-an%c3%a1lisis-de-conflictos" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
-<p>Este trabajo muestra que el análisis riguroso de conflictos armados requiere:</p>
-<p>✓ <strong>Datos desagregados</strong> (grid-cell level, no país/región)<br>
-✓ <strong>Modelos espaciales</strong> cuando existe autocorrelación<br>
-✓ <strong>Análisis temporal diferenciado</strong> (pico vs declive vs completo)<br>
-✓ <strong>Modelos de conteo apropiados</strong> para datos zero-inflated<br>
-✓ <strong>Reproducibilidad completa</strong> (código + datos públicos)</p>
+<p>Lo primero: que la concentración geográfica de la violencia cambia dramáticamente a lo largo del conflicto: El I de Moran aumentó de 0.032 (pico) a 0.268 (declive), revelando que la violencia se volvió más espacialmente concentrada en el periodo 2001-2021.</p>
+<p>Además, durante el declive, los modelos SEM/SAR mostraron mejor ajuste que el OLS, y el parámetro espacial (λ = 0.467, ρ = 0.455) fue altamente significativo.</p>
+<p>Por otro lado, también encontré que los efectos de algunas variables son condicionales al período temporal. Variables clave como el cultivo de hoja de coca y la distancia a los bordes invierten su signo entre períodos, demostrando que analizar todo el conflicto como un bloque homogéneo oculta dinámicas críticas.</p>
+<p>Para finalizar, todo el análisis es <strong>completamente reproducible</strong>:</p>
+<ul>
+<li><strong>Repositorio GitHub</strong>: <a href="https://github.com/castellco/terrorism_peru"  target="_blank">github.com/castellco/terrorism_peru</a></li>
+<li><strong>Archivo R Markdown</strong>: <code>carolina_cornejo_tfm.Rmd</code> (el código completo)</li>
+<li><strong>Datasets</strong>: Carpeta <code>/data/data.zip</code></li>
+<li><strong>Shapefiles</strong>: Carpeta <code>/shapefiles/</code></li>
+<li><strong>Figuras</strong>: Carpeta <code>/figs/</code></li>
+</ul>
 
 <h2 class="relative group">Referencias
     <div id="referencias" class="anchor"></div>
@@ -3653,16 +2472,6 @@ Durante el período de repliegue de las fuerzas subversivas (2001-2021), los ata
     </span>
     
 </h2>
-
-<h3 class="relative group">Metodológicas
-    <div id="metodológicas" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#metodol%c3%b3gicas" aria-label="Ancla">#</a>
-    </span>
-    
-</h3>
 <p>Anselin, L. (1988). <em>Spatial Econometrics: Methods and Models</em>. Springer.</p>
 <p>Buhaug, H., &amp; Rød, J. K. (2006). Local determinants of African civil wars,</p>
 
