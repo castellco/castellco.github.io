@@ -112,13 +112,13 @@ También puedes ver mi currículum más detallado en LinkedIn: [https://www.link
             <td><img class="customEntitityLogo" src="esan.png"/></td>
             <td><a href="https://www.ue.edu.pe/" target="_blank">Universidad ESAN</a></td>
             <td>Diplomado en Monitoreo y Evaluación de Programas y Proyectos</td>
-            <td>2024</td>
+            <td>2022</td>
         </tr>
         <tr>
             <td><img class="customEntitityLogo" src="pucp.png"/></td>
             <td><a href="https://www.pucp.edu.pe/" target="_blank">Pontificia Universidad Católica del Perú</a></td>
             <td>Bachiller en Comunicación para el Desarrollo</td>
-            <td>2021-2022</td>
+            <td>2012-2018</td>
         </tr>
     </tbody>
 </table>

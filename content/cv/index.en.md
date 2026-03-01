@@ -110,13 +110,13 @@ You can also take a look at my LinkedIn profile: [https://www.linkedin.com/in/co
             <td><img class="customEntitityLogo" src="/cv/esan.png"/></td>
             <td><a href="https://www.ue.edu.pe/" target="_blank">ESAN University</a></td>
             <td>Diploma in Monitoring and Evaluation of Programs and Projects</td>
-            <td>2024</td>
+            <td>2022</td>
         </tr>
         <tr>
             <td><img class="customEntitityLogo" src="/cv/pucp.png"/></td>
             <td><a href="https://www.pucp.edu.pe/" target="_blank">Pontifical Catholic University of Peru</a></td>
             <td>Bachelor in Communication for Development</td>
-            <td>2021-2022</td>
+            <td>2012-2018</td>
         </tr>
     </tbody>
 </table>
